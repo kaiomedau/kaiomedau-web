@@ -1,1 +1,154 @@
-Hello
+<!DOCTYPE html>
+<html itemscope="" itemtype="http://schema.org/WebPage" lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="origin" name="referrer" />
+    <meta content="/images/the-craftsman-256.png" itemprop="image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Kaio Medau</title>
+    <style type="text/css">
+      html,
+      body {
+        background: #1d1d1d;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: "Montserrat", sans-serif;
+        font-family: "Roboto", sans-serif;
+        color: #fff;
+      }
+
+      .vertical,
+      .featured {
+        flex-direction: column;
+      }
+
+      header {
+        display: flex;
+        height: 40px;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .featured {
+        display: flex;
+        align-items: center;
+        height: 99%;
+        background: url("images/featured-image.jpg") no-repeat center;
+        background-size: contain;
+      }
+
+      .session {
+        display: flex;
+        margin: 0 10px;
+        /* background: green; */
+        max-width: 400px;
+        flex-grow: 1;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+      }
+
+      .featured .session {
+        justify-content: flex-end;
+      }
+
+      .card {
+        display: flex;
+        color: #5c5c5c;
+        border-radius: 12px;
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.95) 0%,
+          #fff 100%
+        );
+        box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.1);
+        align-self: flex-end;
+      }
+      .card .wrapper {
+        margin: 14px 18px;
+      }
+
+      .card h2 {
+        margin: 0;
+        color: #242424;
+      }
+      .card p {
+        margin: 6px 0 24px;
+      }
+
+      button {
+        border: none;
+        /* padding: 14px 40px 14px 20px; */
+        padding: 14px 20px;
+        border-radius: 8px;
+        background: linear-gradient(273deg, #ab39ef -0.06%, #02c6de 101.77%);
+        box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
+
+        color: #fff;
+        font-size: 16px;
+        font-weight: 700;
+        flex-grow: 1;
+      }
+
+      ul,
+      li {
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+        padding: 0;
+        flex-grow: 1;
+      }
+
+      .price {
+        color: #20c056;
+        font-size: 32px;
+        font-weight: 700;
+      }
+
+      .price .old {
+        color: #505050;
+        font-size: 12px;
+        text-decoration: line-through;
+        text-decoration-line: strikethrough;
+      }
+
+      .c70 {
+        width: 70%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="featured">
+      <header>Olá, eu sou @KaioMedau</header>
+      <div class="session">
+        <div class="card">
+          <div class="wrapper">
+            <h2>Curso de Procreate</h2>
+            <p>
+              Desbloqueie todo o seu potencial com esse curso 100% em português.
+            </p>
+            <div>
+              <ul>
+                <li>
+                  <ul class="price vertical">
+                    <li class="old">R$80</li>
+                    <li>R$40</li>
+                  </ul>
+                </li>
+                <li class="c70"><button>Conferir Agora!</button></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div>▼</div>
+      </div>
+    </div>
+  </body>
+</html>
