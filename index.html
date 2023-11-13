@@ -115,7 +115,7 @@
           #fff 100%
         );
         box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.1);
-        /* align-self: flex-end; */
+        position: relative;
       }
       .card .wrapper {
         margin: 14px;
@@ -222,6 +222,17 @@
       .margin_top {
         margin-top: 20px;
       }
+
+      .sale {
+        position: absolute;
+        right: 0;
+        background: red;
+        padding: 4px 12px;
+        font-size: 14px;
+        font-weight: 700;
+        color: #fff;
+        border-radius: 0 8px;
+      }
     </style>
   </head>
   <body>
@@ -229,6 +240,7 @@
       <!-- <header>Kaio Medau</header> -->
       <div class="session">
         <div class="card">
+          <div class="sale">50% OFF</div>
           <div class="wrapper">
             <h2>Curso de Procreate</h2>
             <p>
@@ -238,7 +250,7 @@
               <ul>
                 <li>
                   <ul class="price vertical">
-                    <li class="old">R$80</li>
+                    <li class="old">De R$80</li>
                     <li>R$40</li>
                   </ul>
                 </li>
@@ -247,7 +259,7 @@
                     class="button"
                     href="https://www.udemy.com/course/procreate-iniciantes/?couponCode=GUMROAD40"
                     title="Confira agora: Curso de Procreate com 50% de desconto na Udemy"
-                    >Conferir Agora!</a
+                    >Confira Agora!</a
                   >
                 </li>
               </ul>
