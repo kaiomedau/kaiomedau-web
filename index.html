@@ -237,6 +237,10 @@
         color: #fff;
         border-radius: 0 8px;
       }
+
+      .featured h2 {
+        margin-top: 12px;
+      }
     </style>
   </head>
   <body>
@@ -244,24 +248,24 @@
       <!-- <header>Kaio Medau</header> -->
       <div class="session">
         <!-- // video -->
-        <div class="video-thumbnail" data-video-id="aYfL8IefH2Y?si">
-          <picture>
-            <img
-              src="./images/introducao-fundamentos-do-procreate-375w.webp"
-              width="375"
-              height="209"
-              alt="Introdução ao Curso Fundamentos do Procreate"
-            />
-          </picture>
-        </div>
-        <!-- // video -->
         <div class="card">
           <!-- <div class="sale">47% OFF</div> -->
           <div class="wrapper">
+            <!-- // video -->
+            <div class="video-thumbnail" data-video-id="aYfL8IefH2Y?si">
+              <picture>
+                <img
+                  src="./images/introducao-fundamentos-do-procreate-375w.webp"
+                  width="347"
+                  height="193"
+                  alt="Introdução ao Curso Fundamentos do Procreate"
+                />
+              </picture>
+            </div>
             <h2>Aprenda Procreate</h2>
             <p>
-              São mais de <strong>8 horas de conteúdo</strong> super didático e
-              totalmente em português!
+              Transforme suas ideias em arte digital!<br />
+              <strong>8h de conteúdo totalmente em português</strong>
             </p>
             <div>
               <ul>
@@ -278,12 +282,6 @@
                     title="Confira agora: Fundamentos do Procreate"
                     >Confira os Detalhes →</a
                   >
-                  <!-- <a
-                    class="button"
-                    href="https://www.udemy.com/course/procreate-iniciantes/?couponCode=PRO80R"
-                    title="Confira agora: Curso de Procreate com 47% de desconto na Udemy"
-                    >Quero Aprender!</a
-                  > -->
                 </li>
               </ul>
             </div>
@@ -637,8 +635,8 @@
             "src",
             "https://www.youtube.com/embed/" + videoId
           );
-          iframe.setAttribute("width", "375");
-          iframe.setAttribute("height", "209");
+          iframe.setAttribute("width", "347");
+          iframe.setAttribute("height", "193");
           iframe.setAttribute("frameborder", "0");
           iframe.setAttribute("allowfullscreen", "true");
 
