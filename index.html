@@ -86,15 +86,15 @@
       .featured {
         display: flex;
         align-items: center;
-        height: 60%;
-        background: url("images/featured-image.jpg") no-repeat center;
+        /* height: 60%; */
+        /* background: url("images/featured-image.jpg") no-repeat center; */
         background-size: contain;
       }
 
       .session {
         display: flex;
         margin: 0 10px;
-        max-width: 400px;
+        max-width: 375px;
         flex-grow: 1;
         flex-direction: column;
         align-items: center;
@@ -104,6 +104,8 @@
 
       .featured .session {
         justify-content: flex-end;
+        row-gap: 0;
+        margin-top: 16px;
       }
 
       .card {
@@ -242,12 +244,24 @@
     <div class="featured">
       <!-- <header>Kaio Medau</header> -->
       <div class="session">
+        <!-- // video -->
+        <div class="video-thumbnail" data-video-id="aYfL8IefH2Y?si">
+          <picture>
+            <img
+              src="./images/introducao-fundamentos-do-procreate-372w.webp"
+              width="375"
+              height="209"
+              alt="Introdução ao Curso Fundamentos do Procreate"
+            />
+          </picture>
+        </div>
+        <!-- // video -->
         <div class="card">
           <!-- <div class="sale">47% OFF</div> -->
           <div class="wrapper">
-            <h2>Curso de Procreate</h2>
+            <h2>Aprenda Procreate</h2>
             <p>
-              Mais de <strong>8 horas de conteúdo</strong> super didático e
+              São mais de <strong>8 horas de conteúdo</strong> super didático e
               totalmente em português!
             </p>
             <div>
@@ -612,4 +626,28 @@
       </div>
     </div>
   </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var videoThumbnails = document.querySelectorAll(".video-thumbnail");
+
+      videoThumbnails.forEach(function (thumbnail) {
+        thumbnail.addEventListener("click", function () {
+          var videoId = this.getAttribute("data-video-id");
+          var iframe = document.createElement("iframe");
+          iframe.setAttribute(
+            "src",
+            "https://www.youtube.com/embed/" + videoId
+          );
+          iframe.setAttribute("width", "375");
+          iframe.setAttribute("height", "209");
+          iframe.setAttribute("frameborder", "0");
+          iframe.setAttribute("allowfullscreen", "true");
+
+          // Substitui a imagem pela iframe
+          this.innerHTML = "";
+          this.appendChild(iframe);
+        });
+      });
+    });
+  </script>
 </html>
