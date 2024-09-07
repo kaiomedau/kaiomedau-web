@@ -85,9 +85,10 @@
       .featured {
         display: flex;
         align-items: center;
-        /* height: 60%; */
-        /* background: url("images/featured-image.jpg") no-repeat center; */
-        background-size: contain;
+      }
+
+      .featured img {
+        width: 100%;
       }
 
       .session {
@@ -119,6 +120,7 @@
         position: relative;
         width: 100%;
       }
+
       .card .wrapper {
         margin: 14px;
         flex: 1;
@@ -130,6 +132,10 @@
       }
       .card p {
         margin: 6px 0 24px;
+      }
+
+      .socials .card {
+        justify-content: center;
       }
 
       a.button {
@@ -246,30 +252,27 @@
     <!-- <div class="featured">
       <div class="session">
         <div class="card">
+          <div class="sale">NOVO!</div>
           <div class="wrapper">
-            <div class="video-thumbnail" data-video-id="aYfL8IefH2Y?si">
-              <picture>
-                <img
-                  src="./images/introducao-fundamentos-do-procreate-375w.webp"
-                  width="330"
-                  height="193"
-                  alt="Introdução ao Curso Fundamentos do Procreate"
-                />
-              </picture>
-            </div>
-            <h2>Aprenda Procreate</h2>
-            <p>
-              Transforme suas ideias em arte digital!<br />
-              <strong>8h de conteúdo totalmente em português</strong>
-            </p>
+            <img
+              alt="Pôsteres das varinhas mágicas brasileiras"
+              srcset="
+                images/aposteres-varinhas-magicas-brasileiras@2x.webp 2x,
+                images/aposteres-varinhas-magicas-brasileiras@3x.webp 3x
+              "
+              src="images/aposteres-varinhas-magicas-brasileiras.webp"
+              loading="lazy"
+            />
+            <h2>Varinhas Brasileiras</h2>
+            <p>Magia baseada no nosso folclore ❤️</p>
             <div>
               <ul>
                 <li class="c70">
                   <a
                     class="button"
                     href="https://procreate.com.br"
-                    title="Confira agora: Fundamentos do Procreate"
-                    >Confira as aulas gratuitas →</a
+                    title="Confira os pôsteres das varinhas mágicas brasileiras"
+                    >Confira os Pôsteres →</a
                   >
                 </li>
               </ul>
@@ -406,7 +409,7 @@
         </div>
       </div>
 
-      <div class="session">
+      <div class="session socials">
         <header>Redes Sociais</header>
         <div class="card-row">
           <div class="card">
