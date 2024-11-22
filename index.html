@@ -40,7 +40,7 @@
     <style type="text/css">
       html,
       body {
-        background: #1d1d1d;
+        background: #e4d3b6;
         height: 100%;
         margin: 0;
         padding: 0;
@@ -80,6 +80,7 @@
       .session header {
         margin-top: 24px;
         font-weight: 700;
+        color: #7d5036;
       }
 
       .featured {
@@ -143,7 +144,8 @@
         /* padding: 14px 40px 14px 20px; */
         padding: 14px 20px;
         border-radius: 8px;
-        background: linear-gradient(273deg, #ab39ef -0.06%, #02c6de 101.77%);
+        background: #7d5036;
+        /* linear-gradient(273deg, #ab39ef -0.06%, #02c6de 101.77%); */
         box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
 
         color: #fff;
@@ -155,6 +157,13 @@
         display: flex;
         justify-content: center;
         align-items: center;
+      }
+
+      a.button.secondary {
+        color: #7d5036;
+        border: solid 2px #7d5036;
+        background: none;
+        box-shadow: none;
       }
 
       ul,
@@ -191,13 +200,13 @@
       }
 
       .card-row .card h2 {
-        background: var(
+        /* background: var(
           --Box-Title,
           linear-gradient(94deg, #0094ff 5.19%, #a141ee 95.15%)
         );
         background-clip: text;
         -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        -webkit-text-fill-color: transparent; */
       }
 
       .card-list {
@@ -271,18 +280,31 @@
             <img
               alt="Lista de espera para as varinhas máficas brasileiras"
               srcset="
-                images/varinhas-brasileiras-lista@2x.webp 2x,
-                images/varinhas-brasileiras-lista@3x.webp 3x
+                images/lancamento-acre-tocantins@2x.webp 2x,
+                images/lancamento-acre-tocantins@3x.webp 3x
               "
-              src="images/varinhas-brasileiras-lista.webp"
+              src="images/lancamento-acre-tocantins.webp"
             />
-            <h2>Varinhas Brasileiras</h2>
-            <p>Chegou a hora de trazê-las para o mundo real</p>
+            <h2>Acre e Tocantins</h2>
+            <p>
+              As varinhas do Acre e do Tocantins chegaram e estão disponíveis na
+              loja do Galho Quebrado.
+            </p>
             <div>
               <ul>
                 <li class="c70">
                   <a
                     class="button"
+                    href="https://galhoquebrado.lojavirtualnuvem.com.br/produtos/"
+                    title="Confira as varinhas mágicas"
+                    >Confira as Varinhas →</a
+                  >
+                </li>
+              </ul>
+              <ul class="margin_top">
+                <li class="c70">
+                  <a
+                    class="button secondary"
                     href="https://forms.gle/qzrL33v9TwmF4Pmd6"
                     title="Lista de espera para as varinhas máficas brasileiras"
                     >Lista de espera (Google Docs) →</a
@@ -299,7 +321,7 @@
         <header>Arte Digital</header>
         <div class="card-list">
           <div class="card">
-            <div class="sale">Super Desconto</div>
+            <!-- <div class="sale">Super Desconto</div> -->
             <a
               href="https://www.udemy.com/course/procreate-iniciantes/?referralCode=3F03E409260C54EDD533"
               title="Aprenda Procreate em 40 aulas 100% em português"
@@ -315,7 +337,7 @@
                   loading="lazy"
                 />
                 <div class="content">
-                  <h2>Curso de Procreate</h2>
+                  <h2>Aprenda Procreate</h2>
                   <p>Mais de 40 aulas 100% em Português →</p>
                 </div>
               </div>
@@ -334,36 +356,34 @@
       </div>
 
       <div class="session socials">
-        <header>Redes Sociais</header>
+        <header>Minhas Redes Sociais</header>
         <div class="card-row">
           <div class="card">
             <a
-              href="https://tiktok.com/@kaiomedau"
-              title="Kaio Medau no TikTok"
-            >
-              <div class="wrapper">
-                <h2>TikTok</h2>
-              </div>
-            </a>
-          </div>
-          <div class="card">
-            <a
-              href="https://www.youtube.com/kaiomedau"
-              title="Kaio Medau no YouTube"
-            >
-              <div class="wrapper">
-                <h2>YouTube</h2>
-              </div>
-            </a>
-          </div>
-          <div class="card">
-            <a
+              class="button"
               href="https://instagram.com/kaiomedau"
               title="Kaio Medau no Instagram"
             >
-              <div class="wrapper">
-                <h2>Insta</h2>
-              </div>
+              Instagram
+            </a>
+          </div>
+
+          <div class="card">
+            <a
+              class="button"
+              href="https://www.youtube.com/kaiomedau"
+              title="Kaio Medau no YouTube"
+            >
+              YouTube
+            </a>
+          </div>
+          <div class="card">
+            <a
+              class="button"
+              href="https://tiktok.com/@kaiomedau"
+              title="Kaio Medau no TikTok"
+            >
+              TikTok
             </a>
           </div>
         </div>
