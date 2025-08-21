@@ -139,7 +139,8 @@
         justify-content: center;
       }
 
-      a.button {
+      a.button,
+      .button {
         border: none;
         /* padding: 14px 40px 14px 20px; */
         padding: 14px 20px;
@@ -159,13 +160,20 @@
         align-items: center;
       }
 
-      a.button.secondary {
+      a.button.secondary,
+      .button.secondary,
+      .button.tertiary {
         color: #7d5036;
         border: solid 2px #7d5036;
         background: none;
         box-shadow: none;
         padding-top: 10px;
         padding-bottom: 10px;
+      }
+
+      .button.tertiary {
+        padding-top: 2px;
+        padding-bottom: 4px;
       }
 
       ul,
@@ -199,16 +207,6 @@
         grid-auto-flow: column;
         grid-gap: 10px;
         grid-auto-columns: 1fr;
-      }
-
-      .card-row .card h2 {
-        /* background: var(
-          --Box-Title,
-          linear-gradient(94deg, #0094ff 5.19%, #a141ee 95.15%)
-        );
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent; */
       }
 
       .card-list {
@@ -247,6 +245,22 @@
         margin-top: 20px;
       }
 
+      .margin_top_30 {
+        margin-top: 30px;
+      }
+
+      .margin_top_40 {
+        margin-top: 40px;
+      }
+
+      .margin_top_50 {
+        margin-top: 50px;
+      }
+
+      .margin_top_60 {
+        margin-top: 60px;
+      }
+
       .round_corner {
         border-radius: 8px;
       }
@@ -283,83 +297,99 @@
         border-radius: 8px;
         padding: 4px 12px;
       }
+
+      .author {
+        align-self: flex-end;
+        margin-bottom: 17px;
+        color: #7d5036;
+        font-size: 15px;
+      }
+
+      hr.divider {
+        width: 100%;
+        border: none;
+        height: 1px;
+        background: #d3bd99;
+      }
+
+      .product {
+        width: 180px;
+        text-align: center;
+      }
+
+      .product img {
+        border-radius: 8px;
+      }
+
+      .product-name {
+        color: #7d5036;
+        margin: 4px 0 16px;
+      }
     </style>
   </head>
   <body>
     <div class="featured">
       <div class="session">
-        <div class="card head-logo">
-          <img
-            alt="Galho Quebrado. Itens mágicos com aura tupiniquim"
-            src="images/logo-galho-quebrado.svg"
-          />
-        </div>
-        <div class="card">
-          <!-- <div class="sale">NOVO!</div> -->
-          <div class="wrapper">
+        <div class="card-row">
+          <div class="card head-logo">
             <img
-              class="round_corner"
-              alt="Varinhas Mágicas Brasileiras"
-              srcset="
-                images/varinha-amapa@2x.webp 2x,
-                images/varinha-amapa@3x.webp 3x
-              "
-              src="images/varinha-amapa.webp"
+              alt="Galho Quebrado. Itens mágicos com aura tupiniquim"
+              src="images/logo-galho-quebrado.svg"
             />
-            <!-- <h2>Varinhas Mágicas Brasileiras</h2> -->
-            <!-- <p>
-              As varinhas do Acre e do Tocantins chegaram e estão disponíveis na
-              loja do Galho Quebrado.
-            </p> -->
-            <div>
-              <ul class="margin_top_10">
-                <li class="c70">
-                  <a
-                    class="button"
-                    href="https://galhoquebrado.lojavirtualnuvem.com.br/"
-                    title="Confira os itens mágicos"
-                    >Loja de Bonequinhos e Varinhas →</a
-                  >
-                </li>
-              </ul>
-              <!-- <ul class="margin_top_10">
-                <li class="c70">
-                  <a
-                    class="button secondary"
-                    href="https://forms.gle/qzrL33v9TwmF4Pmd6"
-                    title="Lista de espera para as varinhas máficas brasileiras"
-                    >Lista de espera (Google Docs) →</a
-                  >
-                </li>
-              </ul> -->
-              <ul class="margin_top_10">
-                <li class="c70">
-                  <a
-                    class="button secondary"
-                    href="https://t.me/+SsGEGhKLOJ9kMWUx"
-                    title="Canal no telegram"
-                    >Receba Atualizações no Telegram →</a
-                  >
-                </li>
-              </ul>
-              <ul>
-                <small class="warning"
-                  ><strong
-                    >*Somente eu tenho acesso à lista de inscritos e permissão
-                    para enviar mensagens no Telegram.</strong
-                  >
-                </small>
-              </ul>
+          </div>
+          <div class="author">por <strong>Kaio Medau</strong></div>
+        </div>
+      </div>
+      <hr class="divider" />
+      <div class="featured">
+        <div class="session">
+          <div class="card-row">
+            <div class="product">
+              <a
+                href="https://galhoquebrado.lojavirtualnuvem.com.br/produtos/capirara-pop/"
+                title="Bonequinhos da Capirara no Galho Quebrado"
+              >
+                <img
+                  alt="Bonequinhos da Capirara no Galho Quebrado"
+                  srcset="
+                    images/produtos/capirara@2x.webp 2x,
+                    images/produtos/capirara@3x.webp 3x
+                  "
+                  src="images/produtos/capirara.webp"
+                  loading="lazy"
+                />
+                <div class="product-name">Capirara Pop</div>
+              </a>
+            </div>
+
+            <div class="product">
+              <a
+                href="https://galhoquebrado.lojavirtualnuvem.com.br/varinha-magica/"
+                title="Varinhas Mágicas no Galho Quebrado"
+              >
+                <img
+                  alt="Varinhas Mágicas no Galho Quebrado"
+                  srcset="
+                    images/produtos/varinha-magica-espirito-santo-kit@2x.webp 2x,
+                    images/produtos/varinha-magica-espirito-santo-kit@3x.webp 3x
+                  "
+                  src="images/produtos/varinha-magica-espirito-santo-kit.webp"
+                  loading="lazy"
+                />
+                <div class="product-name">Varinhas Mágicas</div>
+              </a>
             </div>
           </div>
+          <a href="https://galhoquebrado.lojavirtualnuvem.com.br">
+            <div class="button tertiary">🛍️ Conheça a loja →</div>
+          </a>
         </div>
       </div>
     </div>
-    <div class="content-wrap">
+    <div class="content-wrap margin_top_40">
       <div class="session">
-        <!-- <header>Minha Comunidade</header> -->
         <div class="card-list">
-          <div class="card margin_top_20">
+          <div class="card">
             <!-- <div class="sale">Super Desconto</div> -->
             <a
               href="http://patreon.com/kaiomedau"
@@ -367,10 +397,69 @@
             >
               <div class="wrapper">
                 <div class="content">
-                  <h2>Meu Universo Mágico: Patreon</h2>
+                  <h2>Patreon</h2>
                   <p>
-                    Conteúdos extras gratuitos sobre as varinhas mágicas,
-                    animais fantásticos e bastidores das criações →
+                    Confira conteúdos exclusivos e bastidores do universo mágico
+                    do Galho Quebrado.
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- <div class="card">
+            <div class="sale">Formulário de Inscrição</div>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSedSsyYyuNTW7HZEd2dIIIfuZIdn8Fs03BG6nOv_J2ZjaY4dQ/viewform?usp=sf_link"
+              title="Receba atualizações em tempo real sobre os lançamentos das varinhas mágicas e bonequinhos no telegram"
+            >
+              <div class="wrapper">
+                <div class="content">
+                  <h2>Meu Bonequinho</h2>
+                  <p>
+                    <strong>Increva-se aqui</strong> para a chance de participar do quadro "Meu Bonequinho" e ter o desenho do seu filho transformado em um bonequinho exclusivo.
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div> -->
+        </div>
+      </div>
+
+      <hr class="divider margin_top_40" />
+
+      <div class="session">
+        <header>Lançamentos do Galho</header>
+        <div class="card-list">
+          <div class="card">
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSedSsyYyuNTW7HZEd2dIIIfuZIdn8Fs03BG6nOv_J2ZjaY4dQ/viewform?usp=sf_link"
+              title="Receba atualizações em tempo real sobre os lançamentos das varinhas mágicas e bonequinhos no telegram"
+            >
+              <div class="wrapper">
+                <div class="content">
+                  <h2>Lista de Espera <small>(Newsletter)</small></h2>
+                  <p>
+                    <strong>Receba atualizações</strong> sobre os lançamentos
+                    das varinhas mágicas direto <strong>no seu e-mail</strong>.
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="card">
+            <a
+              href="https://t.me/+SsGEGhKLOJ9kMWUx"
+              title="Receba atualizações em tempo real sobre os lançamentos das varinhas mágicas e bonequinhos no telegram"
+            >
+              <div class="wrapper">
+                <div class="content">
+                  <h2>Telegram</h2>
+                  <p>
+                    <strong>Receba atualizações</strong> sobre os lançamentos
+                    das varinhas mágicas <strong>3 horas antes</strong> do
+                    público geral.
                   </p>
                 </div>
               </div>
@@ -378,11 +467,14 @@
           </div>
         </div>
       </div>
+
+      <hr class="divider margin_top_40" />
+
       <div class="session">
         <header>Arte Digital</header>
         <div class="card-list">
           <div class="card">
-            <!-- <div class="sale">Super Desconto</div> -->
+            <div class="sale">Super Desconto</div>
             <a
               href="https://www.udemy.com/course/procreate-iniciantes/?referralCode=3F03E409260C54EDD533"
               title="Aprenda Procreate em 40 aulas 100% em português"
@@ -391,54 +483,31 @@
                 <img
                   alt="Thumbnail para Procreate para Iniciantes"
                   srcset="
-                    images/brushes/fundamentos-do-procreate@2x.webp 2x,
-                    images/brushes/fundamentos-do-procreate@3x.webp 3x
+                    images/icones/fundamentos-do-procreate@2x.webp 2x,
+                    images/icones/fundamentos-do-procreate@3x.webp 3x
                   "
-                  src="images/brushes/fundamentos-do-procreate.webp"
+                  src="images/icones/fundamentos-do-procreate.webp"
                   loading="lazy"
                 />
                 <div class="content">
                   <h2>Aprenda Procreate</h2>
-                  <p>Mais de 40 aulas 100% em Português →</p>
+                  <p>Mais de 40 aulas 100% em Português</p>
                 </div>
               </div>
             </a>
           </div>
 
-          <div class="card">
-            <!-- <div class="sale">Super Desconto</div> -->
-            <a
-              href="https://www.desenhoeilustracao.com.br/pinceis-da-semana/"
-              title="Baixe pincéis para todos os principais apps de deenho e pintura"
-            >
-              <div class="wrapper">
-                <img
-                  alt="Pincéis da semana"
-                  srcset="
-                    images/brushes/pinceis-da-semana@2x.webp 2x,
-                    images/brushes/pinceis-da-semana@3x.webp 3x
-                  "
-                  src="images/brushes/pinceis-da-semana.webp"
-                  loading="lazy"
-                />
-                <div class="content">
-                  <h2>Pincéis da Semana</h2>
-                  <p>Para os principais apps de desenho →</p>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="card">
-            <a
-              class="button"
-              href="https://kaiomedau.gumroad.com"
-              title="Todos os meus Pincéis gratuitos"
-              >Pincéis digitais e outros recursos →</a
-            >
-          </div>
+          <a
+            href="https://galhoquebrado.lojavirtualnuvem.com.br"
+            href="https://kaiomedau.gumroad.com"
+            title="Todos os meus Pincéis gratuitos"
+          >
+            <div class="button tertiary">🖌️ Pincéis para o Procreate →</div>
+          </a>
         </div>
       </div>
+
+      <!-- <hr class="divider margin_top_60" /> -->
 
       <div class="session socials">
         <header>Minhas Redes Sociais</header>
