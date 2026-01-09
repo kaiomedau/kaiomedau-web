@@ -1,29 +1,19 @@
 <!DOCTYPE html>
-<html itemscope="" itemtype="http://schema.org/WebPage" lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta content="origin" name="referrer" />
-    <meta content="/images/the-craftsman-256.png" itemprop="image" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="p:domain_verify" content="262c683d232f152c0ef9ce361d063148" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="preload"
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
-    <noscript
-      ><link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap"
-    /></noscript>
-    <title>Kaio Medau</title>
-    <meta
+    <title>Kaio Medau - Galho Quebrado</title>
+     <meta
       name="description"
-      content="Dicas, tutoriais e recursos de procreate, desenho e ilustração"
+      content="Acesse todos os links e projetos de Kaio Medau em um só lugar. Entre no universo do Galho Quebrado, visite a loja, cursos, redes sociais e confira meu Media Kit."
     />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+
     <!-- Google tag (gtag.js) -->
     <script
       async
@@ -37,525 +27,296 @@
       gtag("js", new Date());
       gtag("config", "G-7BJPHZVT6F");
     </script>
-    <style type="text/css">
-      html,
-      body {
-        background: #e4d3b6;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        font-family: "Montserrat", sans-serif;
-        font-family: "Roboto", sans-serif;
-        color: #fff;
-      }
 
-      a,
-      a:visited,
-      a:hover,
-      a:active {
-        color: inherit;
-        text-decoration: none;
-      }
+    <style>
+        :root {
+            --bg-color: #1A2622;
+            --card-bg: #24332E;
+            --text-main: #F2F2F2;
+            --text-muted: #A8B8B0;
+            --accent-orange: #E88D67;
+            --accent-green: #6B8E78;
+        }
 
-      .vertical,
-      .featured,
-      .content-wrap {
-        flex-direction: column;
-      }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
 
-      .content-wrap {
-        display: flex;
-        align-items: center;
-        padding-bottom: 40px;
-      }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding-bottom: 40px;
+        }
 
-      header {
-        display: flex;
-        height: 40px;
-        justify-content: flex-end;
-        flex-direction: column;
-        font-size: 24px;
-      }
+        .container {
+            max-width: 480px;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
-      .session header {
-        margin-top: 24px;
-        font-weight: 700;
-        color: #7d5036;
-      }
+        /* --- HEADER --- */
+        header { text-align: center; margin-bottom: 28px; }
 
-      .featured {
-        display: flex;
-        align-items: center;
-      }
+        .brand-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 2.5rem;
+            line-height: 1;
+            color: var(--text-main);
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+        
+        .brand-highlight { color: var(--accent-orange); }
 
-      .featured img {
-        width: 100%;
-      }
+        .tagline {
+            font-size: 1rem;
+            color: var(--accent-green);
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
 
-      .session {
-        display: flex;
-        margin: 0 10px;
-        max-width: 375px;
-        flex-grow: 1;
-        flex-direction: column;
-        row-gap: 20px;
-        width: 95%;
-      }
+        /* --- REDES SOCIAIS --- */
+        .social-row {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 40px;
+        }
 
-      .featured .session {
-        justify-content: flex-end;
-        row-gap: 0;
-        margin-top: 16px;
-      }
+        .social-link {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 20px;
+            transition: 0.3s;
+        }
 
-      .card {
-        display: flex;
-        color: #5c5c5c;
-        border-radius: 12px;
-        background: linear-gradient(
-          180deg,
-          rgba(255, 255, 255, 0.95) 0%,
-          #fff 100%
-        );
-        box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.1);
-        position: relative;
-        width: 100%;
-      }
+        .social-link:hover {
+            background: var(--accent-orange);
+            color: white;
+        }
 
-      .card .wrapper {
-        margin: 14px;
-        flex: 1;
-      }
+        /* --- HERO BANNER (NOVO) --- */
+        .hero-banner {
+            display: flex;
+            align-items: flex-end; /* Texto na parte inferior */
+            width: 100%;
+            height: 250px; /* Altura do destaque */
+            
+            /* CONFIGURAÇÃO DA IMAGEM DE FUNDO */
+            /* Substitua 'url(...)' pelo link da sua imagem de destaque */
+            background-image: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.1)), url('./images/hero/varinha-magica-sao-paulo.webp');
+            background-size: cover;
+            background-position: center;
+            
+            border-radius: 16px;
+            text-decoration: none;
+            padding: 20px;
+            margin-bottom: 30px;
+            border: 2px solid var(--accent-orange); /* Borda laranja para chamar atenção */
+            position: relative;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+        }
 
-      .card h2 {
-        margin: 0;
-        color: #242424;
-      }
-      .card p {
-        margin: 6px 0 24px;
-      }
+        .hero-banner:hover {
+            transform: scale(1.02);
+        }
 
-      .socials .card {
-        justify-content: center;
-      }
+        .hero-content {
+            z-index: 2;
+            width: 100%;
+        }
 
-      a.button,
-      .button {
-        border: none;
-        /* padding: 14px 40px 14px 20px; */
-        padding: 14px 20px;
-        border-radius: 8px;
-        background: #7d5036;
-        /* linear-gradient(273deg, #ab39ef -0.06%, #02c6de 101.77%); */
-        box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
+        .hero-tag {
+            background-color: var(--accent-orange);
+            color: #fff;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 8px;
+        }
 
-        color: #fff;
-        font-size: 16px;
-        font-weight: 700;
-        flex-grow: 1;
-        text-decoration: none;
+        .hero-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 900;
+            color: #fff;
+            margin: 0 0 5px 0;
+            line-height: 1.1;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+        }
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+        .hero-subtitle {
+            color: #ddd;
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
 
-      a.button.secondary,
-      .button.secondary,
-      .button.tertiary {
-        color: #7d5036;
-        border: solid 2px #7d5036;
-        background: none;
-        box-shadow: none;
-        padding-top: 10px;
-        padding-bottom: 10px;
-      }
+        /* --- CARTÕES DE LINKS --- */
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-muted);
+            margin: 32px 0 15px 0;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+        }
 
-      .button.tertiary {
-        padding-top: 2px;
-        padding-bottom: 4px;
-      }
+        .link-card {
+            display: block;
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--text-main);
+            margin-bottom: 15px;
+            border: 1px solid transparent;
+            transition: transform 0.2s, border-color 0.2s;
+            position: relative;
+        }
 
-      ul,
-      li {
-        display: flex;
-        flex-direction: row;
-        margin: 0;
-        padding: 0;
-        flex-grow: 1;
-      }
+        .link-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--accent-orange);
+        }
 
-      .price {
-        color: #20c056;
-        font-size: 32px;
-        font-weight: 700;
-      }
+        .link-card h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
 
-      .price .old {
-        color: #505050;
-        font-size: 12px;
-        text-decoration: line-through;
-        text-decoration-line: strikethrough;
-      }
+        .link-card p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin: 0;
+        }
 
-      .c70 {
-        width: 70%;
-      }
+        .card-highlight { border-left: 4px solid var(--accent-orange); }
 
-      .card-row {
-        display: grid;
-        grid-auto-flow: column;
-        grid-gap: 10px;
-        grid-auto-columns: 1fr;
-      }
+        .tag-new {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--accent-green);
+            color: #fff;
+            font-size: 0.6rem;
+            padding: 2px 8px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
 
-      .card-list {
-        display: flex;
-        flex-direction: column;
-        row-gap: 10px;
-        width: 100%;
-      }
-
-      .card-list a {
-        flex-grow: 1;
-      }
-
-      .card-list .card .wrapper {
-        display: flex;
-        column-gap: 10px;
-      }
-
-      .card-list .card p {
-        font-size: 14px;
-        color: #797979;
-        margin-bottom: 0;
-      }
-
-      .card-list .card img {
-        width: 52px;
-        height: 52px;
-        border-radius: 8px;
-      }
-
-      .margin_top_10 {
-        margin-top: 10px;
-      }
-
-      .margin_top_20 {
-        margin-top: 20px;
-      }
-
-      .margin_top_30 {
-        margin-top: 30px;
-      }
-
-      .margin_top_40 {
-        margin-top: 40px;
-      }
-
-      .margin_top_50 {
-        margin-top: 50px;
-      }
-
-      .margin_top_60 {
-        margin-top: 60px;
-      }
-
-      .round_corner {
-        border-radius: 8px;
-      }
-
-      .sale {
-        position: absolute;
-        right: 0;
-        background: #a31400;
-        padding: 4px 12px;
-        font-size: 14px;
-        font-weight: 800;
-        color: #fff;
-        border-radius: 0 8px;
-      }
-
-      .featured h2 {
-        margin-top: 12px;
-      }
-
-      .head-logo {
-        background: none;
-        box-shadow: none;
-      }
-
-      .head-logo img {
-        max-width: 140px;
-        margin: 14px auto;
-      }
-
-      small.warning {
-        border: solid 2px #ffce00;
-        background-color: #fff6cf;
-        margin: 4px auto 0;
-        border-radius: 8px;
-        padding: 4px 12px;
-      }
-
-      .author {
-        align-self: flex-end;
-        margin-bottom: 17px;
-        color: #7d5036;
-        font-size: 15px;
-      }
-
-      hr.divider {
-        width: 100%;
-        border: none;
-        height: 1px;
-        background: #d3bd99;
-      }
-
-      .product {
-        width: 180px;
-        text-align: center;
-      }
-
-      .product img {
-        border-radius: 8px;
-      }
-
-      .product-name {
-        color: #7d5036;
-        margin: 4px 0 16px;
-      }
+        /* --- FOOTER --- */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 0.8rem;
+            color: #555;
+        }
     </style>
-  </head>
-  <body>
-    <div class="featured">
-      <div class="session">
-        <div class="card-row">
-          <div class="card head-logo">
-            <img
-              alt="Galho Quebrado. Itens mágicos com aura tupiniquim"
-              src="images/logo-galho-quebrado.svg"
-            />
-          </div>
-          <div class="author">por <strong>Kaio Medau</strong></div>
-        </div>
-      </div>
-      <hr class="divider" />
-      <div class="featured">
-        <div class="session">
-          <div class="card-row">
-            <div class="product">
-              <a
-                href="https://galhoquebrado.lojavirtualnuvem.com.br/produtos/sushino-o-sushi-dinossauro-mais-fofinho-do-mundo/"
-                title="Bonequinho do Sushino no Galho Quebrado"
-              >
-                <img
-                  alt="Bonequinho do Sushino no Galho Quebrado"
-                  srcset="
-                    images/produtos/sushino@2x.webp 2x,
-                    images/produtos/sushino@3x.webp 3x
-                  "
-                  src="images/produtos/sushino.webp"
-                  loading="lazy"
-                />
-                <div class="product-name">Sushino</div>
-              </a>
-            </div>
+</head>
+<body>
 
-            <div class="product">
-              <a
-                href="https://galhoquebrado.lojavirtualnuvem.com.br/varinha-magica/"
-                title="Varinhas Mágicas no Galho Quebrado"
-              >
-                <img
-                  alt="Varinhas Mágicas no Galho Quebrado"
-                  srcset="
-                    images/produtos/varinha-magica-espirito-santo-kit@2x.webp 2x,
-                    images/produtos/varinha-magica-espirito-santo-kit@3x.webp 3x
-                  "
-                  src="images/produtos/varinha-magica-espirito-santo-kit.webp"
-                  loading="lazy"
-                />
-                <div class="product-name">Varinhas Mágicas</div>
-              </a>
+    <div class="container">
+        <header>
+            <div class="brand-title">Kaio <span class="brand-highlight">Medau</span></div>
+            <div class="tagline">Galho Quebrado</div>
+            <!-- <p style="font-size: 0.9rem; color: #ccc;">Itens mágicos com aura tupiniquim.</p> -->
+        </header>
+
+        <!-- <a href="#" class="hero-banner" style="background-image: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.1)), url('https://via.placeholder.com/600x400/E88D67/ffffff?text=Nova+Coleção');">
+            <div class="hero-content">
+                <span class="hero-tag">Lançamento</span>
+                <h2 class="hero-title">Coleção Folclore</h2>
+                <p class="hero-subtitle">Novas varinhas disponíveis ✨</p>
             </div>
-          </div>
-          <a href="https://galhoquebrado.lojavirtualnuvem.com.br">
-            <div class="button">🛍️ Conheça a loja →</div>
-          </a>
+        </a> -->
+
+        <a href="https://galhoquebrado.lojavirtualnuvem.com.br/varinha-magica/varinhas-brasileiras/?utm_source=agregador&utm_medium=hero-banner&utm_campaign=Loja+Galho+Quebrado" class="hero-banner" style="background-image: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.1)), url('./images/hero/varinha-magica-sao-paulo.webp');">
+            <div class="hero-content">
+                <!-- <span class="hero-tag">Lançamento</span> -->
+                <h2 class="hero-title">Varinhas Mágicas</h2>
+                <p class="hero-subtitle">Artefatos exclusivos do Galho Quebrado! ✨</p>
+            </div>
+        </a>
+
+        <div class="section-title">Loja Oficial</div>
+
+        <a href="https://galhoquebrado.lojavirtualnuvem.com.br?utm_source=agregador&utm_medium=btn_loja&utm_campaign=Loja+Galho+Quebrado" class="link-card" style="background-color: var(--accent-orange); color: white;">
+            <h3>🛍️ Ir para a Loja</h3>
+            <p style="color: rgba(255,255,255,0.9);">Ver todos os produtos</p>
+        </a>
+
+        <!-- <a href="https://galhoquebrado.lojavirtualnuvem.com.br/varinha-magica/varinhas-brasileiras/?utm_source=agregador&utm_medium=btn_varinhas&utm_campaign=Loja+Galho+Quebrado" class="link-card card-highlight">
+            <span class="tag-new">Popular</span>
+            <h3>Varinhas Mágicas</h3>
+            <p>Artefatos exclusivos do Galho Quebrado</p>
+        </a> -->
+
+         <div class="section-title">Parcerias</div>
+
+        <a href="media-kit/" class="link-card card-highlight">
+            <h3>Media Kit</h3>
+            <p>Vamos trabalhar juntos!</p>
+        </a>
+
+        <div class="section-title">Comunidade</div>
+
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe916JKNl2aU78i3txz8DA4HDaQjEIfzP6fakE2doqjmFDVGA/viewform?usp=header" class="link-card">
+            <span class="tag-new">Formulário de Inscrição</span>
+            <h3>🎨 Meu Bonequinho</h3>
+            <p>Increva-se para a chance de ganhar</p>
+        </a>
+
+        <a href="https://t.me/+SsGEGhKLOJ9kMWUx" class="link-card">
+            <h3>Telegram</h3>
+            <p>Receba atualizações em primeira mão</p>
+        </a>
+
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSedSsyYyuNTW7HZEd2dIIIfuZIdn8Fs03BG6nOv_J2ZjaY4dQ/viewform?usp=sf_link" class="link-card">
+            <h3>Newsletter</h3>
+            <p>Seja avisado durante os lançamentos</p>
+        </a>
+        
+        <a href="http://patreon.com/kaiomedau" class="link-card">
+            <h3>Patreon</h3>
+            <p>Bastidores e conteúdos exclusivos</p>
+        </a>
+
+        <div class="section-title">Arte Digital</div>
+
+        <a href="https://www.udemy.com/course/procreate-iniciantes/?referralCode=3F03E409260C54EDD533" class="link-card card-highlight">
+            <span class="tag-new">Super Desconto</span>
+            <h3>Curso de Procreate</h3>
+            <p>Mais de 40 aulas 100% em Português</p>
+        </a>
+
+        <a href="https://www.desenhoeilustracao.com.br/pinceis-da-semana/?utm_source=agregador&utm_medium=btn_pinceis&utm_campaign=Pinc%C3%A9is+Digitais" class="link-card">
+            <h3>🖌️ Pincéis Digitais</h3>
+            <p>Ferramentas para artistas digitais</p>
+        </a>
+
+        <div class="social-row">
+            <a href="https://instagram.com/kaiomedau" class="social-link">Instagram</a>
+            <a href="https://www.youtube.com/@kaiomedau" class="social-link">YouTube</a>
+            <a href="https://tiktok.com/@kaiomedau" class="social-link">TikTok</a>
         </div>
-      </div>
+
+        <footer>
+            © 2026 Galho Quebrado. Todos os direitos reservados.
+        </footer>
     </div>
 
-    <hr class="divider margin_top_40" />
-
-    <div class="content-wrap margin_top_20">
-      <div class="session">
-        <div class="card-list">
-          
-          <div class="card">
-            <div class="sale">Formulário de Inscrição</div>
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSe916JKNl2aU78i3txz8DA4HDaQjEIfzP6fakE2doqjmFDVGA/viewform?usp=header"
-              title="Receba atualizações em tempo real sobre os lançamentos das varinhas mágicas e bonequinhos no telegram"
-            >
-              <div class="wrapper">
-                <div class="content">
-                  <h2>Meu Bonequinho</h2>
-                  <p>
-                    <strong>Increva-se aqui</strong> para a chance de participar do quadro "Meu Bonequinho" e ter um desenho transformado em um bonequinho exclusivo.
-                  </p>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      
-
-      <div class="session">
-        <header>Atualizações e Lançamentos</header>
-        <div class="card-list">
-          <div class="card">
-            <a
-              href="https://t.me/+SsGEGhKLOJ9kMWUx"
-              title="Receba atualizações em tempo real sobre os lançamentos das varinhas mágicas e bonequinhos no telegram"
-            >
-              <div class="wrapper">
-                <div class="content">
-                  <h2>Telegram</h2>
-                  <p>
-                    <strong>Receba atualizações</strong> sobre os lançamentos
-                    das varinhas mágicas <strong>antes</strong> do
-                    público geral.
-                  </p>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="card">
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSedSsyYyuNTW7HZEd2dIIIfuZIdn8Fs03BG6nOv_J2ZjaY4dQ/viewform?usp=sf_link"
-              title="Receba atualizações em tempo real sobre os lançamentos das varinhas mágicas e bonequinhos no telegram"
-            >
-              <div class="wrapper">
-                <div class="content">
-                  <h2>Lista de Espera <small>(Newsletter)</small></h2>
-                  <p>
-                    <strong>Receba atualizações</strong> sobre os lançamentos
-                    das varinhas mágicas direto <strong>no seu e-mail</strong>.
-                  </p>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          
-
-          <div class="card">
-            <!-- <div class="sale">Super Desconto</div> -->
-            <a
-              href="http://patreon.com/kaiomedau"
-              title="Venha conhecer minha comunidade no Patreon"
-            >
-              <div class="wrapper">
-                <div class="content">
-                  <h2>Patreon</h2>
-                  <p>
-                    Confira conteúdos exclusivos e bastidores do universo mágico
-                    do Galho Quebrado.
-                  </p>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <hr class="divider margin_top_40" />
-
-      <div class="session">
-        <header>Arte Digital</header>
-        <div class="card-list">
-          <div class="card">
-            <div class="sale">Super Desconto</div>
-            <a
-              href="https://www.udemy.com/course/procreate-iniciantes/?referralCode=3F03E409260C54EDD533"
-              title="Aprenda Procreate em 40 aulas 100% em português"
-            >
-              <div class="wrapper">
-                <img
-                  alt="Thumbnail para Procreate para Iniciantes"
-                  srcset="
-                    images/icones/fundamentos-do-procreate@2x.webp 2x,
-                    images/icones/fundamentos-do-procreate@3x.webp 3x
-                  "
-                  src="images/icones/fundamentos-do-procreate.webp"
-                  loading="lazy"
-                />
-                <div class="content">
-                  <h2>Aprenda Procreate</h2>
-                  <p>Mais de 40 aulas 100% em Português</p>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <a
-            href="https://kaiomedau.gumroad.com"
-            title="Todos os meus Pincéis gratuitos"
-          >
-            <div class="button tertiary">🖌️ Pincéis para o Procreate →</div>
-          </a>
-        </div>
-      </div>
-
-      <hr class="divider margin_top_40" />
-
-      <div class="session socials">
-        <header>Mais Sobre Mim</header>
-        <div class="card">
-            <a
-              class="button"
-              href="media-kit/"
-              title="Media Kit para parcerias e patrocínios"
-            >
-              Media Kit (Parcerias)
-            </a>
-          </div>
-        <div class="card-row">
-          
-            <a
-              class="button secondary"
-              href="https://instagram.com/kaiomedau"
-              title="Kaio Medau no Instagram"
-            >
-              Instagram
-            </a>
-          
-
-          
-            <a
-              class="button secondary"
-              href="https://www.youtube.com/kaiomedau"
-              title="Kaio Medau no YouTube"
-            >
-              YouTube
-            </a>
-          
-          
-            <a
-              class="button secondary"
-              href="https://tiktok.com/@kaiomedau"
-              title="Kaio Medau no TikTok"
-            >
-              TikTok
-            </a>
-          
-        </div>
-      </div>
-    </div>
-  </body>
+</body>
 </html>
