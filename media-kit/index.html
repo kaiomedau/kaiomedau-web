@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Media Kit - Kaio Medau</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@700;900&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Google tag (gtag.js) -->
     <script
@@ -24,376 +27,477 @@
     </script>
 
     <style>
-        :root {
-            /* Paleta de Cores inspirada no PDF */
-            --bg-color: #1A2622;
-            --card-bg: #24332E;
-            --text-main: #F2F2F2;
-            --text-muted: #A8B8B0;
-            --accent-orange: #E88D67;
-            --accent-green: #6B8E78;
-        }
+      :root {
+        /* Paleta de Cores inspirada no PDF */
+        --bg-color: #1a2622;
+        --card-bg: #24332e;
+        --text-main: #f2f2f2;
+        --text-muted: #a8b8b0;
+        --accent-orange: #e88d67;
+        --accent-green: #6b8e78;
+      }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.6;
-            padding-bottom: 40px;
-        }
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-main);
+        line-height: 1.6;
+        padding-bottom: 40px;
+      }
 
-        .container {
-            max-width: 480px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+      .container {
+        max-width: 480px;
+        margin: 0 auto;
+        padding: 20px;
+      }
 
-        /* --- HEADER & PERFIL --- */
-        header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
+      /* --- HEADER & PERFIL --- */
+      header {
+        text-align: center;
+        margin-bottom: 30px;
+      }
 
-        .profile-img-placeholder {
-            width: 150px;
-            height: 150px;
-            background-color: var(--card-bg);
-            border: 2px solid var(--accent-orange);
-            border-radius: 50%;
-            margin: 0 auto 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            overflow: hidden;
-        }
-        
-        /* Se você tiver a imagem, descomente a tag img no HTML */
-        .profile-img-placeholder img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+      .profile-img-placeholder {
+        width: 150px;
+        height: 150px;
+        background-color: var(--card-bg);
+        border: 2px solid var(--accent-orange);
+        border-radius: 50%;
+        margin: 0 auto 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.8rem;
+        color: var(--text-muted);
+        overflow: hidden;
+      }
 
-        h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 900;
-            font-size: 3.5rem;
-            line-height: 0.9;
-            color: var(--accent-green);
-            opacity: 0.8;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            letter-spacing: -2px;
-        }
+      /* Se você tiver a imagem, descomente a tag img no HTML */
+      .profile-img-placeholder img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
 
-        .subtitle {
-            font-size: 1.2rem;
-            font-weight: 600;
-        }
+      h1 {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 900;
+        font-size: 3.5rem;
+        line-height: 0.9;
+        color: var(--accent-green);
+        opacity: 0.8;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        letter-spacing: -2px;
+      }
 
-        /* --- NOVOS LINKS SOCIAIS --- */
-        .social-row {
-            display: flex;
-            justify-content: center;
-            gap: 20px; /* Espaço entre os links */
-            margin-bottom: 10px;
-            margin-top: 32px;
-        }
+      .subtitle {
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
 
-        .social-link {
-            color: var(--accent-orange);
-            font-weight: 600;
-            text-decoration: none;
-            font-size: 0.9rem;
-            padding: 5px 10px;
-            border: 1px solid rgba(232, 141, 103, 0.3); /* Borda sutil */
-            border-radius: 20px;
-            transition: all 0.2s ease;
-        }
+      /* --- NOVOS LINKS SOCIAIS --- */
+      .social-row {
+        display: flex;
+        justify-content: center;
+        gap: 20px; /* Espaço entre os links */
+        margin-bottom: 10px;
+        margin-top: 32px;
+      }
 
-        .social-link:hover {
-            background-color: var(--accent-orange);
-            color: var(--bg-color);
-        }
+      .social-link {
+        color: var(--accent-orange);
+        font-weight: 600;
+        text-decoration: none;
+        font-size: 0.9rem;
+        padding: 5px 10px;
+        border: 1px solid rgba(232, 141, 103, 0.3); /* Borda sutil */
+        border-radius: 20px;
+        transition: all 0.2s ease;
+      }
 
-        .email {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            text-decoration: none;
-            display: block;
-            margin-bottom: 15px;
-        }
+      .social-link:hover {
+        background-color: var(--accent-orange);
+        color: var(--bg-color);
+      }
 
-        /* --- CONTEÚDO --- */
-        section {
-            margin-bottom: 40px;
-        }
+      .email {
+        font-size: 0.9rem;
+        color: var(--text-muted);
+        text-decoration: none;
+        display: block;
+        margin-bottom: 15px;
+      }
 
-        h2 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.5rem;
-            color: var(--text-main);
-            border-left: 4px solid var(--accent-orange);
-            padding-left: 15px;
-            margin-bottom: 20px;
-        }
+      /* --- CONTEÚDO --- */
+      section {
+        margin-bottom: 40px;
+      }
 
-        p {
-            margin-bottom: 15px;
-            font-size: 1rem;
-            color: #d1d1d1;
-        }
+      h2 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.5rem;
+        color: var(--text-main);
+        border-left: 4px solid var(--accent-orange);
+        padding-left: 15px;
+        margin-bottom: 20px;
+      }
 
-        /* --- STATS --- */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin-bottom: 20px;
-        }
+      p {
+        margin-bottom: 15px;
+        font-size: 1rem;
+        color: #d1d1d1;
+      }
 
-        .stat-card {
-            background-color: var(--card-bg);
-            padding: 15px;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-        }
+      /* --- STATS --- */
+      .stats-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        margin-bottom: 20px;
+      }
 
-        .stat-card.full-width {
-            grid-column: span 2;
-        }
+      .stat-card {
+        background-color: var(--card-bg);
+        padding: 15px;
+        border-radius: 12px;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      }
 
-        .stat-number {
-            display: block;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 900;
-            font-size: 2rem;
-            color: var(--text-main);
-        }
+      .stat-card.full-width {
+        grid-column: span 2;
+      }
 
-        .stat-label {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
+      .stat-number {
+        display: block;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 900;
+        font-size: 2rem;
+        color: var(--text-main);
+      }
 
-        .highlight {
-            color: var(--accent-orange);
-        }
+      .stat-label {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
 
-        .super {
-            font-size: 2.8rem;
-        }
+      .highlight {
+        color: var(--accent-orange);
+      }
 
-        /* --- ENGAJAMENTO --- */
-        .engagement-wrap {
-            background: var(--card-bg);
-            padding: 15px;
-            border-radius: 12px;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-        .engagement-row {
-            display: inline-flex;;
-            justify-content: center;
-            gap: 16px;
-        }
-        
-        .eng-item { text-align: center; }
-        .eng-val { font-weight: bold; font-size: 1.2rem; color: var(--accent-orange); }
-        .eng-label { font-size: 0.7rem; color: var(--text-muted); }
+      .super {
+        font-size: 2.8rem;
+      }
 
-        /* --- DEMOGRAFIA --- */
-        .demographics {
-            background: var(--card-bg);
-            padding: 20px;
-            border-radius: 12px;
-            margin-top: 20px;
-        }
+      /* --- ENGAJAMENTO --- */
+      .engagement-wrap {
+        background: var(--card-bg);
+        padding: 15px;
+        border-radius: 12px;
+        margin-bottom: 30px;
+        text-align: center;
+      }
+      .engagement-row {
+        display: inline-flex;
+        justify-content: center;
+        gap: 16px;
+      }
 
-        /* .demographics.stat-label{text-align: center;} */
+      .eng-item {
+        text-align: center;
+      }
+      .eng-val {
+        font-weight: bold;
+        font-size: 1.2rem;
+        color: var(--accent-orange);
+      }
+      .eng-label {
+        font-size: 0.7rem;
+        color: var(--text-muted);
+      }
 
-        .demo-bar {
-            display: flex;
-            height: 10px;
-            border-radius: 5px;
-            overflow: hidden;
-            margin: 10px 0;
-        }
-        
-        .male { background: var(--text-muted); width: 64%; }
-        .female { background: var(--accent-orange); width: 36%; }
+      /* --- DEMOGRAFIA --- */
+      .demographics {
+        background: var(--card-bg);
+        padding: 20px;
+        border-radius: 12px;
+        margin-top: 20px;
+      }
 
-        /* --- RODAPÉ --- */
-        .note {
-            font-size: 0.75rem;
-            color: var(--text-muted);
-            text-align: center;
-            margin-top: 30px;
-            border-top: 1px solid #333;
-            padding-top: 20px;
-        }
-        
-        .note a { color: var(--accent-orange); text-decoration: none; }
+      /* .demographics.stat-label{text-align: center;} */
 
-        .cta-button {
-            display: block;
-            width: 100%;
-            padding: 15px;
-            background-color: var(--accent-orange);
-            color: #fff;
-            text-align: center;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 8px;
-            margin-top: 20px;
-            text-transform: uppercase;
-        }
+      .demo-bar {
+        display: flex;
+        height: 10px;
+        border-radius: 5px;
+        overflow: hidden;
+        margin: 10px 0;
+      }
+
+      .male {
+        background: var(--text-muted);
+        width: 64%;
+      }
+      .female {
+        background: var(--accent-orange);
+        width: 36%;
+      }
+
+      /* --- RODAPÉ --- */
+      .note {
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        text-align: center;
+        margin-top: 30px;
+        border-top: 1px solid #333;
+        padding-top: 20px;
+      }
+
+      .note a {
+        color: var(--accent-orange);
+        text-decoration: none;
+      }
+
+      .cta-button {
+        display: block;
+        width: 100%;
+        padding: 15px;
+        background-color: var(--accent-orange);
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 8px;
+        margin-top: 20px;
+        text-transform: uppercase;
+      }
+
+      .back-link {
+        display: block;
+        text-align: center;
+        margin-top: 40px;
+        color: var(--text-muted);
+        text-decoration: none;
+        font-size: 0.8rem;
+      }
+
+      .back-link:hover {
+        color: var(--accent-orange);
+      }
     </style>
-</head>
-<body>
-
+  </head>
+  <body>
     <div class="container">
-        <header>
-            <div class="profile-img-placeholder">
-                
-                <img
-                  alt="Imagem de perfil do Kaio Medau - Media Kit"
-                  srcset="
-                    kaio-medau-media_kit@x2.webp 2x,
-                    kaio-medau-media_kit@x3.webp 3x
-                  "
-                  src="kaio-medau-media_kit.webp"
-                  loading="lazy"
-                />
-            
+      <header>
+        <div class="profile-img-placeholder">
+          <img
+            alt="Imagem de perfil do Kaio Medau - Media Kit"
+            srcset="
+              kaio-medau-media_kit@x2.webp 2x,
+              kaio-medau-media_kit@x3.webp 3x
+            "
+            src="kaio-medau-media_kit.webp"
+            loading="lazy"
+          />
+        </div>
+
+        <h1>Media<br />Kit</h1>
+        <div class="subtitle">Kaio Medau</div>
+
+        <div class="social-row">
+          <a
+            href="https://instagram.com/KaioMedau"
+            class="social-link"
+            target="_blank"
+            >Instagram</a
+          >
+          <a
+            href="https://tiktok.com/@KaioMedau"
+            class="social-link"
+            target="_blank"
+            >TikTok</a
+          >
+          <a
+            href="https://youtube.com/@KaioMedau"
+            class="social-link"
+            target="_blank"
+            >YouTube</a
+          >
+        </div>
+      </header>
+
+      <section id="sobre">
+        <h2>Sobre mim</h2>
+        <p>
+          Sou Kaio Medau, designer, ilustrador e
+          <strong class="highlight">criador de conteúdo</strong>, com mais de 15
+          anos de experiência atuando entre design de produto, gestão de
+          equipes, UX/UI, ilustração digital e educação criativa.
+        </p>
+        <p>
+          Trabalho de forma multidisciplinar, unindo estética, narrativa e
+          funcionalidade, sempre com um olhar autoral para processos criativos e
+          construção de mundos.
+        </p>
+      </section>
+
+      <section id="dados">
+        <h2>Números</h2>
+        <div class="engagement-wrap">
+          <div class="engagement-row">
+            <div class="eng-item">
+              <div class="stat-number highlight super">20%</div>
+              <div class="eng-label">Instagram</div>
             </div>
-            
-            <h1>Media<br>Kit</h1>
-            <div class="subtitle">Kaio Medau</div>
-            
-            <div class="social-row">
-                <a href="https://instagram.com/KaioMedau" class="social-link" target="_blank">Instagram</a>
-                <a href="https://tiktok.com/@KaioMedau" class="social-link" target="_blank">TikTok</a>
-                <a href="https://youtube.com/@KaioMedau" class="social-link" target="_blank">YouTube</a>
+            <div class="eng-item">
+              <div class="stat-number super">12%</div>
+              <div class="eng-label">Youtube</div>
             </div>
-        </header>
-
-        <section id="sobre">
-            <h2>Sobre mim</h2>
-            <p>Sou Kaio Medau, designer, ilustrador e <strong class="highlight">criador de conteúdo</strong>, com mais de 15 anos de experiência atuando entre design de produto, gestão de equipes, UX/UI, ilustração digital e educação criativa.</p>
-            <p>Trabalho de forma multidisciplinar, unindo estética, narrativa e funcionalidade, sempre com um olhar autoral para processos criativos e construção de mundos.</p>
-        </section>
-
-        <section id="dados">
-            <h2>Números</h2>
-            <div class="engagement-wrap">
-                <div class="engagement-row">
-                    <div class="eng-item">
-                        <div class="stat-number highlight super">20%</div>
-                        <div class="eng-label">Instagram</div>
-                    </div>
-                    <div class="eng-item">
-                        <div class="stat-number super">12%</div>
-                        <div class="eng-label">Youtube</div>
-                    </div>
-                    <div class="eng-item">
-                        <div class="stat-number super">11%</div>
-                        <div class="eng-label">TikTok</div>
-                    </div>
-                </div>
-
-                <span style="display:flex; margin-top:15px; justify-content: center;" class="stat-label">Taxa Média de Engajamento</span>
+            <div class="eng-item">
+              <div class="stat-number super">11%</div>
+              <div class="eng-label">TikTok</div>
             </div>
+          </div>
 
-            <div class="stats-grid">
-                <div class="stat-card full-width">
-                    <span class="stat-number">965k</span>
-                    <span class="stat-label">Contas Alcançadas</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-number">146k</span>
-                    <span class="stat-label">Seguidores</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-number">+7.4k</span>
-                    <span class="stat-label">Crescimento</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-number">1.9M</span>
-                    <span class="stat-label">Visualizações</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-number">136k</span>
-                    <span class="stat-label">Engajamento</span>
-                </div>
-                
-            </div>
+          <span
+            style="display: flex; margin-top: 15px; justify-content: center"
+            class="stat-label"
+            >Taxa Média de Engajamento</span
+          >
+        </div>
 
-            <div class="demographics">
-                
-                <div class="demo-bar">
-                    <div class="male"></div>
-                    <div class="female"></div>
-                </div>
-                <div style="display:flex; justify-content:space-between; font-size:0.8rem; color:var(--text-muted);">
-                    <span>64% Masc.</span>
-                    <span>36% Fem.</span>
-                </div>
+        <div class="stats-grid">
+          <div class="stat-card full-width">
+            <span class="stat-number">965k</span>
+            <span class="stat-label">Contas Alcançadas</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">146k</span>
+            <span class="stat-label">Seguidores</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">+7.4k</span>
+            <span class="stat-label">Crescimento</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">1.9M</span>
+            <span class="stat-label">Visualizações</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">136k</span>
+            <span class="stat-label">Engajamento</span>
+          </div>
+        </div>
 
-                <div style="margin-top:20px;" class="demo-bar">
-                    <div class="female"></div>
-                    <div class="male"></div>
-                </div>
-                <div style="display:flex; justify-content:space-between; font-size:0.8rem; color:var(--text-muted);">
-                    <span>18% 18-24 anos</span>
-                    <span>63% 25-45 anos</span>
-                </div>
-                
-                <!-- <div style="display:flex; justify-content:space-between; margin-top:5px; font-size:0.8rem">
+        <div class="demographics">
+          <div class="demo-bar">
+            <div class="male"></div>
+            <div class="female"></div>
+          </div>
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              font-size: 0.8rem;
+              color: var(--text-muted);
+            "
+          >
+            <span>64% Masc.</span>
+            <span>36% Fem.</span>
+          </div>
+
+          <div style="margin-top: 20px" class="demo-bar">
+            <div class="female"></div>
+            <div class="male"></div>
+          </div>
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              font-size: 0.8rem;
+              color: var(--text-muted);
+            "
+          >
+            <span>18% 18-24 anos</span>
+            <span>63% 25-45 anos</span>
+          </div>
+
+          <!-- <div style="display:flex; justify-content:space-between; margin-top:5px; font-size:0.8rem">
                     <span>25-45 anos (63%)</span>
                 </div> -->
 
-                <span style="display:flex; margin-top:15px; justify-content: center;" class="stat-label">Público Principal</span>
-            </div>
-        </section>
-
-        <section id="jornada">
-            <h2>O que estou construindo hoje</h2>
-            <p>Atualmente, estou criando um universo autoral - o <strong class="highlight">Galho Quebrado</strong>, onde desenvolvo criaturas fantásticas e artefatos inspirados na fauna, cultura e imaginário brasileiro. Esse universo nasce no digital, por meio de ilustrações e conceitos, e ganha forma no mundo real com a produção de peças físicas.</p>
-            <p>Meu conteúdo acompanha todo esse processo criativo — das ideias iniciais à execução final — com o objetivo de contar histórias, compartilhar técnicas, explorar materiais e criar uma conexão verdadeira com pessoas que gostam de arte, design e universos fantásticos.</p>
-        </section>
-
-        <section id="proximo-passo">
-            <h2>Próximo passo</h2>
-            <p>Meu próximo objetivo é <strong class="highlight">transformar a criação de conteúdo na minha principal atividade profissional</strong>, dedicando mais tempo, estrutura e profundidade aos projetos. Quero me aproximar ainda mais da minha comunidade e expandir para conteúdos de formato longo, com projetos mais ambiciosos, narrativas mais ricas e um nível de produção cada vez maior.</p>
-            <p>Quero me aproximar ainda mais da minha comunidade e expandir para conteúdos de formato longo, com projetos mais ambiciosos.</p>
-        </section>
-
-        <section id="parcerias">
-            <h2>Alguns Formatos de parcerias</h2>
-            <p>✦ Patrocínio de vídeos completos</p>
-            <p>✦ Patrocínio de sessões ou quadros dentro dos vídeos</p>
-            <p>✦ Inserções de produtos (com ou sem menção direta à marca)</p>
-            <p>✦ Criação de peças personalizadas com a documentação completa do processo criativo nas redes sociais, com citação da marca</p>
-        </section>
-
-        <div class="note">
-            Período dos dados: Out - Dez/2025<br>
+          <span
+            style="display: flex; margin-top: 15px; justify-content: center"
+            class="stat-label"
+            >Público Principal</span
+          >
         </div>
-        
-        <a href="mailto:kaio@galhoquebrado.com.br" class="cta-button">Entrar em Contato</a>
-    </div>
+      </section>
 
-</body>
+      <section id="jornada">
+        <h2>O que estou construindo hoje</h2>
+        <p>
+          Atualmente, estou criando um universo autoral - o
+          <strong class="highlight">Galho Quebrado</strong>, onde desenvolvo
+          criaturas fantásticas e artefatos inspirados na fauna, cultura e
+          imaginário brasileiro. Esse universo nasce no digital, por meio de
+          ilustrações e conceitos, e ganha forma no mundo real com a produção de
+          peças físicas.
+        </p>
+        <p>
+          Meu conteúdo acompanha todo esse processo criativo — das ideias
+          iniciais à execução final — com o objetivo de contar histórias,
+          compartilhar técnicas, explorar materiais e criar uma conexão
+          verdadeira com pessoas que gostam de arte, design e universos
+          fantásticos.
+        </p>
+      </section>
+
+      <section id="proximo-passo">
+        <h2>Próximo passo</h2>
+        <p>
+          Meu próximo objetivo é
+          <strong class="highlight"
+            >transformar a criação de conteúdo na minha principal atividade
+            profissional</strong
+          >, dedicando mais tempo, estrutura e profundidade aos projetos. Quero
+          me aproximar ainda mais da minha comunidade e expandir para conteúdos
+          de formato longo, com projetos mais ambiciosos, narrativas mais ricas
+          e um nível de produção cada vez maior.
+        </p>
+        <p>
+          Quero me aproximar ainda mais da minha comunidade e expandir para
+          conteúdos de formato longo, com projetos mais ambiciosos.
+        </p>
+      </section>
+
+      <section id="parcerias">
+        <h2>Alguns Formatos de parcerias</h2>
+        <p>✦ Patrocínio de vídeos completos</p>
+        <p>✦ Patrocínio de sessões ou quadros dentro dos vídeos</p>
+        <p>✦ Inserções de produtos (com ou sem menção direta à marca)</p>
+        <p>
+          ✦ Criação de peças personalizadas com a documentação completa do
+          processo criativo nas redes sociais, com citação da marca
+        </p>
+      </section>
+
+      <div class="note">Período dos dados: Out - Dez/2025<br /></div>
+
+      <a href="mailto:kaio@galhoquebrado.com.br" class="cta-button"
+        >Entrar em Contato</a
+      >
+
+      <a href="/" class="back-link">← Voltar para todos os links</a>
+    </div>
+  </body>
 </html>

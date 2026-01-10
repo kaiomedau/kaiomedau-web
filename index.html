@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="p:domain_verify" content="262c683d232f152c0ef9ce361d063148" />
     <title>Kaio Medau - Galho Quebrado</title>
-     <meta
+    <meta
       name="description"
       content="Acesse todos os links e projetos de Kaio Medau em um só lugar. Entre no universo do Galho Quebrado, visite a loja, cursos, redes sociais e confira meu Media Kit."
     />
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@700;900&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Google tag (gtag.js) -->
     <script
@@ -29,213 +32,230 @@
     </script>
 
     <style>
-        :root {
-            --bg-color: #1A2622;
-            --card-bg: #24332E;
-            --text-main: #F2F2F2;
-            --text-muted: #A8B8B0;
-            --accent-orange: #E88D67;
-            --accent-green: #6B8E78;
-        }
+      :root {
+        --bg-color: #1a2622;
+        --card-bg: #24332e;
+        --text-main: #f2f2f2;
+        --text-muted: #a8b8b0;
+        --accent-orange: #e88d67;
+        --accent-green: #6b8e78;
+      }
 
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.6;
-            padding-bottom: 40px;
-        }
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-main);
+        line-height: 1.6;
+        padding-bottom: 40px;
+      }
 
-        .container {
-            max-width: 480px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+      .container {
+        max-width: 480px;
+        margin: 0 auto;
+        padding: 20px;
+      }
 
-        /* --- HEADER --- */
-        header { text-align: center; margin-bottom: 28px; }
+      /* --- HEADER --- */
+      header {
+        text-align: center;
+        margin-bottom: 28px;
+      }
 
-        .brand-title {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 900;
-            font-size: 2.5rem;
-            line-height: 1;
-            color: var(--text-main);
-            text-transform: uppercase;
-            margin-bottom: 5px;
-        }
-        
-        .brand-highlight { color: var(--accent-orange); }
+      .brand-title {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 900;
+        font-size: 2.5rem;
+        line-height: 1;
+        color: var(--text-main);
+        text-transform: uppercase;
+        margin-bottom: 5px;
+      }
 
-        .tagline {
-            font-size: 1rem;
-            color: var(--accent-green);
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
+      .brand-highlight {
+        color: var(--accent-orange);
+      }
 
-        /* --- REDES SOCIAIS --- */
-        .social-row {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 40px;
-        }
+      .tagline {
+        font-size: 1rem;
+        color: var(--accent-green);
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
 
-        .social-link {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-size: 0.85rem;
-            font-weight: 600;
-            padding: 8px 16px;
-            background: rgba(255,255,255,0.05);
-            border-radius: 20px;
-            transition: 0.3s;
-        }
+      /* --- REDES SOCIAIS --- */
+      .social-row {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 40px;
+      }
 
-        .social-link:hover {
-            background: var(--accent-orange);
-            color: white;
-        }
+      .social-link {
+        color: var(--text-muted);
+        text-decoration: none;
+        font-size: 0.85rem;
+        font-weight: 600;
+        padding: 8px 16px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 20px;
+        transition: 0.3s;
+      }
 
-        /* --- HERO BANNER (NOVO) --- */
-        .hero-banner {
-            display: flex;
-            align-items: flex-end; /* Texto na parte inferior */
-            width: 100%;
-            height: 250px; /* Altura do destaque */
-            
-            /* CONFIGURAÇÃO DA IMAGEM DE FUNDO */
-            /* Substitua 'url(...)' pelo link da sua imagem de destaque */
-            background-image: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.1)), url('./images/hero/varinha-magica-sao-paulo.webp');
-            background-size: cover;
-            background-position: center;
-            
-            border-radius: 16px;
-            text-decoration: none;
-            padding: 20px;
-            margin-bottom: 30px;
-            border: 2px solid var(--accent-orange); /* Borda laranja para chamar atenção */
-            position: relative;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-            transition: transform 0.3s ease;
-        }
+      .social-link:hover {
+        background: var(--accent-orange);
+        color: white;
+      }
 
-        .hero-banner:hover {
-            transform: scale(1.02);
-        }
+      /* --- HERO BANNER (NOVO) --- */
+      .hero-banner {
+        display: flex;
+        align-items: flex-end; /* Texto na parte inferior */
+        width: 100%;
+        height: 250px; /* Altura do destaque */
 
-        .hero-content {
-            z-index: 2;
-            width: 100%;
-        }
+        /* CONFIGURAÇÃO DA IMAGEM DE FUNDO */
+        /* Substitua 'url(...)' pelo link da sua imagem de destaque */
+        background-image: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.9),
+            rgba(0, 0, 0, 0.1)
+          ),
+          url("./images/hero/varinha-magica-sao-paulo.webp");
+        background-size: cover;
+        background-position: center;
 
-        .hero-tag {
-            background-color: var(--accent-orange);
-            color: #fff;
-            padding: 4px 10px;
-            border-radius: 4px;
-            font-size: 0.7rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            display: inline-block;
-            margin-bottom: 8px;
-        }
+        border-radius: 16px;
+        text-decoration: none;
+        padding: 20px;
+        margin-bottom: 30px;
+        border: 2px solid var(--accent-orange); /* Borda laranja para chamar atenção */
+        position: relative;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease;
+      }
 
-        .hero-title {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.6rem;
-            font-weight: 900;
-            color: #fff;
-            margin: 0 0 5px 0;
-            line-height: 1.1;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.8);
-        }
+      .hero-banner:hover {
+        transform: scale(1.02);
+      }
 
-        .hero-subtitle {
-            color: #ddd;
-            font-size: 0.9rem;
-            margin-bottom: 0;
-        }
+      .hero-content {
+        z-index: 2;
+        width: 100%;
+      }
 
-        /* --- CARTÕES DE LINKS --- */
-        .section-title {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--text-muted);
-            margin: 32px 0 15px 0;
-            border-bottom: 1px solid #333;
-            padding-bottom: 10px;
-        }
+      .hero-tag {
+        background-color: var(--accent-orange);
+        color: #fff;
+        padding: 4px 10px;
+        border-radius: 4px;
+        font-size: 0.7rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        display: inline-block;
+        margin-bottom: 8px;
+      }
 
-        .link-card {
-            display: block;
-            background-color: var(--card-bg);
-            padding: 20px;
-            border-radius: 12px;
-            text-decoration: none;
-            color: var(--text-main);
-            margin-bottom: 15px;
-            border: 1px solid transparent;
-            transition: transform 0.2s, border-color 0.2s;
-            position: relative;
-        }
+      .hero-title {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.6rem;
+        font-weight: 900;
+        color: #fff;
+        margin: 0 0 5px 0;
+        line-height: 1.1;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+      }
 
-        .link-card:hover {
-            transform: translateY(-3px);
-            border-color: var(--accent-orange);
-        }
+      .hero-subtitle {
+        color: #ddd;
+        font-size: 0.9rem;
+        margin-bottom: 0;
+      }
 
-        .link-card h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.2rem;
-            margin-bottom: 5px;
-        }
+      /* --- CARTÕES DE LINKS --- */
+      .section-title {
+        font-family: "Montserrat", sans-serif;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: var(--text-muted);
+        margin: 32px 0 15px 0;
+        border-bottom: 1px solid #333;
+        padding-bottom: 10px;
+      }
 
-        .link-card p {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            margin: 0;
-        }
+      .link-card {
+        display: block;
+        background-color: var(--card-bg);
+        padding: 20px;
+        border-radius: 12px;
+        text-decoration: none;
+        color: var(--text-main);
+        margin-bottom: 15px;
+        border: 1px solid transparent;
+        transition: transform 0.2s, border-color 0.2s;
+        position: relative;
+      }
 
-        .card-highlight { border-left: 4px solid var(--accent-orange); }
+      .link-card:hover {
+        transform: translateY(-3px);
+        border-color: var(--accent-orange);
+      }
 
-        .tag-new {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: var(--accent-green);
-            color: #fff;
-            font-size: 0.6rem;
-            padding: 2px 8px;
-            border-radius: 4px;
-            text-transform: uppercase;
-            font-weight: bold;
-        }
+      .link-card h3 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+      }
 
-        /* --- FOOTER --- */
-        footer {
-            text-align: center;
-            margin-top: 50px;
-            font-size: 0.8rem;
-            color: #555;
-        }
+      .link-card p {
+        font-size: 0.9rem;
+        color: var(--text-muted);
+        margin: 0;
+      }
+
+      .card-highlight {
+        border-left: 4px solid var(--accent-orange);
+      }
+
+      .tag-new {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: var(--accent-green);
+        color: #fff;
+        font-size: 0.6rem;
+        padding: 2px 8px;
+        border-radius: 4px;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+
+      /* --- FOOTER --- */
+      footer {
+        text-align: center;
+        margin-top: 50px;
+        font-size: 0.8rem;
+        color: #555;
+      }
     </style>
-</head>
-<body>
-
+  </head>
+  <body>
     <div class="container">
-        <header>
-            <div class="brand-title">Kaio <span class="brand-highlight">Medau</span></div>
-            <div class="tagline">Galho Quebrado</div>
-            <!-- <p style="font-size: 0.9rem; color: #ccc;">Itens mágicos com aura tupiniquim.</p> -->
-        </header>
+      <header>
+        <div class="brand-title">
+          Kaio <span class="brand-highlight">Medau</span>
+        </div>
+        <div class="tagline">Galho Quebrado</div>
+        <!-- <p style="font-size: 0.9rem; color: #ccc;">Itens mágicos com aura tupiniquim.</p> -->
+      </header>
 
-        <!-- <a href="#" class="hero-banner" style="background-image: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.1)), url('https://via.placeholder.com/600x400/E88D67/ffffff?text=Nova+Coleção');">
+      <!-- <a href="#" class="hero-banner" style="background-image: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.1)), url('https://via.placeholder.com/600x400/E88D67/ffffff?text=Nova+Coleção');">
             <div class="hero-content">
                 <span class="hero-tag">Lançamento</span>
                 <h2 class="hero-title">Coleção Folclore</h2>
@@ -243,80 +263,115 @@
             </div>
         </a> -->
 
-        <a href="https://galhoquebrado.lojavirtualnuvem.com.br/varinha-magica/varinhas-brasileiras/?utm_source=agregador&utm_medium=hero-banner&utm_campaign=Loja+Galho+Quebrado" class="hero-banner" style="background-image: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.1)), url('./images/hero/varinha-magica-sao-paulo.webp');">
-            <div class="hero-content">
-                <!-- <span class="hero-tag">Lançamento</span> -->
-                <h2 class="hero-title">Varinhas Mágicas</h2>
-                <p class="hero-subtitle">Artefatos exclusivos do Galho Quebrado! ✨</p>
-            </div>
-        </a>
+      <a
+        href="https://galhoquebrado.lojavirtualnuvem.com.br/varinha-magica/varinhas-brasileiras/?utm_source=agregador&utm_medium=hero-banner&utm_campaign=Loja+Galho+Quebrado"
+        class="hero-banner"
+        style="
+          background-image: linear-gradient(
+              to top,
+              rgba(0, 0, 0, 0.9),
+              rgba(0, 0, 0, 0.1)
+            ),
+            url('./images/hero/varinha-magica-sao-paulo.webp');
+        "
+      >
+        <div class="hero-content">
+          <!-- <span class="hero-tag">Lançamento</span> -->
+          <h2 class="hero-title">Varinhas Mágicas</h2>
+          <p class="hero-subtitle">
+            Artefatos exclusivos do Galho Quebrado! ✨
+          </p>
+        </div>
+      </a>
 
-        <div class="section-title">Loja Oficial</div>
+      <div class="section-title">Loja Oficial</div>
 
-        <a href="https://galhoquebrado.lojavirtualnuvem.com.br?utm_source=agregador&utm_medium=btn_loja&utm_campaign=Loja+Galho+Quebrado" class="link-card" style="background-color: var(--accent-orange); color: white;">
-            <h3>🛍️ Ir para a Loja</h3>
-            <p style="color: rgba(255,255,255,0.9);">Ver todos os produtos</p>
-        </a>
+      <a
+        href="https://galhoquebrado.lojavirtualnuvem.com.br?utm_source=agregador&utm_medium=btn_loja&utm_campaign=Loja+Galho+Quebrado"
+        class="link-card"
+        style="background-color: var(--accent-orange); color: white"
+      >
+        <h3>🛍️ Ir para a Loja</h3>
+        <p style="color: rgba(255, 255, 255, 0.9)">Ver todos os produtos</p>
+      </a>
 
-        <!-- <a href="https://galhoquebrado.lojavirtualnuvem.com.br/varinha-magica/varinhas-brasileiras/?utm_source=agregador&utm_medium=btn_varinhas&utm_campaign=Loja+Galho+Quebrado" class="link-card card-highlight">
+      <!-- <a href="https://galhoquebrado.lojavirtualnuvem.com.br/varinha-magica/varinhas-brasileiras/?utm_source=agregador&utm_medium=btn_varinhas&utm_campaign=Loja+Galho+Quebrado" class="link-card card-highlight">
             <span class="tag-new">Popular</span>
             <h3>Varinhas Mágicas</h3>
             <p>Artefatos exclusivos do Galho Quebrado</p>
         </a> -->
 
-         <div class="section-title">Parcerias</div>
+      <div class="section-title">Parcerias e Setup</div>
 
-        <a href="media-kit/" class="link-card card-highlight">
-            <h3>Media Kit</h3>
-            <p>Vamos trabalhar juntos!</p>
-        </a>
+      <a href="media-kit/" class="link-card card-highlight">
+        <h3>Media Kit</h3>
+        <p>Vamos trabalhar juntos!</p>
+      </a>
 
-        <div class="section-title">Comunidade</div>
+      <a href="lista-de-equipamentos/" class="link-card">
+        <h3>Equipamentos</h3>
+        <p>Lista dos equipamentos que uso diariamente.</p>
+      </a>
 
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe916JKNl2aU78i3txz8DA4HDaQjEIfzP6fakE2doqjmFDVGA/viewform?usp=header" class="link-card">
-            <span class="tag-new">Formulário</span>
-            <h3>🎨 Meu Bonequinho</h3>
-            <p>Increva-se para a chance de ganhar</p>
-        </a>
+      <div class="section-title">Comunidade</div>
 
-        <a href="https://t.me/+SsGEGhKLOJ9kMWUx" class="link-card">
-            <h3>Telegram</h3>
-            <p>Receba atualizações em primeira mão</p>
-        </a>
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSe916JKNl2aU78i3txz8DA4HDaQjEIfzP6fakE2doqjmFDVGA/viewform?usp=header"
+        class="link-card"
+      >
+        <span class="tag-new">Formulário</span>
+        <h3>🎨 Meu Bonequinho</h3>
+        <p>Increva-se para a chance de ganhar</p>
+      </a>
 
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSedSsyYyuNTW7HZEd2dIIIfuZIdn8Fs03BG6nOv_J2ZjaY4dQ/viewform?usp=sf_link" class="link-card">
-            <h3>Newsletter</h3>
-            <p>Seja avisado durante os lançamentos</p>
-        </a>
-        
-        <a href="http://patreon.com/kaiomedau" class="link-card">
-            <h3>Patreon</h3>
-            <p>Bastidores e conteúdos exclusivos</p>
-        </a>
+      <a href="https://t.me/+SsGEGhKLOJ9kMWUx" class="link-card">
+        <h3>Telegram</h3>
+        <p>Receba atualizações em primeira mão</p>
+      </a>
 
-        <div class="section-title">Arte Digital</div>
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSedSsyYyuNTW7HZEd2dIIIfuZIdn8Fs03BG6nOv_J2ZjaY4dQ/viewform?usp=sf_link"
+        class="link-card"
+      >
+        <h3>Newsletter</h3>
+        <p>Seja avisado durante os lançamentos</p>
+      </a>
 
-        <a href="https://www.udemy.com/course/procreate-iniciantes/?referralCode=3F03E409260C54EDD533" class="link-card card-highlight">
-            <span class="tag-new">Desconto</span>
-            <h3>Curso de Procreate</h3>
-            <p>Mais de 40 aulas 100% em Português</p>
-        </a>
+      <a href="http://patreon.com/kaiomedau" class="link-card">
+        <h3>Patreon</h3>
+        <p>Bastidores e conteúdos exclusivos</p>
+      </a>
 
-        <a href="https://www.desenhoeilustracao.com.br/pinceis-da-semana/?utm_source=agregador&utm_medium=btn_pinceis&utm_campaign=Pinc%C3%A9is+Digitais" class="link-card">
-            <h3>🖌️ Pincéis Digitais</h3>
-            <p>Ferramentas para artistas digitais</p>
-        </a>
+      <div class="section-title">Arte Digital</div>
 
-        <div class="social-row">
-            <a href="https://instagram.com/kaiomedau" class="social-link">Instagram</a>
-            <a href="https://www.youtube.com/@kaiomedau" class="social-link">YouTube</a>
-            <a href="https://tiktok.com/@kaiomedau" class="social-link">TikTok</a>
-        </div>
+      <a
+        href="https://www.udemy.com/course/procreate-iniciantes/?referralCode=3F03E409260C54EDD533"
+        class="link-card card-highlight"
+      >
+        <span class="tag-new">Desconto</span>
+        <h3>Curso de Procreate</h3>
+        <p>Mais de 40 aulas 100% em Português</p>
+      </a>
 
-        <footer>
-            © 2026 Galho Quebrado. Todos os direitos reservados.
-        </footer>
+      <a
+        href="https://www.desenhoeilustracao.com.br/pinceis-da-semana/?utm_source=agregador&utm_medium=btn_pinceis&utm_campaign=Pinc%C3%A9is+Digitais"
+        class="link-card"
+      >
+        <h3>🖌️ Pincéis Digitais</h3>
+        <p>Ferramentas para artistas digitais</p>
+      </a>
+
+      <div class="social-row">
+        <a href="https://instagram.com/kaiomedau" class="social-link"
+          >Instagram</a
+        >
+        <a href="https://www.youtube.com/@kaiomedau" class="social-link"
+          >YouTube</a
+        >
+        <a href="https://tiktok.com/@kaiomedau" class="social-link">TikTok</a>
+      </div>
+
+      <footer>© 2026 Galho Quebrado. Todos os direitos reservados.</footer>
     </div>
-
-</body>
+  </body>
 </html>

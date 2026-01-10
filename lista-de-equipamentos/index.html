@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Setup & Equipamentos - Kaio Medau</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-7BJPHZVT6F"
+    ></script>
+    <script defer>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-7BJPHZVT6F");
+    </script>
+
+    <style>
+      :root {
+        --bg-color: #1a2622;
+        --card-bg: #24332e;
+        --text-main: #f2f2f2;
+        --text-muted: #a8b8b0;
+        --accent-orange: #e88d67;
+        --accent-green: #6b8e78;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-main);
+        line-height: 1.6;
+        padding-bottom: 40px;
+      }
+
+      .container {
+        max-width: 480px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      /* --- HEADER --- */
+      header {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .title {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 900;
+        font-size: 2rem;
+        color: var(--accent-orange);
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+
+      .intro-text {
+        font-size: 0.95rem;
+        color: var(--text-muted);
+        margin-bottom: 30px;
+        padding: 0 10px;
+      }
+
+      /* --- SECTION TITLES --- */
+      .section-header {
+        font-family: "Montserrat", sans-serif;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: var(--text-muted);
+        margin: 32px 0 15px 0;
+        border-bottom: 1px solid #333;
+        padding-bottom: 10px;
+      }
+
+      /* --- LISTA DE EQUIPAMENTOS --- */
+      .equipment-list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .item-card {
+        background-color: var(--card-bg);
+        border-radius: 16px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column; /* No mobile, imagem em cima e texto embaixo */
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+
+      .item-image {
+        width: 100%;
+        height: 200px;
+        background-color: var(--bg-color);
+        background-image: url("https://placehold.co/400x250/1A2622/E88D67?text=Produto");
+        background-size: center;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      .item-content {
+        padding: 20px;
+      }
+
+      /* .item-category { */
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        color: var(--accent-green);
+        font-weight: bold;
+        letter-spacing: 1px;
+        margin-bottom: 5px;
+        display: block;
+      }
+
+      .item-name {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: var(--text-main);
+      }
+
+      .item-description {
+        font-size: 0.9rem;
+        color: var(--text-muted);
+        margin-bottom: 20px;
+      }
+
+      /* --- BOTÃO AFILIADO --- */
+      .affiliate-button {
+        display: inline-block;
+        width: 100%;
+        padding: 12px;
+        background-color: transparent;
+        color: var(--accent-orange);
+        border: 2px solid var(--accent-orange);
+        text-align: center;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 8px;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+      }
+
+      .affiliate-button:hover {
+        background-color: var(--accent-orange);
+        color: white;
+      }
+
+      .back-link {
+        display: block;
+        text-align: center;
+        margin-top: 40px;
+        color: var(--text-muted);
+        text-decoration: none;
+        font-size: 0.8rem;
+      }
+
+      .back-link:hover {
+        color: var(--accent-orange);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1 class="title">Meu Setup</h1>
+        <p class="intro-text">
+          Muitos de vocês perguntam quais ferramentas eu uso para criar o
+          universo do <strong>Galho Quebrado</strong>. Abaixo, listei meus
+          equipamentos essenciais, com links diretos.
+        </p>
+        <p class="intro-text">
+          <strong>Disclaimer:</strong> estes são links afiliados, o que
+          significa que receberei uma pequena comissão caso você conclua a
+          compra por meio deles.
+        </p>
+      </header>
+
+      <div class="section-header">Ilustração e Modelagem 3D</div>
+      <div class="equipment-list">
+        <div class="item-card">
+          <div
+            class="item-image"
+            style="background-image: url('../images/equipamentos/ipad-pro.png')"
+          ></div>
+          <div class="item-content">
+            <!-- <span class="item-category">Ilustração Digital</span> -->
+            <h2 class="item-name">iPad Pro 11</h2>
+            <p class="item-description">
+              Minha principal ferramenta de trabalho é sem dúvida o iPad Pro 2
+              (fora de linha). Onde toda a magia do Procreate acontece e onde
+              nascem os conceitos e modelos 3D das varinhas mágicas e criaturas
+              fantásticas.
+            </p>
+            <a
+              href="https://mercadolivre.com/sec/1pBRfei"
+              class="affiliate-button"
+              target="_blank"
+              >Ver na Loja</a
+            >
+          </div>
+        </div>
+
+        <div class="item-card">
+          <div
+            class="item-image"
+            style="
+              background-image: url('../images/equipamentos/apple-pencil-2.png');
+            "
+          ></div>
+          <div class="item-content">
+            <!-- <span class="item-category">Acessório</span> -->
+            <h2 class="item-name">Apple Pencil (2ª Geração)</h2>
+            <p class="item-description">
+              Essa é a caneta que eu uso diariamente desde 2021. Ela tem uma
+              precisão incrível e ajuda demais nas ilustrações e modelagens por
+              conta da sensibilidade à pressão.
+            </p>
+            <a
+              href="https://mercadolivre.com/sec/2VDpyBV"
+              class="affiliate-button"
+              target="_blank"
+              >Ver na Loja</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="section-header">Gravação de Vídeo</div>
+      <div class="equipment-list">
+        <div class="item-card">
+          <div
+            class="item-image"
+            style="
+              background-image: url('../images/equipamentos/camera-sony-zv-e10.png');
+            "
+          ></div>
+          <div class="item-content">
+            <!-- <span class="item-category">Áudio & Vídeo</span> -->
+            <h2 class="item-name">Câmera Sony Zv-e10</h2>
+            <p class="item-description">
+              Comprei essa câmera há pouco tempo e ela já se tornou meu
+              principal equipamento de gravação de vídeos, principalmente no
+              formato horizontal. O único ponto negativo dela é não ter
+              estabilização, então você sempre precisa de um tripé.
+            </p>
+            <a
+              href="https://mercadolivre.com/sec/1XsSYHy"
+              class="affiliate-button"
+              target="_blank"
+              >Ver na Loja</a
+            >
+          </div>
+        </div>
+
+        <div class="item-card">
+          <div
+            class="item-image"
+            style="
+              background-image: url('../images/equipamentos/dji-mic-2.png');
+            "
+          ></div>
+          <div class="item-content">
+            <!-- <span class="item-category">Áudio & Vídeo</span> -->
+            <h2 class="item-name">Microfone Dji Mic 2</h2>
+            <p class="item-description">
+              Esse é o meu equipamento primário para captação de áudio. Eu adoro
+              o fato de ser sem fio e ter cancelamento de ruído nativo, facilita
+              muito a vida. Eu tenho o kit com dois transmissores e um receptor.
+            </p>
+            <a
+              href="https://mercadolivre.com/sec/13NYD29"
+              class="affiliate-button"
+              target="_blank"
+              >Ver na Loja</a
+            >
+          </div>
+        </div>
+
+        <div class="item-card">
+          <div
+            class="item-image"
+            style="
+              background-image: url('../images/equipamentos/sdxc-card-silver-plus-lexar-128GB.png');
+            "
+          ></div>
+          <div class="item-content">
+            <!-- <span class="item-category">Acessório</span> -->
+            <h2 class="item-name">Cartão de Memória Lexar 128GB</h2>
+            <p class="item-description">
+              Esse é o meu principal cartão de memória para gravações. Ele está
+              sempre na minha câmera, principalmente quando vou filmar em 4k
+              100mb/s.
+            </p>
+            <a
+              href="https://mercadolivre.com/sec/1e9tKUQ"
+              class="affiliate-button"
+              target="_blank"
+              >Ver na Loja</a
+            >
+          </div>
+        </div>
+
+        <div class="item-card">
+          <div
+            class="item-image"
+            style="
+              background-image: url('../images/equipamentos/sdxc-card-extreme-128gb.png');
+            "
+          ></div>
+          <div class="item-content">
+            <!-- <span class="item-category">Acessório</span> -->
+            <h2 class="item-name">Cartão de memória Sandisk Extreme</h2>
+            <p class="item-description">
+              Esses são os meus cartões de memória secundários. Eles tem uma
+              velocidade menor de gravação, então tento usar quando vou filmar
+              em Full HD.
+            </p>
+            <a
+              href="https://mercadolivre.com/sec/2VHVxza"
+              class="affiliate-button"
+              target="_blank"
+              >Ver na Loja</a
+            >
+          </div>
+        </div>
+
+        <div class="item-card">
+          <div
+            class="item-image"
+            style="
+              background-image: url('../images/equipamentos/suporte-de-celular-360.png');
+            "
+          ></div>
+          <div class="item-content">
+            <!-- <span class="item-category">Tripés</span> -->
+            <h2 class="item-name">Suporte De Celular 360°</h2>
+            <p class="item-description">
+              Eu tenho três desses espalhados pela minha casa e uso todos eles
+              diariamente. É um produto simples e barato que resolve super bem a
+              proposta, sempre que vou gravar com o celular, uso ele.
+            </p>
+            <a
+              href="https://mercadolivre.com/sec/2uCQ1Gu"
+              class="affiliate-button"
+              target="_blank"
+              >Ver na Loja</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="section-header">Iluminação</div>
+      <div class="equipment-list">
+        <div class="item-card">
+          <div
+            class="item-image"
+            style="
+              background-image: url('../images/equipamentos/ring-Light-rl-16.png');
+            "
+          ></div>
+          <div class="item-content">
+            <!-- <span class="item-category">Iluminação</span> -->
+            <h2 class="item-name">Ring Light Profissional RL-16</h2>
+            <p class="item-description">
+              Optei por aposentar as soft-boxes que eu tinha aqui por algo com a
+              mesma potência e muito menor. Tenho duas luminárias dessa para
+              trabalhar minha luz principal. A única parte ruim é que ela só
+              muda a temperatura da luz pelo controle remoto.
+            </p>
+            <a
+              href="https://mercadolivre.com/sec/1h4ApB7"
+              class="affiliate-button"
+              target="_blank"
+              >Ver na Loja</a
+            >
+          </div>
+        </div>
+
+        <div class="item-card">
+          <div
+            class="item-image"
+            style="
+              background-image: url('../images/equipamentos/bastao-led-Luxceo-q508a.png');
+            "
+          ></div>
+          <div class="item-content">
+            <!-- <span class="item-category">Iluminação</span> -->
+            <h2 class="item-name">Bastão De Luz Luxceo-q508a</h2>
+            <p class="item-description">
+              Essas foram as minhas luzes principais e secundárias por muito
+              tempo. Atualmente eu uso como luz de preenchimento e iluminação do
+              ambiente, para dar mais cor para a cena.
+            </p>
+            <a
+              href="https://mercadolivre.com/sec/1bVxaSf"
+              class="affiliate-button"
+              target="_blank"
+              >Ver na Loja</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="section-header">Impressão 3D</div>
+      <div class="equipment-list">
+        <div class="item-card">
+          <div
+            class="item-image"
+            style="
+              background-image: url('../images/equipamentos/bambu-lab-ai-sem-ams.png');
+            "
+          ></div>
+          <div class="item-content">
+            <!-- <span class="item-category">Impressão 3D</span> -->
+            <h2 class="item-name">Bambu Lab A1</h2>
+            <p class="item-description">
+              Amo essa impressora! Ela é a minha queridinha e uso diariamente
+              para imprimir coisas para casa e peças para organizar meu setup,
+              mas o uso profissional está na impressão dos meus protótipos. Todo
+              o meu processo melhorou 100% depois que comprei minha A1.
+            </p>
+            <a
+              href="https://mercadolivre.com/sec/1aV1JAa"
+              class="affiliate-button"
+              target="_blank"
+              >Ver na Loja</a
+            >
+          </div>
+        </div>
+
+        <div class="item-card">
+          <div
+            class="item-image"
+            style="
+              background-image: url('../images/equipamentos/creality-halot-mage-8k.png');
+            "
+          ></div>
+          <div class="item-content">
+            <!-- <span class="item-category">Impressão 3D</span> -->
+            <h2 class="item-name">Creality Halot Mage</h2>
+            <p class="item-description">
+              Eu tenho um caso de amor e ódio com essa impressora. Ela gera
+              resultados muito bons, mas existem algumas facilidades que
+              surgiram no mercado após minha aquisição, como imprimir por wi-fi,
+              por exemplo. E os seguradores dos parafusos do VAT quebraram após
+              algumas semanas de uso, o que não afeta diretamente a impressão,
+              mas não é algo legal.
+            </p>
+            <a
+              href="https://mercadolivre.com/sec/11Af7yy"
+              class="affiliate-button"
+              target="_blank"
+              >Ver na Loja</a
+            >
+          </div>
+        </div>
+
+        <div class="item-card">
+          <div
+            class="item-image"
+            style="
+              background-image: url('../images/equipamentos/creality-wash-cure-UW-03.png');
+            "
+          ></div>
+          <div class="item-content">
+            <!-- <span class="item-category">Impressão 3D</span> -->
+            <h2 class="item-name">Lava e Cura Creality UW-03</h2>
+            <p class="item-description">
+              Essa é minha principal forma de lavagem e cura das minhas peças
+              impressas em resina. Funciona bem e tem um limite de cura de 30
+              min, o que é bem bom. Os dois pontos que não gosto muito são o
+              fato de precisarmos remover a tampa e a gandeja de cura, que vibra
+              bastante ao girar, fazendo as peças caírem ou se acumularem nos
+              cantos durante a cura.
+            </p>
+            <a
+              href="https://mercadolivre.com/sec/1V9AvCf"
+              class="affiliate-button"
+              target="_blank"
+              >Ver na Loja</a
+            >
+          </div>
+        </div>
+
+        <div class="item-card">
+          <div
+            class="item-image"
+            style="
+              background-image: url('../images/equipamentos/resina-gamer-3d-cure.png');
+            "
+          ></div>
+          <div class="item-content">
+            <!-- <span class="item-category">Impressão 3D</span> -->
+            <h2 class="item-name">Resina 3D Cure Gamer</h2>
+            <p class="item-description">
+              Minha resina de escolha para todas as impressões que faço. Ela é
+              um pouquinho mais cara que a Basic, mas tem uma resistência muito
+              maior e, para o tipo de trabalho que faço, essa resistência é
+              super importante.
+            </p>
+            <a
+              href="https://mercadolivre.com/sec/17wvg4z"
+              class="affiliate-button"
+              target="_blank"
+              >Ver na Loja</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="section-header">Computador</div>
+      <div class="equipment-list">
+        <div class="item-card">
+          <div
+            class="item-image"
+            style="
+              background-image: url('../images/equipamentos/mac-mini-m4-base-model.png');
+            "
+          ></div>
+          <div class="item-content">
+            <!-- <span class="item-category">Imagem e Vídeo</span> -->
+            <h2 class="item-name">Mac Mini M4 (base model)</h2>
+            <p class="item-description">
+              Eu aposentei meu antigo computador e optei por seguir o hype da
+              internet. Melhor decisão que fiz em muito tempo... Esse PCzinho
+              agilizou muito minha vida e ainda deixou o meu setup muito mais
+              enxuto.
+            </p>
+            <a
+              href="https://mercadolivre.com/sec/2VaUNR3"
+              class="affiliate-button"
+              target="_blank"
+              >Ver na Loja</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <a href="/" class="back-link">← Voltar para todos os links</a>
+
+      <footer
+        style="
+          text-align: center;
+          margin-top: 50px;
+          font-size: 0.7rem;
+          color: #555;
+        "
+      >
+        Ao comprar pelos links acima, eu recebo uma pequena comissão.
+      </footer>
+    </div>
+  </body>
+</html>
