@@ -251,9 +251,15 @@
         background: var(--text-muted);
         width: 64%;
       }
-      .female {
+      .female,
+      .age {
         background: var(--accent-orange);
         width: 36%;
+      }
+
+      .age-base {
+        background: var(--text-muted);
+        width: 100%;
       }
 
       /* --- RODAPÉ --- */
@@ -607,26 +613,28 @@
             <span>36% Fem.</span>
           </div>
 
-          <div style="margin-top: 20px" class="demo-bar">
-            <div class="female"></div>
-            <div class="male"></div>
-          </div>
           <div
-            style="
-              display: flex;
-              justify-content: space-between;
-              font-size: 0.8rem;
-              color: var(--text-muted);
-            "
+            id="demographics-age"
+            style="font-size: 0.8rem; color: var(--text-muted)"
           >
-            <span>18% 18-24 anos</span>
-            <span>63% 25-45 anos</span>
+            <div style="margin-top: 20px">
+              <span>18-24 anos (25%)</span>
+              <div class="demo-bar">
+                <div style="width: 25%" class="age"></div>
+                <div class="age-base"></div>
+              </div>
+              <span>25-34 anos (44%)</span>
+              <div class="demo-bar">
+                <div style="width: 44%" class="age"></div>
+                <div class="age-base"></div>
+              </div>
+              <span>35-44 anos (18%)</span>
+              <div class="demo-bar">
+                <div style="width: 18%" class="age"></div>
+                <div class="age-base"></div>
+              </div>
+            </div>
           </div>
-
-          <!-- <div style="display:flex; justify-content:space-between; margin-top:5px; font-size:0.8rem">
-                    <span>25-45 anos (63%)</span>
-                </div> -->
-
           <span
             style="display: flex; margin-top: 15px; justify-content: center"
             class="stat-label"
