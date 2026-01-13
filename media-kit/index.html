@@ -293,6 +293,172 @@
       .back-link:hover {
         color: var(--accent-orange);
       }
+
+      /* --- CARROSSEL DE REELS --- */
+      .reels-carousel {
+        display: flex;
+        overflow-x: auto;
+        gap: 16px;
+        padding-bottom: 20px; /* Espaço para não cortar sombra */
+        scroll-snap-type: x mandatory; /* Efeito magnético ao rolar */
+        -webkit-overflow-scrolling: touch;
+
+        /* Esconde a barra de rolagem para ficar mais limpo */
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+      }
+
+      .reels-carousel::-webkit-scrollbar {
+        display: none;
+      }
+
+      .reel-card {
+        flex: 0 0 220px; /* Largura fixa do card */
+        height: 390px; /* Altura proporcional 9:16 */
+        background-color: var(--card-bg);
+        border-radius: 12px;
+        scroll-snap-align: center; /* Centraliza o card ao soltar */
+        position: relative;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        text-decoration: none;
+        transition: transform 0.2s ease;
+      }
+
+      .reel-card:hover {
+        transform: translateY(-5px);
+        border-color: var(--accent-orange);
+      }
+
+      .reel-thumb {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.8;
+        transition: opacity 0.3s;
+      }
+
+      .reel-card:hover .reel-thumb {
+        opacity: 0.4;
+      }
+
+      /* Ícone de Play sobreposto */
+      .play-overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50px;
+        height: 50px;
+        background: rgba(232, 141, 103, 0.9); /* Laranja */
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      }
+
+      .play-icon {
+        width: 0;
+        height: 0;
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+        border-left: 14px solid #fff;
+        margin-left: 4px; /* Ajuste óptico */
+      }
+
+      /* Informações na base do card */
+      .reel-info {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px 15px;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+        color: #fff;
+      }
+
+      .reel-views {
+        font-size: 0.8rem;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .reel-title {
+        font-size: 0.9rem;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-top: 4px;
+        font-family: "Montserrat", sans-serif;
+
+        /* Limita a 2 linhas e coloca ... */
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      .swipe-hint {
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        text-align: right;
+        margin-bottom: 10px;
+        font-style: italic;
+      }
+
+      /* --- MODAL DE VÍDEO (Lightbox) --- */
+      .video-modal {
+        display: none; /* Escondido por padrão */
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9); /* Fundo escuro */
+        align-items: center;
+        justify-content: center;
+        backdrop-filter: blur(5px);
+      }
+
+      .modal-content {
+        position: relative;
+        width: 100%;
+        max-width: 400px; /* Tamanho máximo similar ao celular */
+        height: 80vh; /* 80% da altura da tela */
+        background: #000;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      }
+
+      .close-modal {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        color: #fff;
+        font-size: 30px;
+        font-weight: bold;
+        cursor: pointer;
+        z-index: 1001;
+        background: rgba(0, 0, 0, 0.5);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1;
+      }
+
+      /* Responsividade para o iframe preencher tudo */
+      .modal-content iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
     </style>
   </head>
   <body>
@@ -491,6 +657,67 @@
         </p>
       </section>
 
+      <section id="reels">
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+          "
+        >
+          <h2>Alguns Vídeos</h2>
+          <span class="swipe-hint">Arraste para o lado →</span>
+        </div>
+
+        <div class="reels-carousel">
+          <div class="reel-card" onclick="openReel('DBZaVKJvRnr')">
+            <img
+              src="https://instagram.fcgh22-1.fna.fbcdn.net/v/t51.71878-15/504469506_717932997522821_2893598581169933904_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=107&ig_cache_key=MzQ4MzkzMTU4OTk2Njg5NTU5NTcxNzkzMjk4NDE4OTQ4OQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjEwODB4MTkyMC5zZHIuQzMifQ%3D%3D&_nc_ohc=pOwcAQRNjNwQ7kNvwGB_L3W&_nc_oc=AdlBxob-lofvoFP83abwETNRJ3NQI9HzyS4Z6acXam36UrcRwPVXJd9zHKXoazvk610&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fcgh22-1.fna&_nc_gid=NJn2pw5K5DJfGA08IKSA4g&oh=00_AfqqSfDtVlSw5PJ1grTEI6BfwmB7rVqS6EGFysT9rUw00A&oe=696C3F61"
+              alt="Essa é a história da criação da varinha mágica brasileira em homenagem ao Paraná."
+              class="reel-thumb"
+            />
+            <div class="play-overlay"><div class="play-icon"></div></div>
+            <div class="reel-info">
+              <div class="reel-views">👁️ 797k visualizações</div>
+              <div class="reel-title">História da varinha mágica do Paraná</div>
+            </div>
+          </div>
+
+          <div class="reel-card" onclick="openReel('DM3TorFv_Z0')">
+            <img
+              src="https://instagram.fcgh22-1.fna.fbcdn.net/v/t51.71878-15/525904726_1048947934071988_2721875470569164382_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=100&ig_cache_key=MzY5MDUwNDc3NzU4MzU1NjIxMg%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjY0MHgxMTM2LnNkci5DMyJ9&_nc_ohc=IjEFWj2YWrgQ7kNvwEzmlNq&_nc_oc=Adm5Q4rOuNJNwhvmHcs0Ju-jHw2X-7gEVvBqdMcdN268oc8IsWy76waP8uXZWpjs158&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fcgh22-1.fna&_nc_gid=mCRgNF94J_5WX2anAG3W3w&oh=00_AfpKFs3T5PRJzDPl9sc4hjGB22BxZF9Zw1HPK63dtTffJw&oe=696C4634"
+              alt="Transformei o desenho do meu sobrinho em um bonequinho customizado para dar de presente para ele."
+              class="reel-thumb"
+            />
+            <div class="play-overlay"><div class="play-icon"></div></div>
+            <div class="reel-info">
+              <div class="reel-views">👁️ 330k visualizações</div>
+              <div class="reel-title">O desenho virou bonequinho</div>
+            </div>
+          </div>
+
+          <div class="reel-card" onclick="openReel('DQWvy6Rjo4E')">
+            <img
+              src="https://instagram.fcgh22-1.fna.fbcdn.net/v/t51.71878-15/569550252_1000736312214327_1201913304024595426_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=107&ig_cache_key=Mzc1MzM5NzU0NjE5MTMyNjcyNA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjY0MHgxMTM2LnNkci5DMyJ9&_nc_ohc=xU-r9vAQfbkQ7kNvwFMkHsa&_nc_oc=AdlDbAQwOjjRlMhMZF74Fo_aVYxVU4AdGMXxHS_IXyBRlx-pe7hk7XRZiZoo_2tScsA&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fcgh22-1.fna&_nc_gid=qL20lGFyKL2fYHK4c_y6OA&oh=00_Afq7WBGYEzvjagY419etDMNWfWY_Iem0cqZIjXYbgVcUEg&oe=696C4F5F"
+              alt="A pintura da varinha mágica do Centro-Oeste ficou pronta. Vem conferir o resultado!"
+              class="reel-thumb"
+            />
+            <div class="play-overlay"><div class="play-icon"></div></div>
+            <div class="reel-info">
+              <div class="reel-views">👁️ 9.4k visualizações</div>
+              <div class="reel-title">Pintura da varinha do Centro-Oeste</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div id="reelModal" class="video-modal" onclick="closeReel()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+          <span class="close-modal" onclick="closeReel()">&times;</span>
+          <div id="iframeContainer" style="width: 100%; height: 100%"></div>
+        </div>
+      </div>
+
       <div class="note">Período dos dados: Out - Dez/2025<br /></div>
 
       <a href="mailto:kaio@galhoquebrado.com.br" class="cta-button"
@@ -499,5 +726,46 @@
 
       <a href="/" class="back-link">← Voltar para todos os links</a>
     </div>
+
+    <script>
+      // Função para abrir o Modal
+      function openReel(reelId) {
+        const modal = document.getElementById("reelModal");
+        const container = document.getElementById("iframeContainer");
+
+        // Monta o iframe oficial do Instagram
+        // O '/embed' no final é o segredo para pegar só o player
+        container.innerHTML = `
+          <iframe 
+            src="https://www.instagram.com/reel/${reelId}/embed" 
+            frameborder="0" 
+            allowfullscreen 
+            scrolling="no"
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+          </iframe>
+        `;
+
+        // Mostra o modal (display flex para centralizar)
+        modal.style.display = "flex";
+
+        // Impede rolagem da página de fundo
+        document.body.style.overflow = "hidden";
+      }
+
+      // Função para fechar o Modal
+      function closeReel() {
+        const modal = document.getElementById("reelModal");
+        const container = document.getElementById("iframeContainer");
+
+        // Esconde o modal
+        modal.style.display = "none";
+
+        // Limpa o iframe (isso para o som do vídeo imediatamente)
+        container.innerHTML = "";
+
+        // Devolve a rolagem para a página
+        document.body.style.overflow = "auto";
+      }
+    </script>
   </body>
 </html>
