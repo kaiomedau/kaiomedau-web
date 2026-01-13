@@ -247,17 +247,10 @@
         margin: 10px 0;
       }
 
-      .male {
-        background: var(--text-muted);
-        width: 64%;
-      }
-      .female,
-      .age {
+      .graph-main {
         background: var(--accent-orange);
-        width: 36%;
       }
-
-      .age-base {
+      .graph-base {
         background: var(--text-muted);
         width: 100%;
       }
@@ -598,8 +591,8 @@
 
         <div class="demographics">
           <div class="demo-bar">
-            <div class="male"></div>
-            <div class="female"></div>
+            <div style="width: 64%" class="graph-main"></div>
+            <div style="width: 36%" class="graph-base"></div>
           </div>
           <div
             style="
@@ -609,8 +602,8 @@
               color: var(--text-muted);
             "
           >
-            <span>64% Masc.</span>
-            <span>36% Fem.</span>
+            <span>Masculino (64%)</span>
+            <span>Feminino (36%)</span>
           </div>
 
           <div
@@ -620,18 +613,18 @@
             <div style="margin-top: 20px">
               <span>18-24 anos (25%)</span>
               <div class="demo-bar">
-                <div style="width: 25%" class="age"></div>
-                <div class="age-base"></div>
+                <div style="width: 25%" class="graph-main"></div>
+                <div class="graph-base"></div>
               </div>
               <span>25-34 anos (44%)</span>
               <div class="demo-bar">
-                <div style="width: 44%" class="age"></div>
-                <div class="age-base"></div>
+                <div style="width: 44%" class="graph-main"></div>
+                <div class="graph-base"></div>
               </div>
               <span>35-44 anos (18%)</span>
               <div class="demo-bar">
-                <div style="width: 18%" class="age"></div>
-                <div class="age-base"></div>
+                <div style="width: 18%" class="graph-main"></div>
+                <div class="graph-base"></div>
               </div>
             </div>
           </div>
