@@ -302,11 +302,12 @@
         display: flex;
         overflow-x: auto;
         gap: 16px;
-        padding-bottom: 20px; /* Espaço para não cortar sombra */
-        scroll-snap-type: x mandatory; /* Efeito magnético ao rolar */
+        padding-bottom: 20px;
+        scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
+        content-visibility: auto;
+        contain-intrinsic-size: 400px;
 
-        /* Esconde a barra de rolagem para ficar mais limpo */
         scrollbar-width: none;
         -ms-overflow-style: none;
       }
@@ -334,8 +335,8 @@
       }
 
       .reel-thumb {
-        width: 100%;
-        height: 100%;
+        width: 220px;
+        height: 390px;
         object-fit: cover;
         opacity: 0.8;
         transition: opacity 0.3s;
@@ -689,8 +690,16 @@
         <div class="reels-carousel">
           <div class="reel-card" onclick="openReel('DBZaVKJvRnr')">
             <img
-              src="https://instagram.fcgh22-1.fna.fbcdn.net/v/t51.71878-15/504469506_717932997522821_2893598581169933904_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=107&ig_cache_key=MzQ4MzkzMTU4OTk2Njg5NTU5NTcxNzkzMjk4NDE4OTQ4OQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjEwODB4MTkyMC5zZHIuQzMifQ%3D%3D&_nc_ohc=pOwcAQRNjNwQ7kNvwGB_L3W&_nc_oc=AdlBxob-lofvoFP83abwETNRJ3NQI9HzyS4Z6acXam36UrcRwPVXJd9zHKXoazvk610&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fcgh22-1.fna&_nc_gid=NJn2pw5K5DJfGA08IKSA4g&oh=00_AfqqSfDtVlSw5PJ1grTEI6BfwmB7rVqS6EGFysT9rUw00A&oe=696C3F61"
-              alt="Essa é a história da criação da varinha mágica brasileira em homenagem ao Paraná."
+              src="../images/reels/varinha-magica-parana-480.webp"
+              srcset="
+                ../images/reels/varinha-magica-parana-320.webp 320w,
+                ../images/reels/varinha-magica-parana-480.webp 480w,
+                ../images/reels/varinha-magica-parana-720.webp 720w
+              "
+              sizes="220px"
+              fetchpriority="high"
+              decoding="async"
+              alt="História da varinha mágica do Paraná"
               class="reel-thumb"
             />
             <div class="play-overlay"><div class="play-icon"></div></div>
@@ -702,7 +711,9 @@
 
           <div class="reel-card" onclick="openReel('DM3TorFv_Z0')">
             <img
-              src="https://instagram.fcgh22-1.fna.fbcdn.net/v/t51.71878-15/525904726_1048947934071988_2721875470569164382_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=100&ig_cache_key=MzY5MDUwNDc3NzU4MzU1NjIxMg%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjY0MHgxMTM2LnNkci5DMyJ9&_nc_ohc=IjEFWj2YWrgQ7kNvwEzmlNq&_nc_oc=Adm5Q4rOuNJNwhvmHcs0Ju-jHw2X-7gEVvBqdMcdN268oc8IsWy76waP8uXZWpjs158&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fcgh22-1.fna&_nc_gid=mCRgNF94J_5WX2anAG3W3w&oh=00_AfpKFs3T5PRJzDPl9sc4hjGB22BxZF9Zw1HPK63dtTffJw&oe=696C4634"
+              src="../images/reels/thumb-desenho-virou-bonequinho-480.webp"
+              loading="lazy"
+              decoding="async"
               alt="Transformei o desenho do meu sobrinho em um bonequinho customizado para dar de presente para ele."
               class="reel-thumb"
             />
@@ -715,7 +726,9 @@
 
           <div class="reel-card" onclick="openReel('DQWvy6Rjo4E')">
             <img
-              src="https://instagram.fcgh22-1.fna.fbcdn.net/v/t51.71878-15/569550252_1000736312214327_1201913304024595426_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=107&ig_cache_key=Mzc1MzM5NzU0NjE5MTMyNjcyNA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjY0MHgxMTM2LnNkci5DMyJ9&_nc_ohc=xU-r9vAQfbkQ7kNvwFMkHsa&_nc_oc=AdlDbAQwOjjRlMhMZF74Fo_aVYxVU4AdGMXxHS_IXyBRlx-pe7hk7XRZiZoo_2tScsA&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fcgh22-1.fna&_nc_gid=qL20lGFyKL2fYHK4c_y6OA&oh=00_Afq7WBGYEzvjagY419etDMNWfWY_Iem0cqZIjXYbgVcUEg&oe=696C4F5F"
+              src="../images/reels/thumb-pintura-varinha-centro-oeste-480.webp"
+              loading="lazy"
+              decoding="async"
               alt="A pintura da varinha mágica do Centro-Oeste ficou pronta. Vem conferir o resultado!"
               class="reel-thumb"
             />
@@ -728,7 +741,9 @@
 
           <div class="reel-card" onclick="openReel('DO64alNCcv7')">
             <img
-              src="https://instagram.fcgh22-1.fna.fbcdn.net/v/t51.71878-15/553676474_2047887516020619_3413268730685102722_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=102&ig_cache_key=MzcyNzUzOTc1ODg2MDcxNzA1MQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjY0MHgxMTM2LnNkci5DMyJ9&_nc_ohc=0gfu4DBHNYQQ7kNvwEya8-y&_nc_oc=AdmZ8wt14XpLK6_2gTqdK8RBaoD_vqJ9yXHTLt7L6ML86YTLD7RM0uFD_mE2_iDKYso&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fcgh22-1.fna&_nc_gid=YvWRV7XfkTDnflylaG6lZQ&oh=00_AfpfsWFb1PkWITTaeWJyPfhbfVVe-w7uXXflHZ7CnGlPgg&oe=696C3901"
+              src="../images/reels/thumb-manutencao-impressora-3d-480.webp"
+              loading="lazy"
+              decoding="async"
               alt="Chegou a hora de fazer a manutenção da minha impressora 3D"
               class="reel-thumb"
             />
