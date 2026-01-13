@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Media Kit - Kaio Medau</title>
+    <meta
+      name="description"
+      content="Media kit de Kaio Medau, criador de conteúdo focado em arte, design e universos autorais. Conheça números, público e oportunidades de parceria."
+    />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -459,6 +463,28 @@
         height: 100%;
         border: none;
       }
+
+      /* --- CSS DO LOADER (Spinner) --- */
+      .loader {
+        border: 4px solid rgba(255, 255, 255, 0.1);
+        border-left-color: var(--accent-orange);
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        animation: spin 1s linear infinite;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -20px; /* Metade da altura para centralizar */
+        margin-left: -20px; /* Metade da largura para centralizar */
+        z-index: 999;
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
     </style>
   </head>
   <body>
@@ -727,6 +753,9 @@
       <div id="reelModal" class="video-modal" onclick="closeReel()">
         <div class="modal-content" onclick="event.stopPropagation()">
           <span class="close-modal" onclick="closeReel()">&times;</span>
+
+          <div id="modalLoader" class="loader"></div>
+
           <div id="iframeContainer" style="width: 100%; height: 100%"></div>
         </div>
       </div>
@@ -745,23 +774,24 @@
       function openReel(reelId) {
         const modal = document.getElementById("reelModal");
         const container = document.getElementById("iframeContainer");
+        const loader = document.getElementById("modalLoader");
 
-        // Monta o iframe oficial do Instagram
-        // O '/embed' no final é o segredo para pegar só o player
+        // Mostra o loader sempre que abrir um novo vídeo
+        loader.style.display = "block";
+
+        // O segredo está no 'onload' dentro da string do iframe
         container.innerHTML = `
-          <iframe 
-            src="https://www.instagram.com/reel/${reelId}/embed" 
-            frameborder="0" 
-            allowfullscreen 
-            scrolling="no"
-            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-          </iframe>
-        `;
+        <iframe 
+          src="https://www.instagram.com/reel/${reelId}/embed" 
+          frameborder="0" 
+          allowfullscreen 
+          scrolling="no"
+          onload="document.getElementById('modalLoader').style.display='none';"
+          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+        </iframe>
+      `;
 
-        // Mostra o modal (display flex para centralizar)
         modal.style.display = "flex";
-
-        // Impede rolagem da página de fundo
         document.body.style.overflow = "hidden";
       }
 
