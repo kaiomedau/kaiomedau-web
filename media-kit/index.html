@@ -486,6 +486,63 @@
           transform: rotate(360deg);
         }
       }
+
+      /* --- BOTÃO SECUNDÁRIO E SANFONA (HISTÓRICO) --- */
+      .btn-secondary {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        background-color: transparent;
+        color: var(--accent-orange);
+        border: 1px solid var(--accent-orange);
+        border-radius: 8px;
+        font-family: "Inter", sans-serif;
+        font-weight: 600;
+        text-align: center;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        margin-top: 25px;
+      }
+
+      .btn-secondary:hover {
+        background-color: rgba(232, 141, 103, 0.1);
+      }
+
+      .accordion-content {
+        max-height: 0;
+        overflow: hidden;
+        transition:
+          max-height 0.4s ease-in-out,
+          opacity 0.4s ease-in-out;
+        opacity: 0;
+      }
+
+      .accordion-content.open {
+        max-height: 1200px; /* Valor alto para garantir que o conteúdo caiba */
+        opacity: 1;
+      }
+
+      .accordion-inner {
+        padding-top: 20px;
+      }
+
+      .history-list {
+        list-style: none;
+        font-size: 0.85rem;
+        color: var(--text-muted);
+      }
+
+      .history-list li {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      }
+
+      .history-list li:last-child {
+        border-bottom: none;
+      }
     </style>
   </head>
   <body>
@@ -645,6 +702,87 @@
             class="stat-label"
             >Público Principal</span
           >
+        </div>
+
+        <!-- <button
+          class="btn-secondary"
+          id="btn-history"
+          onclick="toggleHistory()"
+        >
+          Histórico de Dados ▾
+        </button> -->
+
+        <div class="accordion-content" id="history-content">
+          <div class="accordion-inner">
+            <div class="stats-grid">
+              <div class="stat-card">
+                <span class="stat-number">42%</span>
+                <span class="stat-label">Retenção Média</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-number">112k</span>
+                <span class="stat-label">Views Completas</span>
+              </div>
+            </div>
+
+            <div class="demographics">
+              <span
+                class="stat-label"
+                style="
+                  display: flex;
+                  justify-content: center;
+                  margin-bottom: 15px;
+                "
+                >Engajamento Regional (Top 3)</span
+              >
+
+              <div style="font-size: 0.8rem; color: var(--text-muted)">
+                <span>São Paulo (38%)</span>
+                <div class="demo-bar">
+                  <div style="width: 38%" class="graph-main"></div>
+                  <div class="graph-base"></div>
+                </div>
+
+                <span>Rio de Janeiro (15%)</span>
+                <div class="demo-bar">
+                  <div style="width: 15%" class="graph-main"></div>
+                  <div class="graph-base"></div>
+                </div>
+
+                <span>Minas Gerais (11%)</span>
+                <div class="demo-bar">
+                  <div style="width: 11%" class="graph-main"></div>
+                  <div class="graph-base"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="demographics">
+              <span
+                class="stat-label"
+                style="
+                  display: flex;
+                  justify-content: center;
+                  margin-bottom: 15px;
+                "
+                >Histórico de Seguidores</span
+              >
+              <ul class="history-list">
+                <li>
+                  <span>Janeiro 2026</span>
+                  <strong style="color: var(--text-main)">148k</strong>
+                </li>
+                <li>
+                  <span>Dezembro 2025</span>
+                  <strong style="color: var(--text-main)">141k</strong>
+                </li>
+                <li>
+                  <span>Novembro 2025</span>
+                  <strong style="color: var(--text-main)">132k</strong>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -835,6 +973,20 @@
 
         // Devolve a rolagem para a página
         document.body.style.overflow = "auto";
+      }
+
+      // Função para abrir/fechar a sanfona de Histórico
+      function toggleHistory() {
+        const content = document.getElementById("history-content");
+        const btn = document.getElementById("btn-history");
+
+        content.classList.toggle("open");
+
+        if (content.classList.contains("open")) {
+          btn.innerHTML = "Ocultar Histórico ▴";
+        } else {
+          btn.innerHTML = "Histórico de Dados ▾";
+        }
       }
     </script>
   </body>
