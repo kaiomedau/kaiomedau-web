@@ -16,7 +16,6 @@
       rel="stylesheet"
     />
 
-    <!-- Google tag (gtag.js) -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-7BJPHZVT6F"
@@ -82,7 +81,6 @@
         overflow: hidden;
       }
 
-      /* Se você tiver a imagem, descomente a tag img no HTML */
       .profile-img-placeholder img {
         width: 100%;
         height: 100%;
@@ -106,11 +104,11 @@
         font-weight: 600;
       }
 
-      /* --- NOVOS LINKS SOCIAIS --- */
+      /* --- LINKS SOCIAIS --- */
       .social-row {
         display: flex;
         justify-content: center;
-        gap: 20px; /* Espaço entre os links */
+        gap: 20px;
         margin-bottom: 10px;
         margin-top: 32px;
       }
@@ -121,7 +119,7 @@
         text-decoration: none;
         font-size: 0.9rem;
         padding: 5px 10px;
-        border: 1px solid rgba(232, 141, 103, 0.3); /* Borda sutil */
+        border: 1px solid rgba(232, 141, 103, 0.3);
         border-radius: 20px;
         transition: all 0.2s ease;
       }
@@ -237,8 +235,6 @@
         margin-top: 20px;
       }
 
-      /* .demographics.stat-label{text-align: center;} */
-
       .demo-bar {
         display: flex;
         height: 10px;
@@ -297,7 +293,7 @@
         color: var(--accent-orange);
       }
 
-      /* --- CARROSSEL DE REELS --- */
+      /* --- CARROSSEL DE REELS (Atualizado com Rodapé) --- */
       .reels-carousel {
         display: flex;
         overflow-x: auto;
@@ -307,7 +303,6 @@
         -webkit-overflow-scrolling: touch;
         content-visibility: auto;
         contain-intrinsic-size: 400px;
-
         scrollbar-width: none;
         -ms-overflow-style: none;
       }
@@ -317,16 +312,18 @@
       }
 
       .reel-card {
-        flex: 0 0 220px; /* Largura fixa do card */
-        height: 390px; /* Altura proporcional 9:16 */
+        flex: 0 0 220px;
         background-color: var(--card-bg);
         border-radius: 12px;
-        scroll-snap-align: center; /* Centraliza o card ao soltar */
+        scroll-snap-align: center;
         position: relative;
         overflow: hidden;
         border: 1px solid rgba(255, 255, 255, 0.05);
         text-decoration: none;
         transition: transform 0.2s ease;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
       }
 
       .reel-card:hover {
@@ -334,9 +331,16 @@
         border-color: var(--accent-orange);
       }
 
-      .reel-thumb {
-        width: 220px;
+      .reel-video-area {
+        position: relative;
+        width: 100%;
         height: 390px;
+        overflow: hidden;
+      }
+
+      .reel-thumb {
+        width: 100%;
+        height: 100%;
         object-fit: cover;
         opacity: 0.8;
         transition: opacity 0.3s;
@@ -346,7 +350,6 @@
         opacity: 0.4;
       }
 
-      /* Ícone de Play sobreposto */
       .play-overlay {
         position: absolute;
         top: 50%;
@@ -354,7 +357,7 @@
         transform: translate(-50%, -50%);
         width: 50px;
         height: 50px;
-        background: rgba(232, 141, 103, 0.9); /* Laranja */
+        background: rgba(232, 141, 103, 0.9);
         border-radius: 50%;
         display: flex;
         align-items: center;
@@ -368,17 +371,16 @@
         border-top: 8px solid transparent;
         border-bottom: 8px solid transparent;
         border-left: 14px solid #fff;
-        margin-left: 4px; /* Ajuste óptico */
+        margin-left: 4px;
       }
 
-      /* Informações na base do card */
       .reel-info {
         position: absolute;
         bottom: 0;
         left: 0;
         width: 100%;
-        padding: 20px 15px;
-        background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+        padding: 20px 15px 15px;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.95), transparent);
         color: #fff;
       }
 
@@ -397,8 +399,6 @@
         margin-top: 4px;
         font-family: "Montserrat", sans-serif;
         line-clamp: 2;
-
-        /* Limita a 2 linhas e coloca ... */
         display: -webkit-box;
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
@@ -413,16 +413,79 @@
         font-style: italic;
       }
 
-      /* --- MODAL DE VÍDEO (Lightbox) --- */
+      /* --- NOVO RODAPÉ DE TAGS --- */
+      .reel-card-footer {
+        padding: 12px 15px;
+        background-color: rgba(0, 0, 0, 0.15);
+        border-top: 1px solid rgba(255, 255, 255, 0.03);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        flex-grow: 1;
+        align-content: flex-start;
+      }
+
+      .tag-badge {
+        font-size: 0.65rem;
+        padding: 4px 8px;
+        border-radius: 4px;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: #c4c4c4;
+        font-family: "Inter", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        white-space: nowrap;
+      }
+
+      .tag-objective {
+        background: rgba(107, 142, 120, 0.15);
+        border-color: rgba(107, 142, 120, 0.4);
+        color: #a1c9b3;
+        font-weight: 600;
+      }
+
+      .tag-highlight {
+        background: rgba(232, 141, 103, 0.1);
+        border-color: rgba(232, 141, 103, 0.3);
+        color: var(--accent-orange);
+        font-weight: 600;
+      }
+
+      /* Tag Azul / Teal (Ideal para Resina, Tecnologia, Impressão 3D) */
+      .tag-blue {
+        background: rgba(92, 136, 145, 0.15);
+        border-color: rgba(92, 136, 145, 0.4);
+        color: #9bc5cc;
+        font-weight: 600;
+      }
+
+      /* Tag Roxa / Ametista (Ideal para Magia, RPG, Fantasia) */
+      .tag-purple {
+        background: rgba(138, 115, 158, 0.15);
+        border-color: rgba(138, 115, 158, 0.4);
+        color: #c5aedd;
+        font-weight: 600;
+      }
+
+      /* Tag Dourada / Madeira (Ideal para Materiais, Acabamento, Patrocínio) */
+      .tag-gold {
+        background: rgba(194, 166, 110, 0.15);
+        border-color: rgba(194, 166, 110, 0.4);
+        color: #e3cca1;
+        font-weight: 600;
+      }
+
+      /* --- MODAL DE VÍDEO E LOADER --- */
       .video-modal {
-        display: none; /* Escondido por padrão */
+        display: none;
         position: fixed;
         z-index: 1000;
         left: 0;
         top: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.9); /* Fundo escuro */
+        background-color: rgba(0, 0, 0, 0.9);
         align-items: center;
         justify-content: center;
         backdrop-filter: blur(5px);
@@ -431,8 +494,8 @@
       .modal-content {
         position: relative;
         width: 100%;
-        max-width: 400px; /* Tamanho máximo similar ao celular */
-        height: 80vh; /* 80% da altura da tela */
+        max-width: 400px;
+        height: 80vh;
         background: #000;
         border-radius: 12px;
         overflow: hidden;
@@ -458,14 +521,12 @@
         line-height: 1;
       }
 
-      /* Responsividade para o iframe preencher tudo */
       .modal-content iframe {
         width: 100%;
         height: 100%;
         border: none;
       }
 
-      /* --- CSS DO LOADER (Spinner) --- */
       .loader {
         border: 4px solid rgba(255, 255, 255, 0.1);
         border-left-color: var(--accent-orange);
@@ -476,8 +537,8 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        margin-top: -20px; /* Metade da altura para centralizar */
-        margin-left: -20px; /* Metade da largura para centralizar */
+        margin-top: -20px;
+        margin-left: -20px;
         z-index: 999;
       }
 
@@ -487,7 +548,7 @@
         }
       }
 
-      /* --- BOTÃO SECUNDÁRIO E SANFONA (HISTÓRICO) --- */
+      /* --- BOTÃO SECUNDÁRIO E SANFONA --- */
       .btn-secondary {
         display: block;
         width: 100%;
@@ -519,7 +580,7 @@
       }
 
       .accordion-content.open {
-        max-height: 1200px; /* Valor alto para garantir que o conteúdo caiba */
+        max-height: 1200px;
         opacity: 1;
       }
 
@@ -734,20 +795,17 @@
                 "
                 >Engajamento Regional (Top 3)</span
               >
-
               <div style="font-size: 0.8rem; color: var(--text-muted)">
                 <span>São Paulo (38%)</span>
                 <div class="demo-bar">
                   <div style="width: 38%" class="graph-main"></div>
                   <div class="graph-base"></div>
                 </div>
-
                 <span>Rio de Janeiro (15%)</span>
                 <div class="demo-bar">
                   <div style="width: 15%" class="graph-main"></div>
                   <div class="graph-base"></div>
                 </div>
-
                 <span>Minas Gerais (11%)</span>
                 <div class="demo-bar">
                   <div style="width: 11%" class="graph-main"></div>
@@ -816,10 +874,6 @@
           de formato longo, com projetos mais ambiciosos, narrativas mais ricas
           e um nível de produção cada vez maior.
         </p>
-        <p>
-          Quero me aproximar ainda mais da minha comunidade e expandir para
-          conteúdos de formato longo, com projetos mais ambiciosos.
-        </p>
       </section>
 
       <section id="reels">
@@ -836,68 +890,136 @@
 
         <div class="reels-carousel">
           <div class="reel-card" onclick="openReel('DBZaVKJvRnr')">
-            <img
-              src="../images/reels/varinha-magica-parana-480.webp"
-              srcset="
-                ../images/reels/varinha-magica-parana-320.webp 320w,
-                ../images/reels/varinha-magica-parana-480.webp 480w,
-                ../images/reels/varinha-magica-parana-720.webp 720w
-              "
-              sizes="220px"
-              fetchpriority="high"
-              decoding="async"
-              alt="História da varinha mágica do Paraná"
-              class="reel-thumb"
-            />
-            <div class="play-overlay"><div class="play-icon"></div></div>
-            <div class="reel-info">
-              <div class="reel-views">👁️ 797k visualizações</div>
-              <div class="reel-title">História da varinha mágica do Paraná</div>
+            <div class="reel-video-area">
+              <img
+                src="../images/reels/varinha-magica-parana-480.webp"
+                srcset="
+                  ../images/reels/varinha-magica-parana-320.webp 320w,
+                  ../images/reels/varinha-magica-parana-480.webp 480w,
+                  ../images/reels/varinha-magica-parana-720.webp 720w
+                "
+                sizes="220px"
+                fetchpriority="high"
+                decoding="async"
+                alt="História da varinha mágica do Paraná"
+                class="reel-thumb"
+              />
+              <div class="play-overlay"><div class="play-icon"></div></div>
+              <div class="reel-info">
+                <div class="reel-views">👁️ 797k visualizações</div>
+                <div class="reel-title">
+                  História da varinha mágica do Paraná
+                </div>
+              </div>
+            </div>
+            <div class="reel-card-footer">
+              <span class="tag-badge tag-objective"
+                >Lore • Criação de Mundo</span
+              >
+              <span class="tag-badge">Universo Autoral</span>
+              <span class="tag-badge">Ilustração 2D</span>
+              <span class="tag-badge">Storytelling</span>
             </div>
           </div>
 
           <div class="reel-card" onclick="openReel('DM3TorFv_Z0')">
-            <img
-              src="../images/reels/thumb-desenho-virou-bonequinho-480.webp"
-              loading="lazy"
-              decoding="async"
-              alt="Transformei o desenho do meu sobrinho em um bonequinho customizado para dar de presente para ele."
-              class="reel-thumb"
-            />
-            <div class="play-overlay"><div class="play-icon"></div></div>
-            <div class="reel-info">
-              <div class="reel-views">👁️ 330k visualizações</div>
-              <div class="reel-title">O desenho virou bonequinho</div>
+            <div class="reel-video-area">
+              <img
+                src="../images/reels/thumb-desenho-virou-bonequinho-480.webp"
+                loading="lazy"
+                decoding="async"
+                alt="Transformei o desenho do meu sobrinho em um bonequinho customizado para dar de presente para ele."
+                class="reel-thumb"
+              />
+              <div class="play-overlay"><div class="play-icon"></div></div>
+              <div class="reel-info">
+                <div class="reel-views">👁️ 330k visualizações</div>
+                <div class="reel-title">O desenho virou bonequinho</div>
+              </div>
+            </div>
+            <div class="reel-card-footer">
+              <span class="tag-badge tag-objective">Processo Criativo</span>
+              <span class="tag-badge">Modelagem 3D</span>
+              <span class="tag-badge">Impressão 3D • Resina</span>
+              <span class="tag-badge">Pintura de Miniatura</span>
+            </div>
+          </div>
+
+          <div class="reel-card" onclick="openReel('DVJNxahETKh')">
+            <div class="reel-video-area">
+              <img
+                src="../images/reels/thumb-mascara-customizada-480.webp"
+                loading="lazy"
+                decoding="async"
+                alt="Criei uma máscara para inspirar uma cabana mágica."
+                class="reel-thumb"
+              />
+              <div class="play-overlay"><div class="play-icon"></div></div>
+              <div class="reel-info">
+                <div class="reel-views">👁️ 6.5k visualizações</div>
+                <div class="reel-title">
+                  Uma máscara para inspirar uma cabana
+                </div>
+              </div>
+            </div>
+            <div class="reel-card-footer">
+              <span class="tag-badge tag-objective">Processo Criativo</span>
+              <span class="tag-badge">Modelagem 3D</span>
+              <span class="tag-badge tag-highlight"
+                >Impressão 3D • Filamento</span
+              >
+              <span class="tag-badge">Prop Vestível</span>
+              <span class="tag-badge">Pintura</span>
             </div>
           </div>
 
           <div class="reel-card" onclick="openReel('DQWvy6Rjo4E')">
-            <img
-              src="../images/reels/thumb-pintura-varinha-centro-oeste-480.webp"
-              loading="lazy"
-              decoding="async"
-              alt="A pintura da varinha mágica do Centro-Oeste ficou pronta. Vem conferir o resultado!"
-              class="reel-thumb"
-            />
-            <div class="play-overlay"><div class="play-icon"></div></div>
-            <div class="reel-info">
-              <div class="reel-views">👁️ 9.4k visualizações</div>
-              <div class="reel-title">Pintura da varinha do Centro-Oeste</div>
+            <div class="reel-video-area">
+              <img
+                src="../images/reels/thumb-pintura-varinha-centro-oeste-480.webp"
+                loading="lazy"
+                decoding="async"
+                alt="A pintura da varinha mágica do Centro-Oeste ficou pronta. Vem conferir o resultado!"
+                class="reel-thumb"
+              />
+              <div class="play-overlay"><div class="play-icon"></div></div>
+              <div class="reel-info">
+                <div class="reel-views">👁️ 9.4k visualizações</div>
+                <div class="reel-title">Pintura da varinha do Centro-Oeste</div>
+              </div>
+            </div>
+            <div class="reel-card-footer">
+              <span class="tag-badge tag-objective"
+                >Item • Criação de Mundo</span
+              >
+              <span class="tag-badge">Objeto Colecionável</span>
+              <span class="tag-badge">Resina Epóxi</span>
+              <span class="tag-badge">Pintura de Prop</span>
             </div>
           </div>
 
           <div class="reel-card" onclick="openReel('DO64alNCcv7')">
-            <img
-              src="../images/reels/thumb-manutencao-impressora-3d-480.webp"
-              loading="lazy"
-              decoding="async"
-              alt="Chegou a hora de fazer a manutenção da minha impressora 3D"
-              class="reel-thumb"
-            />
-            <div class="play-overlay"><div class="play-icon"></div></div>
-            <div class="reel-info">
-              <div class="reel-views">👁️ 56.2k visualizações</div>
-              <div class="reel-title">Manutenção da impressora 3D</div>
+            <div class="reel-video-area">
+              <img
+                src="../images/reels/thumb-manutencao-impressora-3d-480.webp"
+                loading="lazy"
+                decoding="async"
+                alt="Chegou a hora de fazer a manutenção da minha impressora 3D"
+                class="reel-thumb"
+              />
+              <div class="play-overlay"><div class="play-icon"></div></div>
+              <div class="reel-info">
+                <div class="reel-views">👁️ 56.2k visualizações</div>
+                <div class="reel-title">Manutenção da impressora 3D</div>
+              </div>
+            </div>
+            <div class="reel-card-footer">
+              <span class="tag-badge tag-objective">Bastidores • Dicas</span>
+              <span class="tag-badge tag-highlight"
+                >Impressão 3D • Filamento</span
+              >
+              <span class="tag-badge">Cuidando do Equipamento</span>
+              <span class="tag-badge">Consequências</span>
             </div>
           </div>
         </div>
@@ -917,9 +1039,7 @@
       <div id="reelModal" class="video-modal" onclick="closeReel()">
         <div class="modal-content" onclick="event.stopPropagation()">
           <span class="close-modal" onclick="closeReel()">&times;</span>
-
           <div id="modalLoader" class="loader"></div>
-
           <div id="iframeContainer" style="width: 100%; height: 100%"></div>
         </div>
       </div>
@@ -934,16 +1054,13 @@
     </main>
 
     <script>
-      // Função para abrir o Modal
       function openReel(reelId) {
         const modal = document.getElementById("reelModal");
         const container = document.getElementById("iframeContainer");
         const loader = document.getElementById("modalLoader");
 
-        // Mostra o loader sempre que abrir um novo vídeo
         loader.style.display = "block";
 
-        // O segredo está no 'onload' dentro da string do iframe
         container.innerHTML = `
         <iframe 
           src="https://www.instagram.com/reel/${reelId}/embed" 
@@ -959,22 +1076,15 @@
         document.body.style.overflow = "hidden";
       }
 
-      // Função para fechar o Modal
       function closeReel() {
         const modal = document.getElementById("reelModal");
         const container = document.getElementById("iframeContainer");
 
-        // Esconde o modal
         modal.style.display = "none";
-
-        // Limpa o iframe (isso para o som do vídeo imediatamente)
         container.innerHTML = "";
-
-        // Devolve a rolagem para a página
         document.body.style.overflow = "auto";
       }
 
-      // Função para abrir/fechar a sanfona de Histórico
       function toggleHistory() {
         const content = document.getElementById("history-content");
         const btn = document.getElementById("btn-history");
