@@ -17,6 +17,7 @@
       rel="stylesheet"
     />
 
+    <!-- Google tag (gtag.js) -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-7BJPHZVT6F"
@@ -87,110 +88,6 @@
         margin-bottom: 20px;
       }
 
-      /* --- DESTAQUE ESPECIAL: IVY (NOVO) --- */
-      .ivy-card {
-        background-color: var(--card-bg);
-        border-radius: 16px;
-        overflow: hidden;
-        margin-bottom: 30px;
-        border: 2px solid var(--accent-orange);
-        box-shadow: 0 10px 25px rgba(232, 141, 103, 0.15);
-      }
-
-      .ivy-image {
-        width: 100%;
-        height: 480px; /* Mantém a imagem num bom formato vertical mobile */
-        object-fit: cover;
-        object-position: center;
-        display: block;
-        border-bottom: 2px solid var(--accent-orange);
-      }
-
-      .ivy-content {
-        padding: 24px;
-      }
-
-      .ivy-title {
-        font-family: "Montserrat", sans-serif;
-        font-size: 1.8rem;
-        font-weight: 900;
-        color: var(--text-main);
-        margin-bottom: 8px;
-        line-height: 1.1;
-      }
-
-      .ivy-text {
-        font-size: 0.95rem;
-        color: var(--text-muted);
-        margin-bottom: 15px;
-        line-height: 1.5;
-      }
-
-      .ivy-price {
-        font-family: "Montserrat", sans-serif;
-        font-size: 1.6rem;
-        font-weight: 700;
-        color: var(--accent-green);
-        margin-bottom: 20px;
-      }
-
-      .ivy-price small {
-        font-size: 0.9rem;
-        font-weight: 400;
-        color: var(--text-muted);
-      }
-
-      .ivy-info-box {
-        background: rgba(0, 0, 0, 0.2);
-        padding: 15px;
-        border-radius: 8px;
-        border-left: 4px solid var(--accent-green);
-        font-size: 0.85rem;
-        color: var(--text-main);
-        margin-bottom: 20px;
-      }
-
-      .ivy-actions {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-      }
-
-      .btn-primary,
-      .btn-secondary {
-        display: block;
-        text-align: center;
-        padding: 14px;
-        border-radius: 8px;
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 0.95rem;
-        transition:
-          background-color 0.2s,
-          transform 0.2s;
-      }
-
-      .btn-primary {
-        background-color: var(--accent-orange);
-        color: #fff;
-      }
-
-      .btn-primary:hover {
-        background-color: #d07b57;
-        transform: translateY(-2px);
-      }
-
-      .btn-secondary {
-        background-color: transparent;
-        color: var(--accent-orange);
-        border: 1px solid var(--accent-orange);
-      }
-
-      .btn-secondary:hover {
-        background-color: rgba(232, 141, 103, 0.1);
-        transform: translateY(-2px);
-      }
-
       /* --- REDES SOCIAIS --- */
       .social-row {
         display: flex;
@@ -215,22 +112,26 @@
         color: white;
       }
 
-      /* --- HERO BANNER --- */
+      /* --- HERO BANNER (NOVO) --- */
       .hero-banner {
         display: flex;
-        align-items: flex-end;
+        align-items: flex-end; /* Texto na parte inferior */
         width: 100%;
-        height: 250px;
+        height: 250px; /* Altura do destaque */
+
+        /* CONFIGURAÇÃO DA IMAGEM DE FUNDO */
+        /* Substitua 'url(...)' pelo link da sua imagem de destaque */
         background-image:
           linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1)),
           url("./images/hero/varinha-magica-sao-paulo.webp");
         background-size: cover;
         background-position: center;
+
         border-radius: 16px;
         text-decoration: none;
         padding: 20px;
         margin-bottom: 30px;
-        border: 2px solid transparent;
+        border: 2px solid var(--accent-orange); /* Borda laranja para chamar atenção */
         position: relative;
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
         transition: transform 0.3s ease;
@@ -345,6 +246,24 @@
         font-size: 0.8rem;
         color: #555;
       }
+
+      .video-wrapper {
+        position: relative;
+        padding-top: 56.25%;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .video-wrapper iframe {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 12px;
+        border: none;
+      }
     </style>
   </head>
   <body>
@@ -354,54 +273,43 @@
           Kaio <span class="brand-highlight">Medau</span>
         </div>
         <div class="tagline">Galho Quebrado</div>
+        <!-- <p style="font-size: 0.9rem; color: #ccc;">Itens mágicos com aura tupiniquim.</p> -->
       </header>
 
-      <div class="ivy-card">
-        <img
-          src="./images/hero/bonequinha-ivy.webp"
-          alt="Bonequinha Ivy"
-          class="ivy-image"
-        />
+      <!-- <a href="#" class="hero-banner" style="background-image: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.1)), url('https://via.placeholder.com/600x400/E88D67/ffffff?text=Nova+Coleção');">
+            <div class="hero-content">
+                <span class="hero-tag">Lançamento</span>
+                <h2 class="hero-title">Coleção Folclore</h2>
+                <p class="hero-subtitle">Novas varinhas disponíveis ✨</p>
+            </div>
+        </a> -->
 
-        <div class="ivy-content">
-          <span class="hero-tag" style="margin-bottom: 12px"
-            >Disponível Esta Semana</span
-          >
-          <h2 class="ivy-title">Conheça a Ivy</h2>
+      <!-- <iframe
+        width="440"
+        height="250"
+        src="https://www.youtube.com/embed/tXFQ4pCxwKE"
+        title="Fiz o Coragem, o Cão Covarde em 36h para dar de presente (Diorama Maker)"
+        frameborder="0"
+        allow="
+          accelerometer;
+          autoplay;
+          clipboard-write;
+          encrypted-media;
+          gyroscope;
+          picture-in-picture;
+          web-share;
+        "
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe> -->
+      <!-- <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/tXFQ4pCxwKE"
+          title="Fiz o Coragem, o Cão Covarde em 36h para dar de presente (Diorama Maker)"
+          allowfullscreen
+        ></iframe>
+      </div> -->
 
-          <p class="ivy-text">
-            A Ivy tem 9,5cm de altura, é feita com a resina Gamer da 3D Cure e
-            pintada à mão com as tintas da Acrilex e AK Interactive.
-          </p>
-
-          <div class="ivy-price">R$ 600 <small>+ frete</small></div>
-
-          <div class="ivy-info-box">
-            <p style="margin-bottom: 5px">
-              <strong>Para reservar sua Ivy:</strong> Entre em contato clicando
-              nos botões abaixo.
-            </p>
-            <p style="font-size: 0.75rem; color: var(--text-muted)">
-              * Reserva mediante pagamento de 50% do valor.
-            </p>
-          </div>
-
-          <div class="ivy-actions">
-            <a
-              href="mailto:kaio@galhoquebrado.com.br?subject=Reserva%20da%20Ivy"
-              class="btn-primary"
-              >Reservar por E-mail</a
-            >
-            <a
-              href="https://instagram.com/kaiomedau"
-              class="btn-secondary"
-              target="_top"
-              >Mandar DM no Instagram</a
-            >
-          </div>
-        </div>
-      </div>
-      <div class="section-title">No YouTube</div>
       <a
         href="https://youtu.be/RLKZNr-0Ulo"
         class="hero-banner"
@@ -413,9 +321,29 @@
         target="_top"
       >
         <div class="hero-content">
+          <!-- <span class="hero-tag">Lançamento</span> -->
+          <!-- <h2 class="hero-title">Prédio do Galho Quebrado</h2> -->
           <p class="hero-subtitle">▶️ Assista ao vídeo completo →</p>
         </div>
       </a>
+      <!-- <div class="section-title">Loja Oficial</div> -->
+      <!-- <a
+        href="https://galhoquebrado.lojavirtualnuvem.com.br/?utm_source=agregador&utm_medium=hero-banner&utm_campaign=Loja+Galho+Quebrado"
+        class="hero-banner"
+        target="_top"
+        style="
+          background-image:
+            linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)),
+            url(&quot;./images/hero/varinha-magica-goias.webp&quot;);
+        "
+      >
+        <div class="hero-content">
+          <h2 class="hero-title">Varinhas Mágicas</h2>
+          <p class="hero-subtitle">
+            Artefatos exclusivos do Galho Quebrado! ✨
+          </p>
+        </div>
+      </a> -->
 
       <a
         href="https://galhoquebrado.lojavirtualnuvem.com.br?utm_source=agregador&utm_medium=btn_loja&utm_campaign=Loja+Galho+Quebrado"
@@ -433,7 +361,7 @@
 
       <a
         href="https://apoia.se/kaiomedau"
-        class="link-card card-highlight"
+        class="link-card card-highligh"
         target="_top"
       >
         <span class="tag-new">Novo</span>
