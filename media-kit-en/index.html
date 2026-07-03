@@ -1,0 +1,1084 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Kit - Kaio Medau</title>
+    <meta
+      name="description"
+      content="Media kit of Kaio Medau, content creator focused on art, design, and original universes. Explore metrics, audience demographics, and partnership opportunities."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-7BJPHZVT6F"
+    ></script>
+    <script defer>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-7BJPHZVT6F");
+    </script>
+
+    <style>
+      :root {
+        --bg-color: #1a2622;
+        --card-bg: #24332e;
+        --text-main: #f2f2f2;
+        --text-muted: #a8b8b0;
+        --accent-orange: #e88d67;
+        --accent-dark-orange: #b2682d;
+        --accent-green: #6b8e78;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-main);
+        line-height: 1.6;
+        padding-bottom: 40px;
+      }
+
+      .container {
+        max-width: 480px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      /* --- HEADER & PERFIL --- */
+      header {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .profile-img-placeholder {
+        width: 150px;
+        height: 150px;
+        background-color: var(--card-bg);
+        border: 2px solid var(--accent-orange);
+        border-radius: 50%;
+        margin: 0 auto 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.8rem;
+        color: var(--text-muted);
+        overflow: hidden;
+      }
+
+      .profile-img-placeholder img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      h1 {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 900;
+        font-size: 3.5rem;
+        line-height: 0.9;
+        color: var(--accent-green);
+        opacity: 0.8;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        letter-spacing: -2px;
+      }
+
+      .subtitle {
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
+
+      /* --- LINKS SOCIAIS --- */
+      .social-row {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 10px;
+        margin-top: 32px;
+      }
+
+      .social-link {
+        color: var(--accent-orange);
+        font-weight: 600;
+        text-decoration: none;
+        font-size: 0.9rem;
+        padding: 5px 10px;
+        border: 1px solid rgba(232, 141, 103, 0.3);
+        border-radius: 20px;
+        transition: all 0.2s ease;
+      }
+
+      .social-link:hover {
+        background-color: var(--accent-orange);
+        color: var(--bg-color);
+      }
+
+      .email {
+        font-size: 0.9rem;
+        color: var(--text-muted);
+        text-decoration: none;
+        display: block;
+        margin-bottom: 15px;
+      }
+
+      /* --- CONTEÚDO --- */
+      section {
+        margin-bottom: 40px;
+      }
+
+      h2 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.5rem;
+        color: var(--text-main);
+        border-left: 4px solid var(--accent-orange);
+        padding-left: 15px;
+        margin-bottom: 20px;
+      }
+
+      p {
+        margin-bottom: 15px;
+        font-size: 1rem;
+        color: #d1d1d1;
+      }
+
+      /* --- STATS --- */
+      .stats-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        margin-bottom: 20px;
+      }
+
+      .stat-card {
+        background-color: var(--card-bg);
+        padding: 15px;
+        border-radius: 12px;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      }
+
+      .stat-card.full-width {
+        grid-column: span 2;
+      }
+
+      .stat-number {
+        display: block;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 900;
+        font-size: 2rem;
+        color: var(--text-main);
+      }
+
+      .stat-label {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .highlight {
+        color: var(--accent-orange);
+      }
+
+      .super {
+        font-size: 2.8rem;
+      }
+
+      /* --- ENGAJAMENTO --- */
+      .engagement-wrap {
+        background: var(--card-bg);
+        padding: 15px;
+        border-radius: 12px;
+        margin-bottom: 30px;
+        text-align: center;
+      }
+      .engagement-row {
+        display: inline-flex;
+        justify-content: center;
+        gap: 16px;
+      }
+
+      .eng-item {
+        text-align: center;
+      }
+      .eng-val {
+        font-weight: bold;
+        font-size: 1.2rem;
+        color: var(--accent-orange);
+      }
+      .eng-label {
+        font-size: 0.7rem;
+        color: var(--text-muted);
+      }
+
+      /* --- DEMOGRAFIA --- */
+      .demographics {
+        background: var(--card-bg);
+        padding: 20px;
+        border-radius: 12px;
+        margin-top: 20px;
+      }
+
+      .demo-bar {
+        display: flex;
+        height: 10px;
+        border-radius: 5px;
+        overflow: hidden;
+        margin: 10px 0;
+      }
+
+      .graph-main {
+        background: var(--accent-orange);
+      }
+      .graph-base {
+        background: var(--text-muted);
+        width: 100%;
+      }
+
+      /* --- RODAPÉ --- */
+      .note {
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        text-align: center;
+        margin-top: 30px;
+        border-top: 1px solid #333;
+        padding-top: 20px;
+      }
+
+      .note a {
+        color: var(--accent-orange);
+        text-decoration: none;
+      }
+
+      .cta-button {
+        display: block;
+        width: 100%;
+        padding: 15px;
+        background-color: var(--accent-orange);
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 8px;
+        margin-top: 20px;
+        text-transform: uppercase;
+      }
+
+      .back-link {
+        display: block;
+        text-align: center;
+        margin-top: 40px;
+        color: var(--text-muted);
+        text-decoration: none;
+        font-size: 0.8rem;
+      }
+
+      .back-link:hover {
+        color: var(--accent-orange);
+      }
+
+      /* --- CARROSSEL DE REELS (Atualizado com Rodapé) --- */
+      .reels-carousel {
+        display: flex;
+        overflow-x: auto;
+        gap: 16px;
+        padding-bottom: 20px;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        content-visibility: auto;
+        contain-intrinsic-size: 400px;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+      }
+
+      .reels-carousel::-webkit-scrollbar {
+        display: none;
+      }
+
+      .reel-card {
+        flex: 0 0 220px;
+        background-color: var(--card-bg);
+        border-radius: 12px;
+        scroll-snap-align: center;
+        position: relative;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        text-decoration: none;
+        transition: transform 0.2s ease;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+      }
+
+      .reel-card:hover {
+        transform: translateY(-5px);
+        border-color: var(--accent-orange);
+      }
+
+      .reel-video-area {
+        position: relative;
+        width: 100%;
+        height: 390px;
+        overflow: hidden;
+      }
+
+      .reel-thumb {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.8;
+        transition: opacity 0.3s;
+      }
+
+      .reel-card:hover .reel-thumb {
+        opacity: 0.4;
+      }
+
+      .play-overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50px;
+        height: 50px;
+        background: rgba(232, 141, 103, 0.9);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      }
+
+      .play-icon {
+        width: 0;
+        height: 0;
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+        border-left: 14px solid #fff;
+        margin-left: 4px;
+      }
+
+      .reel-info {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px 15px 15px;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.95), transparent);
+        color: #fff;
+      }
+
+      .reel-views {
+        font-size: 0.8rem;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .reel-title {
+        font-size: 0.9rem;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-top: 4px;
+        font-family: "Montserrat", sans-serif;
+        line-clamp: 2;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      .swipe-hint {
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        text-align: right;
+        margin-bottom: 10px;
+        font-style: italic;
+      }
+
+      /* --- NOVO RODAPÉ DE TAGS --- */
+      .reel-card-footer {
+        padding: 12px 15px;
+        background-color: rgba(0, 0, 0, 0.15);
+        border-top: 1px solid rgba(255, 255, 255, 0.03);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        flex-grow: 1;
+        align-content: flex-start;
+      }
+
+      .tag-badge {
+        font-size: 0.65rem;
+        padding: 4px 8px;
+        border-radius: 4px;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: #c4c4c4;
+        font-family: "Inter", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        white-space: nowrap;
+      }
+
+      .tag-objective {
+        background: rgba(107, 142, 120, 0.15);
+        border-color: rgba(107, 142, 120, 0.4);
+        color: #a1c9b3;
+        font-weight: 600;
+      }
+
+      .tag-highlight {
+        background: rgba(232, 141, 103, 0.1);
+        border-color: rgba(232, 141, 103, 0.3);
+        color: var(--accent-orange);
+        font-weight: 600;
+      }
+
+      /* Tag Azul / Teal (Ideal para Resina, Tecnologia, Impressão 3D) */
+      .tag-blue {
+        background: rgba(92, 136, 145, 0.15);
+        border-color: rgba(92, 136, 145, 0.4);
+        color: #9bc5cc;
+        font-weight: 600;
+      }
+
+      /* Tag Roxa / Ametista (Ideal para Magia, RPG, Fantasia) */
+      .tag-purple {
+        background: rgba(138, 115, 158, 0.15);
+        border-color: rgba(138, 115, 158, 0.4);
+        color: #c5aedd;
+        font-weight: 600;
+      }
+
+      /* Tag Dourada / Madeira (Ideal para Materiais, Acabamento, Patrocínio) */
+      .tag-gold {
+        background: rgba(194, 166, 110, 0.15);
+        border-color: rgba(194, 166, 110, 0.4);
+        color: #e3cca1;
+        font-weight: 600;
+      }
+
+      /* --- MODAL DE VÍDEO E LOADER --- */
+      .video-modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        align-items: center;
+        justify-content: center;
+        backdrop-filter: blur(5px);
+      }
+
+      .modal-content {
+        position: relative;
+        width: 100%;
+        max-width: 400px;
+        height: 80vh;
+        background: #000;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      }
+
+      .close-modal {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        color: #fff;
+        font-size: 30px;
+        font-weight: bold;
+        cursor: pointer;
+        z-index: 1001;
+        background: rgba(0, 0, 0, 0.5);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1;
+      }
+
+      .modal-content iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+
+      .loader {
+        border: 4px solid rgba(255, 255, 255, 0.1);
+        border-left-color: var(--accent-orange);
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        animation: spin 1s linear infinite;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -20px;
+        margin-left: -20px;
+        z-index: 999;
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* --- BOTÃO SECUNDÁRIO E SANFONA --- */
+      .btn-secondary {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        background-color: transparent;
+        color: var(--accent-orange);
+        border: 1px solid var(--accent-orange);
+        border-radius: 8px;
+        font-family: "Inter", sans-serif;
+        font-weight: 600;
+        text-align: center;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        margin-top: 25px;
+      }
+
+      .btn-secondary:hover {
+        background-color: rgba(232, 141, 103, 0.1);
+      }
+
+      .accordion-content {
+        max-height: 0;
+        overflow: hidden;
+        transition:
+          max-height 0.4s ease-in-out,
+          opacity 0.4s ease-in-out;
+        opacity: 0;
+      }
+
+      .accordion-content.open {
+        max-height: 1200px;
+        opacity: 1;
+      }
+
+      .accordion-inner {
+        padding-top: 20px;
+      }
+
+      .history-list {
+        list-style: none;
+        font-size: 0.85rem;
+        color: var(--text-muted);
+      }
+
+      .history-list li {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      }
+
+      .history-list li:last-child {
+        border-bottom: none;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container" id="main-content">
+      <header>
+        <div class="profile-img-placeholder">
+          <img
+            alt="Kaio Medau profile picture - Media Kit"
+            srcset="
+              kaio-medau-media_kit-v2@x2.webp 2x,
+              kaio-medau-media_kit-v2@x3.webp 3x
+            "
+            src="kaio-medau-media_kit-v2.webp"
+            loading="lazy"
+          />
+        </div>
+
+        <h1>Media<br />Kit</h1>
+        <div class="subtitle">Kaio Medau</div>
+
+        <div class="social-row">
+          <a
+            href="https://instagram.com/KaioMedau"
+            class="social-link"
+            target="_blank"
+            >Instagram</a
+          >
+          <a
+            href="https://tiktok.com/@KaioMedau"
+            class="social-link"
+            target="_blank"
+            >TikTok</a
+          >
+          <a
+            href="https://youtube.com/@KaioMedau"
+            class="social-link"
+            target="_blank"
+            >YouTube</a
+          >
+        </div>
+      </header>
+
+      <section id="sobre">
+        <h2>About me</h2>
+        <p>
+          I am Kaio Medau, a
+          <strong class="highlight">Brazilian Fantasy Maker</strong>
+          specializing in turning fantasy concepts, narratives, and
+          worldbuilding into physical, real-world objects — such as magical
+          items, props, fantastical creatures, and dioramas.
+        </p>
+
+        <p>
+          Across my channel and platforms, I showcase full creative processes,
+          from ideation and design to construction, finishing, and technical
+          documentation, with a core focus on craftsmanship, 3D printing,
+          painting, and physical piece production.
+        </p>
+
+        <p>
+          The result is an original universe (Galho Quebrado) that bridges
+          aesthetics, narrative, and technique, connecting brands and audiences
+          passionate about fantasy, TTRPG, and maker culture through authentic,
+          visual, and educational content.
+        </p>
+      </section>
+
+      <section id="dados">
+        <h2>Metrics</h2>
+        <div class="engagement-wrap">
+          <div class="engagement-row">
+            <div class="eng-item">
+              <div class="stat-number highlight super">17%</div>
+              <div class="eng-label">Instagram</div>
+            </div>
+            <div class="eng-item">
+              <div class="stat-number super">11%</div>
+              <div class="eng-label">YouTube</div>
+            </div>
+            <div class="eng-item">
+              <div class="stat-number super">10%</div>
+              <div class="eng-label">TikTok</div>
+            </div>
+          </div>
+          <span
+            style="display: flex; margin-top: 15px; justify-content: center"
+            class="stat-label"
+            >Average Engagement Rate</span
+          >
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card full-width">
+            <span class="stat-number">4M</span>
+            <span class="stat-label">Accounts Reached</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">178k</span>
+            <span class="stat-label">Followers</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">+14k</span>
+            <span class="stat-label">Growth</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">9.6M</span>
+            <span class="stat-label">Views</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">447k</span>
+            <span class="stat-label">Engagement</span>
+          </div>
+        </div>
+
+        <div class="demographics">
+          <div class="demo-bar">
+            <div style="width: 64%" class="graph-main"></div>
+            <div style="width: 36%" class="graph-base"></div>
+          </div>
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              font-size: 0.8rem;
+              color: var(--text-muted);
+            "
+          >
+            <span>Male (64%)</span>
+            <span>Female (36%)</span>
+          </div>
+
+          <div
+            id="demographics-age"
+            style="font-size: 0.8rem; color: var(--text-muted)"
+          >
+            <div style="margin-top: 20px">
+              <span>18-24 years old (25%)</span>
+              <div class="demo-bar">
+                <div style="width: 25%" class="graph-main"></div>
+                <div class="graph-base"></div>
+              </div>
+              <span>25-34 years old (44%)</span>
+              <div class="demo-bar">
+                <div style="width: 44%" class="graph-main"></div>
+                <div class="graph-base"></div>
+              </div>
+              <span>35-44 years old (18%)</span>
+              <div class="demo-bar">
+                <div style="width: 18%" class="graph-main"></div>
+                <div class="graph-base"></div>
+              </div>
+            </div>
+          </div>
+          <span
+            style="display: flex; margin-top: 15px; justify-content: center"
+            class="stat-label"
+            >Primary Audience</span
+          >
+        </div>
+
+        <div class="accordion-content" id="history-content">
+          <div class="accordion-inner">
+            <div class="stats-grid">
+              <div class="stat-card">
+                <span class="stat-number">42%</span>
+                <span class="stat-label">Average Retention</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-number">112k</span>
+                <span class="stat-label">Complete Views</span>
+              </div>
+            </div>
+
+            <div class="demographics">
+              <span
+                class="stat-label"
+                style="
+                  display: flex;
+                  justify-content: center;
+                  margin-bottom: 15px;
+                "
+                >Regional Engagement (Top 3)</span
+              >
+              <div style="font-size: 0.8rem; color: var(--text-muted)">
+                <span>São Paulo (38%)</span>
+                <div class="demo-bar">
+                  <div style="width: 38%" class="graph-main"></div>
+                  <div class="graph-base"></div>
+                </div>
+                <span>Rio de Janeiro (15%)</span>
+                <div class="demo-bar">
+                  <div style="width: 15%" class="graph-main"></div>
+                  <div class="graph-base"></div>
+                </div>
+                <span>Minas Gerais (11%)</span>
+                <div class="demo-bar">
+                  <div style="width: 11%" class="graph-main"></div>
+                  <div class="graph-base"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="demographics">
+              <span
+                class="stat-label"
+                style="
+                  display: flex;
+                  justify-content: center;
+                  margin-bottom: 15px;
+                "
+                >Follower History</span
+              >
+              <ul class="history-list">
+                <li>
+                  <span>January 2026</span>
+                  <strong style="color: var(--text-main)">148k</strong>
+                </li>
+                <li>
+                  <span>December 2025</span>
+                  <strong style="color: var(--text-main)">141k</strong>
+                </li>
+                <li>
+                  <span>November 2025</span>
+                  <strong style="color: var(--text-main)">132k</strong>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="jornada">
+        <h2>What I am building today</h2>
+        <p>
+          Currently, I am developing an original universe called
+          <strong class="highlight">Galho Quebrado</strong>, where I create
+          fantastical creatures and artifacts inspired by Brazilian fauna,
+          culture, and folklore. This universe begins in the digital realm
+          through illustrations and concepts, and comes to life in the physical
+          world through the production of handcrafted pieces.
+        </p>
+        <p>
+          My content covers this entire creative journey — from early ideation
+          to final execution — with the goal of storytelling, sharing
+          techniques, exploring materials, and forging an authentic connection
+          with people who love art, design, and fantasy worlds.
+        </p>
+      </section>
+
+      <section id="proximo-passo">
+        <h2>Next step</h2>
+        <p>
+          My next milestone is to
+          <strong class="highlight"
+            >turn content creation into my full-time professional career</strong
+          >, dedicating more time, infrastructure, and depth to my projects. I
+          aim to connect even closer with my community and expand into long-form
+          content, featuring more ambitious projects, richer stories, and higher
+          production values.
+        </p>
+      </section>
+
+      <section id="reels">
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+          "
+        >
+          <h2>Featured Videos</h2>
+          <span class="swipe-hint">Swipe left/right →</span>
+        </div>
+
+        <div class="reels-carousel">
+          <div class="reel-card" onclick="openReel('DBZaVKJvRnr')">
+            <div class="reel-video-area">
+              <img
+                src="../images/reels/varinha-magica-parana-480.webp"
+                srcset="
+                  ../images/reels/varinha-magica-parana-320.webp 320w,
+                  ../images/reels/varinha-magica-parana-480.webp 480w,
+                  ../images/reels/varinha-magica-parana-720.webp 720w
+                "
+                sizes="220px"
+                fetchpriority="high"
+                decoding="async"
+                alt="Story of the magic wand from Paraná"
+                class="reel-thumb"
+              />
+              <div class="play-overlay"><div class="play-icon"></div></div>
+              <div class="reel-info">
+                <div class="reel-views">👁️ 797k views</div>
+                <div class="reel-title">
+                  Story of the magic wand from Paraná
+                </div>
+              </div>
+            </div>
+            <div class="reel-card-footer">
+              <span class="tag-badge tag-objective">Lore • Worldbuilding</span>
+              <span class="tag-badge">Original Universe</span>
+              <span class="tag-badge">2D Illustration</span>
+              <span class="tag-badge">Storytelling</span>
+            </div>
+          </div>
+
+          <div class="reel-card" onclick="openReel('DM3TorFv_Z0')">
+            <div class="reel-video-area">
+              <img
+                src="../images/reels/thumb-desenho-virou-bonequinho-480.webp"
+                loading="lazy"
+                decoding="async"
+                alt="I turned my nephew's drawing into a custom action figure to give to him as a gift."
+                class="reel-thumb"
+              />
+              <div class="play-overlay"><div class="play-icon"></div></div>
+              <div class="reel-info">
+                <div class="reel-views">👁️ 330k views</div>
+                <div class="reel-title">The drawing became a toy</div>
+              </div>
+            </div>
+            <div class="reel-card-footer">
+              <span class="tag-badge tag-objective">Creative Process</span>
+              <span class="tag-badge">3D Modeling</span>
+              <span class="tag-badge">3D Printing • Resin</span>
+              <span class="tag-badge">Miniature Painting</span>
+            </div>
+          </div>
+
+          <div class="reel-card" onclick="openReel('DVJNxahETKh')">
+            <div class="reel-video-area">
+              <img
+                src="../images/reels/thumb-mascara-customizada-480.webp"
+                loading="lazy"
+                decoding="async"
+                alt="I created a mask to inspire a magical cabin."
+                class="reel-thumb"
+              />
+              <div class="play-overlay"><div class="play-icon"></div></div>
+              <div class="reel-info">
+                <div class="reel-views">👁️ 6.5k views</div>
+                <div class="reel-title">A mask to inspire a cabin</div>
+              </div>
+            </div>
+            <div class="reel-card-footer">
+              <span class="tag-badge tag-objective">Creative Process</span>
+              <span class="tag-badge">3D Modeling</span>
+              <span class="tag-badge">3D Printing • Filament</span>
+              <span class="tag-badge">Wearable Prop</span>
+              <span class="tag-badge">Painting</span>
+            </div>
+          </div>
+
+          <div class="reel-card" onclick="openReel('DQWvy6Rjo4E')">
+            <div class="reel-video-area">
+              <img
+                src="../images/reels/thumb-pintura-varinha-centro-oeste-480.webp"
+                loading="lazy"
+                decoding="async"
+                alt="The painting of the magic wand from the Midwest is ready. Come check out the result!"
+                class="reel-thumb"
+              />
+              <div class="play-overlay"><div class="play-icon"></div></div>
+              <div class="reel-info">
+                <div class="reel-views">👁️ 9.4k views</div>
+                <div class="reel-title">Midwest wand painting process</div>
+              </div>
+            </div>
+            <div class="reel-card-footer">
+              <span class="tag-badge tag-objective">Item • Worldbuilding</span>
+              <span class="tag-badge">Collectible Object</span>
+              <span class="tag-badge">Epoxy Resin</span>
+              <span class="tag-badge">Prop Painting</span>
+            </div>
+          </div>
+
+          <div class="reel-card" onclick="openReel('DO64alNCcv7')">
+            <div class="reel-video-area">
+              <img
+                src="../images/reels/thumb-manutencao-impressora-3d-480.webp"
+                loading="lazy"
+                decoding="async"
+                alt="Time to do maintenance on my 3D printer"
+                class="reel-thumb"
+              />
+              <div class="play-overlay"><div class="play-icon"></div></div>
+              <div class="reel-info">
+                <div class="reel-views">👁️ 56.2k views</div>
+                <div class="reel-title">3D printer maintenance</div>
+              </div>
+            </div>
+            <div class="reel-card-footer">
+              <span class="tag-badge tag-objective"
+                >Behind the Scenes • Tips</span
+              >
+              <span class="tag-badge">3D Printing • Filament</span>
+              <span class="tag-badge">Equipment Care</span>
+              <span class="tag-badge">Consequences</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="parcerias">
+        <h2>Partnership ideas</h2>
+        <p>✦ Full-video sponsorships</p>
+        <p>✦ Integration/Segment sponsorships within videos</p>
+        <p>✦ Product placements (with or without direct brand mentions)</p>
+        <p>
+          ✦ Custom prop/piece creation for the brand, backed by complete
+          documentation of the creative process across social media.
+        </p>
+      </section>
+
+      <div id="reelModal" class="video-modal" onclick="closeReel()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+          <span class="close-modal" onclick="closeReel()">&times;</span>
+          <div id="modalLoader" class="loader"></div>
+          <div id="iframeContainer" style="width: 100%; height: 100%"></div>
+        </div>
+      </div>
+
+      <div class="note">Data timeframe: Apr - Jun/2026<br /></div>
+
+      <a href="mailto:kaio@galhoquebrado.com.br" class="cta-button"
+        >Get in Touch</a
+      >
+
+      <a href="/" class="back-link">← Back to all links</a>
+    </main>
+
+    <script>
+      function openReel(reelId) {
+        const modal = document.getElementById("reelModal");
+        const container = document.getElementById("iframeContainer");
+        const loader = document.getElementById("modalLoader");
+
+        loader.style.display = "block";
+
+        container.innerHTML = `
+        <iframe 
+          src="https://www.instagram.com/reel/${reelId}/embed" 
+          frameborder="0" 
+          allowfullscreen 
+          scrolling="no"
+          onload="document.getElementById('modalLoader').style.display='none';"
+          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+        </iframe>
+      `;
+
+        modal.style.display = "flex";
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeReel() {
+        const modal = document.getElementById("reelModal");
+        const container = document.getElementById("iframeContainer");
+
+        modal.style.display = "none";
+        container.innerHTML = "";
+        document.body.style.overflow = "auto";
+      }
+
+      function toggleHistory() {
+        const content = document.getElementById("history-content");
+        const btn = document.getElementById("btn-history");
+
+        content.classList.toggle("open");
+
+        if (content.classList.contains("open")) {
+          btn.innerHTML = "Hide History ▴";
+        } else {
+          btn.innerHTML = "Data History ▾";
+        }
+      }
+    </script>
+  </body>
+</html>
