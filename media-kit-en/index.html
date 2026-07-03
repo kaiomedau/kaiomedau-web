@@ -610,15 +610,21 @@
     <main class="container" id="main-content">
       <header>
         <div class="profile-img-placeholder">
-          <img
-            alt="Kaio Medau profile picture - Media Kit"
-            srcset="
-              kaio-medau-media_kit-v2@x2.webp 2x,
-              kaio-medau-media_kit-v2@x3.webp 3x
-            "
-            src="kaio-medau-media_kit-v2.webp"
-            loading="lazy"
-          />
+          <picture>
+            <source
+              srcset="
+                ../images/kaio-medau-media_kit-v2@x2.webp 2x,
+                ../images/kaio-medau-media_kit-v2@x3.webp 3x
+              "
+              type="image/webp"
+            />
+            <img
+              alt="Kaio Medau profile picture - Media Kit"
+              src="../images/kaio-medau-media_kit-v2.webp"
+              loading="eager"
+              decoding="sync"
+            />
+          </picture>
         </div>
 
         <h1>Media<br />Kit</h1>
