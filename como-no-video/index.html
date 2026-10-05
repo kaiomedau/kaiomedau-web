@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="p:domain_verify" content="262c683d232f152c0ef9ce361d063148" />
+    <title>Kaio Medau - Galho Quebrado</title>
+    <meta
+      name="description"
+      content="Acesse todos os links e projetos de Kaio Medau em um só lugar. Entre no universo do Galho Quebrado, visite a loja, cursos, redes sociais e confira meu Media Kit."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-7BJPHZVT6F"
+    ></script>
+    <script defer>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-7BJPHZVT6F");
+    </script>
+
+    <style>
+      :root {
+        --bg-color: #1a2622;
+        --card-bg: #24332e;
+        --text-main: #f2f2f2;
+        --text-muted: #a8b8b0;
+        --accent-orange: #e88d67;
+        --accent-green: #6b8e78;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-main);
+        line-height: 1.6;
+        padding-bottom: 40px;
+      }
+
+      .container {
+        max-width: 480px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      /* --- HEADER --- */
+      header {
+        text-align: center;
+        margin-bottom: 28px;
+      }
+
+      .brand-title {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 900;
+        font-size: 2.5rem;
+        line-height: 1;
+        color: var(--text-main);
+        text-transform: uppercase;
+        margin-bottom: 5px;
+      }
+
+      .brand-highlight {
+        color: var(--accent-orange);
+      }
+
+      .tagline {
+        font-size: 1rem;
+        color: var(--accent-green);
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+
+      /* --- DESTAQUE ESPECIAL: IVY (NOVO) --- */
+      .ivy-card {
+        background-color: var(--card-bg);
+        border-radius: 16px;
+        overflow: hidden;
+        margin-bottom: 30px;
+        border: 2px solid var(--accent-orange);
+        box-shadow: 0 10px 25px rgba(232, 141, 103, 0.15);
+      }
+
+      .ivy-image {
+        width: 100%;
+        height: 480px; /* Mantém a imagem num bom formato vertical mobile */
+        object-fit: cover;
+        object-position: center;
+        display: block;
+        border-bottom: 2px solid var(--accent-orange);
+      }
+
+      .ivy-content {
+        padding: 24px;
+      }
+
+      .ivy-title {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.8rem;
+        font-weight: 900;
+        color: var(--text-main);
+        margin-bottom: 8px;
+        line-height: 1.1;
+      }
+
+      .ivy-text {
+        font-size: 0.95rem;
+        color: var(--text-muted);
+        margin-bottom: 15px;
+        line-height: 1.5;
+      }
+
+      .ivy-price {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: var(--accent-green);
+        margin-bottom: 20px;
+      }
+
+      .ivy-price small {
+        font-size: 0.9rem;
+        font-weight: 400;
+        color: var(--text-muted);
+      }
+
+      .ivy-info-box {
+        background: rgba(0, 0, 0, 0.2);
+        padding: 15px;
+        border-radius: 8px;
+        border-left: 4px solid var(--accent-green);
+        font-size: 0.85rem;
+        color: var(--text-main);
+        margin-bottom: 20px;
+      }
+
+      .ivy-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .btn-primary,
+      .btn-secondary {
+        display: block;
+        text-align: center;
+        padding: 14px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.95rem;
+        transition:
+          background-color 0.2s,
+          transform 0.2s;
+      }
+
+      .btn-primary {
+        background-color: var(--accent-orange);
+        color: #fff;
+      }
+
+      .btn-primary:hover {
+        background-color: #d07b57;
+        transform: translateY(-2px);
+      }
+
+      .btn-secondary {
+        background-color: transparent;
+        color: var(--accent-orange);
+        border: 1px solid var(--accent-orange);
+      }
+
+      .btn-secondary:hover {
+        background-color: rgba(232, 141, 103, 0.1);
+        transform: translateY(-2px);
+      }
+
+      /* --- REDES SOCIAIS --- */
+      .social-row {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 40px;
+      }
+
+      .social-link {
+        color: var(--text-muted);
+        text-decoration: none;
+        font-size: 0.85rem;
+        font-weight: 600;
+        padding: 8px 16px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 20px;
+        transition: 0.3s;
+      }
+
+      .social-link:hover {
+        background: var(--accent-orange);
+        color: white;
+      }
+
+      /* --- HERO BANNER --- */
+      .hero-banner {
+        display: flex;
+        align-items: flex-end;
+        width: 100%;
+        height: 250px;
+        background-image:
+          linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1)),
+          url("./images/hero/varinha-magica-sao-paulo.webp");
+        background-size: cover;
+        background-position: center;
+
+        border-radius: 16px;
+        text-decoration: none;
+        padding: 20px;
+        margin-bottom: 30px;
+        border: 2px solid var(--accent-orange); /* Borda laranja para chamar atenção */
+        position: relative;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease;
+      }
+
+      .hero-banner:hover {
+        transform: scale(1.02);
+      }
+
+      .hero-content {
+        z-index: 2;
+        width: 100%;
+      }
+
+      .hero-tag {
+        background-color: var(--accent-orange);
+        color: #fff;
+        padding: 4px 10px;
+        border-radius: 4px;
+        font-size: 0.7rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        display: inline-block;
+        margin-bottom: 8px;
+      }
+
+      .hero-title {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.6rem;
+        font-weight: 900;
+        color: #fff;
+        margin: 0 0 5px 0;
+        line-height: 1.1;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+      }
+
+      .hero-subtitle {
+        color: #ddd;
+        font-size: 0.9rem;
+        margin-bottom: 0;
+      }
+
+      /* --- CARTÕES DE LINKS --- */
+      .section-title {
+        font-family: "Montserrat", sans-serif;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: var(--text-muted);
+        margin: 32px 0 15px 0;
+        border-bottom: 1px solid #333;
+        padding-bottom: 10px;
+      }
+
+      .link-card {
+        display: block;
+        background-color: var(--card-bg);
+        padding: 20px;
+        border-radius: 12px;
+        text-decoration: none;
+        color: var(--text-main);
+        margin-bottom: 15px;
+        border: 1px solid transparent;
+        transition:
+          transform 0.2s,
+          border-color 0.2s;
+        position: relative;
+      }
+
+      .link-card:hover {
+        transform: translateY(-3px);
+        border-color: var(--accent-orange);
+      }
+
+      .link-card h3 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+      }
+
+      .link-card p {
+        font-size: 0.9rem;
+        color: var(--text-muted);
+        margin: 0;
+      }
+
+      .card-highlight {
+        border-left: 4px solid var(--accent-orange);
+      }
+
+      .tag-new {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: var(--accent-green);
+        color: #fff;
+        font-size: 0.6rem;
+        padding: 2px 8px;
+        border-radius: 4px;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+
+      .tag-highlight {
+        background: var(--accent-orange);
+      }
+
+      /* --- FOOTER --- */
+      footer {
+        text-align: center;
+        margin-top: 50px;
+        font-size: 0.8rem;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="brand-title">
+          Kaio <span class="brand-highlight">Medau</span>
+        </div>
+        <div class="tagline">Galho Quebrado</div>
+      </header>
+
+      <div class="section-title">Afiliados</div>
+
+      <a
+        href="https://s.click.aliexpress.com/e/_c32tsEsV"
+        class="link-card card-highlight"
+        target="_top"
+      >
+        <h3>BMCU 370</h3>
+        <p>"AMS Chinês" para Bambulab</p>
+      </a>
+      <div
+        style="
+          text-align: center;
+          margin-top: 20px;
+          font-size: 0.8rem;
+          color: #747474;
+        "
+      >
+        Os links acima são afiliados, o que significa que eu receberei uma
+        pequena comissão, caso você os utilize para comprar o produto. Os
+        produtos não são vendidos por mim e podem ter mudado desde a publicação
+        dos meus vídeos.
+        <strong
+          >Lembre de pesquisar e confirmar todos os detalhes antes de realizar
+          qualquer compra por eles.</strong
+        >
+      </div>
+
+      <div class="section-title">Não Afiliados</div>
+      <a
+        href="https://a.aliexpress.com/_mrpZUbv"
+        class="link-card card-highlight"
+        target="_top"
+      >
+        <h3>Braço Articulado</h3>
+        <p>Suporte articulado Ulanzi</p>
+      </a>
+
+      <a
+        href="https://makerworld.com/models/1980325"
+        class="link-card card-highlight"
+        target="_top"
+      >
+        <h3>Suporte do BMCU</h3>
+        <p>Modelo que usei para imprimir o suporte do meu BMCU</p>
+      </a>
+
+      <div class="social-row">
+        <a
+          href="https://instagram.com/kaiomedau"
+          class="social-link"
+          target="_top"
+          >Instagram</a
+        >
+        <a
+          href="https://www.youtube.com/@kaiomedau"
+          class="social-link"
+          target="_top"
+          >YouTube</a
+        >
+        <a
+          href="https://tiktok.com/@kaiomedau"
+          class="social-link"
+          target="_top"
+          >TikTok</a
+        >
+      </div>
+
+      <footer>© 2026 Galho Quebrado. Todos os direitos reservados.</footer>
+    </div>
+  </body>
+</html>
