@@ -49,14 +49,14 @@
   </section>
 
   <section class="featured" aria-labelledby="featured-title">
-    <a class="featured-media" href="https://galhoquebrado.lojavirtualnuvem.com.br/?utm_source=kaiomedau&utm_medium=site&utm_campaign=produto-destaque" aria-label="Conheça o Dito Gordinho na loja Galho Quebrado">
-      <img src="/images/hero/dito-gordinho-fdm.webp" alt="Dito Gordinho, peça autoral impressa em 3D" width="1200" height="900" fetchpriority="high">
+    <a class="featured-media" id="featured-link" href="https://galhoquebrado.lojavirtualnuvem.com.br/?utm_source=kaiomedau&utm_medium=site&utm_campaign=produto-destaque" aria-label="Conheça o Dito Gordinho na loja Galho Quebrado">
+      <img id="featured-image" src="/images/hero/dito-gordinho-fdm.webp" alt="Dito Gordinho, peça autoral impressa em 3D" width="1200" height="900" fetchpriority="high">
     </a>
     <div>
       <p class="kicker">Em destaque na loja</p>
       <h2 id="featured-title">Dito Gordinho</h2>
-      <p>Uma criação da Galho Quebrado que saiu da bancada para ganhar vida. Conheça a peça e veja os outros produtos da coleção.</p>
-      <a class="button" href="https://galhoquebrado.lojavirtualnuvem.com.br/?utm_source=kaiomedau&utm_medium=site&utm_campaign=produto-destaque">Conhecer na loja ↗</a>
+      <p id="featured-description">Uma criação da Galho Quebrado que saiu da bancada para ganhar vida. Conheça a peça e veja os outros produtos da coleção.</p>
+      <a class="button" id="featured-cta" href="https://galhoquebrado.lojavirtualnuvem.com.br/?utm_source=kaiomedau&utm_medium=site&utm_campaign=produto-destaque">Conhecer na loja ↗</a>
     </div>
   </section>
 
@@ -94,5 +94,25 @@
   <p>© 2026 Kaio Medau</p>
   <p class="disclosure">Alguns links podem ser afiliados. Quando isso acontecer, posso receber uma comissão sem custo adicional para você.</p>
 </footer>
+<script>
+  // Product highlight is managed in /data/featured-product.json.
+  fetch("/data/featured-product.json")
+    .then(response => response.ok ? response.json() : null)
+    .then(product => {
+      if (!product || !product.active) return;
+      const title = document.getElementById("featured-title");
+      const description = document.getElementById("featured-description");
+      const image = document.getElementById("featured-image");
+      const mediaLink = document.getElementById("featured-link");
+      const cta = document.getElementById("featured-cta");
+      if (title) title.textContent = product.name || title.textContent;
+      if (description) description.textContent = product.description || description.textContent;
+      if (image && product.image) image.src = product.image;
+      if (image && product.imageAlt) image.alt = product.imageAlt;
+      if (mediaLink && product.destination) mediaLink.href = product.destination;
+      if (cta && product.destination) cta.href = product.destination;
+    })
+    .catch(() => {});
+</script>
 </body>
 </html>
