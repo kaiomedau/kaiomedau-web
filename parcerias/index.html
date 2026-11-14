@@ -91,9 +91,9 @@
       <p class="kicker">O alcance das histórias</p>
       <p>Os indicadores consolidados das Varinhas Mágicas Brasileiras entram aqui após a atualização das métricas das publicações do projeto.</p>
       <div class="metrics-grid">
-        <div class="metric"><strong>A atualizar</strong><span>Visualizações</span></div>
-        <div class="metric"><strong>A atualizar</strong><span>Alcance</span></div>
-        <div class="metric"><strong>A atualizar</strong><span>Interações</span></div>
+        <div class="metric"><strong data-metric="projects.varinhasMagicasBrasileiras.views">A atualizar</strong><span>Visualizações</span></div>
+        <div class="metric"><strong data-metric="projects.varinhasMagicasBrasileiras.reach">A atualizar</strong><span>Alcance</span></div>
+        <div class="metric"><strong data-metric="projects.varinhasMagicasBrasileiras.interactions">A atualizar</strong><span>Interações</span></div>
       </div>
     </div>
   </section>
@@ -122,21 +122,25 @@
     <div class="media-kit-panel">
       <p>Os principais indicadores e o perfil da audiência serão atualizados com dados recentes de cada plataforma antes da publicação desta versão.</p>
       <div class="metrics-grid">
-        <div class="metric"><strong>Em atualização</strong><span>Comunidade</span></div>
-        <div class="metric"><strong>Em atualização</strong><span>Alcance</span></div>
-        <div class="metric"><strong>Em atualização</strong><span>Engajamento</span></div>
+        <div class="metric"><strong data-metric="audience.totalFollowers">Em atualização</strong><span>Comunidade</span></div>
+        <div class="metric"><strong data-metric="audience.monthlyReach">Em atualização</strong><span>Alcance</span></div>
+        <div class="metric"><strong data-metric="audience.engagementRate">Em atualização</strong><span>Engajamento</span></div>
       </div>
       <details>
         <summary>Ver dados completos do media kit</summary>
         <div class="media-kit-detail">
-          <p>A versão completa reunirá:</p>
-          <ul>
-            <li>Seguidores e inscritos por plataforma;</li>
-            <li>Alcance, visualizações e engajamento por período;</li>
-            <li>Faixa etária, gênero e localização da audiência;</li>
-            <li>Desempenho de formatos e exemplos de conteúdo.</li>
-          </ul>
-          <p>Os números históricos do media kit anterior não foram reaproveitados para evitar apresentar dados desatualizados como atuais.</p>
+          <h3>Indicadores por plataforma</h3>
+          <div class="media-platform-grid">
+            <div><strong>Instagram</strong><span>Seguidores: <b data-metric="platforms.instagram.followers">A atualizar</b></span><span>Alcance: <b data-metric="platforms.instagram.monthlyReach">A atualizar</b></span><span>Engajamento: <b data-metric="platforms.instagram.engagementRate">A atualizar</b></span></div>
+            <div><strong>YouTube</strong><span>Inscritos: <b data-metric="platforms.youtube.subscribers">A atualizar</b></span><span>Visualizações: <b data-metric="platforms.youtube.monthlyViews">A atualizar</b></span><span>Horas assistidas: <b data-metric="platforms.youtube.watchTimeHours">A atualizar</b></span></div>
+            <div><strong>TikTok</strong><span>Seguidores: <b data-metric="platforms.tiktok.followers">A atualizar</b></span><span>Visualizações: <b data-metric="platforms.tiktok.monthlyViews">A atualizar</b></span><span>Engajamento: <b data-metric="platforms.tiktok.engagementRate">A atualizar</b></span></div>
+          </div>
+          <h3>Perfil da audiência</h3>
+          <div class="media-platform-grid">
+            <div><strong>Gênero</strong><span>Feminino: <b data-metric="audience.demographics.gender.female">A atualizar</b></span><span>Masculino: <b data-metric="audience.demographics.gender.male">A atualizar</b></span><span>Outros / não informado: <b data-metric="audience.demographics.gender.other">A atualizar</b></span></div>
+            <div><strong>Faixa etária</strong><span>18–24: <b data-metric="audience.demographics.ageGroups.18-24">A atualizar</b></span><span>25–34: <b data-metric="audience.demographics.ageGroups.25-34">A atualizar</b></span><span>35–44: <b data-metric="audience.demographics.ageGroups.35-44">A atualizar</b></span><span>45+: <b data-metric="audience.demographics.ageGroups.45+">A atualizar</b></span></div>
+          </div>
+          <p>Os números históricos do media kit anterior não foram reaproveitados para evitar apresentar dados desatualizados como atuais. Os campos serão preenchidos após a conferência dos painéis de cada plataforma.</p>
         </div>
       </details>
     </div>
@@ -155,5 +159,5 @@
   <p><a href="/">← Voltar para a página inicial</a></p>
   <p>© 2026 Kaio Medau</p>
 </footer>
-</body>
+<script>\nfetch("/data/public-metrics.json").then(response=>response.ok?response.json():null).then(data=>{if(!data)return;document.querySelectorAll("[data-metric]").forEach(node=>{const value=node.dataset.metric.split(".").reduce((current,key)=>current==null?null:current[key],data);if(value!==null&&value!==undefined&&value!=="")node.textContent=typeof value==="number"?new Intl.NumberFormat("pt-BR").format(value):String(value);});}).catch(()=>{});\n</script>\n</body>
 </html>
