@@ -161,3 +161,11 @@ main{padding-bottom:36px}
 .catalog-subtitle{font-size:1rem;letter-spacing:-.02em;margin:28px 0 12px;color:var(--green)}
 .project-proof{margin-top:20px;padding:18px;background:var(--surface-raised);border:1px solid var(--line);border-radius:16px}
 .project-proof>p:not(.kicker){margin:0 0 14px;color:var(--muted);font-size:.9rem}
+
+.media-platform-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:10px 0 22px}
+.media-platform-grid>div{display:grid;gap:5px;padding:13px;background:var(--surface-raised);border:1px solid var(--line);border-radius:12px}
+.media-platform-grid>div>strong{color:var(--text);margin-bottom:3px}
+.media-platform-grid span{font-size:.84rem;color:var(--muted)}
+.media-platform-grid b{color:var(--text);font-weight:700}
+.media-kit-detail h3{font-size:1rem;color:var(--text);margin:18px 0 8px}
+@media(max-width:720px){.media-platform-grid{grid-template-columns:1fr}}
