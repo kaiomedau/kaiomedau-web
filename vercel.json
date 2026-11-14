@@ -12,12 +12,42 @@
     },
     {
       "source": "/como-no-video",
-      "destination": "/mostrei-no-video/",
+      "destination": "/produtos-e-equipamentos/#mostrei",
       "permanent": true
     },
     {
       "source": "/como-no-video/",
-      "destination": "/mostrei-no-video/",
+      "destination": "/produtos-e-equipamentos/#mostrei",
+      "permanent": true
+    },
+    {
+      "source": "/mostrei-no-video",
+      "destination": "/produtos-e-equipamentos/#mostrei",
+      "permanent": true
+    },
+    {
+      "source": "/mostrei-no-video/",
+      "destination": "/produtos-e-equipamentos/#mostrei",
+      "permanent": true
+    },
+    {
+      "source": "/lista-de-equipamentos",
+      "destination": "/produtos-e-equipamentos/#setup",
+      "permanent": true
+    },
+    {
+      "source": "/lista-de-equipamentos/",
+      "destination": "/produtos-e-equipamentos/#setup",
+      "permanent": true
+    },
+    {
+      "source": "/ferramentas",
+      "destination": "/produtos-e-equipamentos/#recursos",
+      "permanent": true
+    },
+    {
+      "source": "/ferramentas/",
+      "destination": "/produtos-e-equipamentos/#recursos",
       "permanent": true
     }
   ]
