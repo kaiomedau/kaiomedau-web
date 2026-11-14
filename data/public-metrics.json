@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "lastUpdated": null,
+  "status": "awaiting_verified_metrics",
+  "creator": {
+    "name": "Kaio Medau",
+    "positioning": [
+      "Artista",
+      "Maker",
+      "Criador de conteúdo"
+    ]
+  },
+  "audience": {
+    "totalFollowers": null,
+    "monthlyReach": null,
+    "engagementRate": null
+  },
+  "platforms": {
+    "instagram": {
+      "followers": null,
+      "monthlyReach": null,
+      "engagementRate": null
+    },
+    "youtube": {
+      "subscribers": null,
+      "monthlyViews": null,
+      "watchTimeHours": null
+    },
+    "tiktok": {
+      "followers": null,
+      "monthlyViews": null,
+      "engagementRate": null
+    },
+    "facebook": {
+      "followers": null,
+      "monthlyReach": null,
+      "engagementRate": null
+    }
+  },
+  "highlights": []
+}
