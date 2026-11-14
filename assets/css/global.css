@@ -157,3 +157,7 @@ main{padding-bottom:36px}
 }
 @media(max-width:390px){.nav a:first-child{display:none}.page{width:min(100% - 32px,var(--content))}.profile-intro{grid-template-columns:72px minmax(0,1fr);gap:13px}.profile-avatar{width:72px;height:72px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+
+.catalog-subtitle{font-size:1rem;letter-spacing:-.02em;margin:28px 0 12px;color:var(--green)}
+.project-proof{margin-top:20px;padding:18px;background:var(--surface-raised);border:1px solid var(--line);border-radius:16px}
+.project-proof>p:not(.kicker){margin:0 0 14px;color:var(--muted);font-size:.9rem}
