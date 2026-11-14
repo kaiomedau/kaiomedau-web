@@ -1,0 +1,24 @@
+{
+  "redirects": [
+    {
+      "source": "/media-kit",
+      "destination": "/parcerias/",
+      "permanent": true
+    },
+    {
+      "source": "/media-kit/",
+      "destination": "/parcerias/",
+      "permanent": true
+    },
+    {
+      "source": "/como-no-video",
+      "destination": "/mostrei-no-video/",
+      "permanent": true
+    },
+    {
+      "source": "/como-no-video/",
+      "destination": "/mostrei-no-video/",
+      "permanent": true
+    }
+  ]
+}
