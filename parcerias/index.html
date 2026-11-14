@@ -13,7 +13,10 @@
   <meta property="og:url" content="https://kaiomedau.com.br/parcerias/">
   <meta property="og:image" content="https://kaiomedau.com.br/images/kaio-medau-media_kit-v2.webp">
   <title>Parcerias — Kaio Medau</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">\n  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,600;1,700&family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">\n  <link rel="stylesheet" href="/assets/css/global.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,600;1,700&family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/global.css">
   <link rel="stylesheet" href="/assets/css/components.css">
 </head>
 <body>
@@ -130,5 +133,6 @@
   <p><a href="/">← Voltar para a página inicial</a></p>
   <p>© 2026 Kaio Medau</p>
 </footer>
-<script>\nfetch("/data/public-metrics.json").then(response=>response.ok?response.json():null).then(data=>{if(!data)return;document.querySelectorAll("[data-metric]").forEach(node=>{const value=node.dataset.metric.split(".").reduce((current,key)=>current==null?null:current[key],data);if(value!==null&&value!==undefined&&value!=="")node.textContent=typeof value==="number"?new Intl.NumberFormat("pt-BR").format(value):String(value);});}).catch(()=>{});\n</script>\n</body>
+
+</body>
 </html>
