@@ -13,7 +13,21 @@
   "audience": {
     "totalFollowers": null,
     "monthlyReach": null,
-    "engagementRate": null
+    "engagementRate": null,
+    "demographics": {
+      "gender": {
+        "female": null,
+        "male": null,
+        "other": null
+      },
+      "ageGroups": {
+        "18-24": null,
+        "25-34": null,
+        "35-44": null,
+        "45+": null
+      },
+      "topRegions": []
+    }
   },
   "platforms": {
     "instagram": {
@@ -37,5 +51,14 @@
       "engagementRate": null
     }
   },
-  "highlights": []
+  "highlights": [],
+  "projects": {
+    "varinhasMagicasBrasileiras": {
+      "views": null,
+      "reach": null,
+      "interactions": null,
+      "publishedVideos": null,
+      "period": null
+    }
+  }
 }
