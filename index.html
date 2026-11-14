@@ -1,587 +1,225 @@
 <!doctype html>
-<html lang="pt-br">
+<html lang="pt-BR">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="p:domain_verify" content="262c683d232f152c0ef9ce361d063148" />
-    <title>Kaio Medau - Galho Quebrado</title>
-    <meta
-      name="description"
-      content="Acesse todos os links e projetos de Kaio Medau em um só lugar. Entre no universo do Galho Quebrado, visite a loja, cursos, redes sociais e confira meu Media Kit."
-    />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@700;900&display=swap"
-      rel="stylesheet"
-    />
-
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-7BJPHZVT6F"
-    ></script>
-    <script defer>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#17231f">
+    <meta name="description" content="Sou Kaio Medau: artista, maker e criador de conteúdo. Compartilho projetos de impressão 3D, toy art, escultura, ilustração e processos criativos.">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://kaiomedau.com.br/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Kaio Medau">
+    <meta property="og:title" content="Kaio Medau — ideias que ganham forma">
+    <meta property="og:description" content="Projetos, processos criativos, impressão 3D, toy art e ferramentas para quem gosta de colocar a mão na massa.">
+    <meta property="og:url" content="https://kaiomedau.com.br/">
+    <meta property="og:image" content="https://kaiomedau.com.br/images/hero/dito-gordinho-fdm.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>Kaio Medau — artista, maker e criador de conteúdo</title>
+    <link rel="preload" as="image" href="/images/hero/dito-gordinho-fdm.webp" fetchpriority="high">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7BJPHZVT6F"></script>
+    <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
+      function gtag(){dataLayer.push(arguments);}
       gtag("js", new Date());
       gtag("config", "G-7BJPHZVT6F");
     </script>
-
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Kaio Medau",
+        "url": "https://kaiomedau.com.br/",
+        "jobTitle": ["Artista", "Maker", "Criador de conteúdo"],
+        "sameAs": [
+          "https://instagram.com/kaiomedau",
+          "https://www.youtube.com/@kaiomedau",
+          "https://tiktok.com/@kaiomedau",
+          "https://makerworld.com/en/@kaiomedau"
+        ]
+      }
+    </script>
     <style>
       :root {
-        --bg-color: #1a2622;
-        --card-bg: #24332e;
-        --text-main: #f2f2f2;
-        --text-muted: #a8b8b0;
-        --accent-orange: #e88d67;
-        --accent-green: #6b8e78;
+        color-scheme: dark;
+        --bg: #17231f;
+        --surface: #202f29;
+        --surface-soft: #263831;
+        --text: #f4f1e9;
+        --muted: #b7c2b9;
+        --accent: #e88d67;
+        --green: #9ab29e;
+        --line: rgba(244,241,233,.13);
+        --radius: 18px;
+        --width: 760px;
       }
-
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
+      *,*::before,*::after{box-sizing:border-box}
+      html{scroll-behavior:smooth}
+      body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+      a{color:inherit}
+      a:focus-visible{outline:3px solid var(--accent);outline-offset:4px;border-radius:5px}
+      .page{width:min(100% - 36px,var(--width));margin:0 auto;padding:34px 0 54px}
+      .topline{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:30px}
+      .wordmark{font-size:.82rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase;text-decoration:none}
+      .wordmark span{color:var(--accent)}
+      .top-link{font-size:.86rem;color:var(--muted);text-decoration:none}
+      .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:26px;align-items:center;margin-bottom:30px}
+      .eyebrow{color:var(--green);font-size:.76rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;margin:0 0 12px}
+      h1,h2,h3,p{margin-top:0}
+      h1{font-size:clamp(2.55rem,8vw,4.6rem);line-height:.98;letter-spacing:-.065em;margin-bottom:18px}
+      h1 span{color:var(--accent)}
+      .intro{font-size:1.06rem;color:var(--muted);max-width:42ch;margin-bottom:22px}
+      .hero-actions{display:flex;flex-wrap:wrap;gap:10px}
+      .button{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:11px 17px;border-radius:999px;background:var(--accent);color:#1d211d;font-weight:800;text-decoration:none;font-size:.9rem}
+      .button.secondary{background:transparent;border:1px solid var(--line);color:var(--text)}
+      .hero-image{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;border-radius:var(--radius);border:1px solid var(--line);background:var(--surface)}
+      .socials{display:flex;flex-wrap:wrap;gap:9px;padding:15px 0 24px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+      .socials a{font-size:.88rem;text-decoration:none;color:var(--muted);padding:7px 12px;border:1px solid var(--line);border-radius:999px}
+      section{padding:30px 0;border-bottom:1px solid var(--line)}
+      .section-kicker{color:var(--accent);font-size:.72rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase;margin-bottom:7px}
+      h2{font-size:clamp(1.55rem,5vw,2.15rem);line-height:1.12;letter-spacing:-.035em;margin-bottom:12px}
+      .section-intro{color:var(--muted);max-width:60ch;margin-bottom:20px}
+      .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+      .card{display:block;min-width:0;padding:19px;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);text-decoration:none;transition:border-color .18s,transform .18s}
+      .card:hover{border-color:var(--accent);transform:translateY(-2px)}
+      .card .icon{font-size:1.35rem;display:block;margin-bottom:9px}
+      .card h3{font-size:1.05rem;margin-bottom:5px;line-height:1.25}
+      .card p{font-size:.88rem;color:var(--muted);margin:0}
+      .card.featured{background:var(--surface-soft);border-color:rgba(232,141,103,.48)}
+      .card .arrow{color:var(--accent);font-weight:800}
+      .project-list{display:grid;gap:10px}
+      .project{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:16px 17px;border:1px solid var(--line);border-radius:14px;background:var(--surface);text-decoration:none}
+      .project strong{display:block;margin-bottom:3px}
+      .project span{display:block;color:var(--muted);font-size:.86rem}
+      .project .arrow{color:var(--accent);font-size:1.2rem}
+      .commercial{background:linear-gradient(135deg,var(--surface-soft),var(--surface));border:1px solid rgba(232,141,103,.38);border-radius:var(--radius);padding:22px;margin-top:20px}
+      .commercial p{color:var(--muted);margin-bottom:16px}
+      .support{margin-top:18px;border:1px solid var(--line);border-radius:14px;padding:14px 16px;background:rgba(255,255,255,.025)}
+      .support summary{cursor:pointer;font-weight:700}
+      .support p{color:var(--muted);font-size:.88rem;margin:10px 0 0}
+      .support a{color:var(--green)}
+      footer{padding-top:25px;text-align:center;color:var(--muted);font-size:.82rem}
+      footer p{margin-bottom:7px}
+      .fineprint{font-size:.74rem;opacity:.75}
+      @media(max-width:620px){
+        .page{width:min(100% - 30px,var(--width));padding-top:24px}
+        .topline{margin-bottom:24px}
+        .hero{grid-template-columns:1fr;gap:18px}
+        .hero-copy{order:1}
+        .hero-image{order:0;aspect-ratio:16/9;max-height:250px}
+        h1{font-size:clamp(2.7rem,13vw,4rem)}
+        .grid{grid-template-columns:1fr}
+        .card{padding:17px}
       }
-
-      body {
-        font-family: "Inter", sans-serif;
-        background-color: var(--bg-color);
-        color: var(--text-main);
-        line-height: 1.6;
-        padding-bottom: 40px;
-      }
-
-      .container {
-        max-width: 480px;
-        margin: 0 auto;
-        padding: 20px;
-      }
-
-      /* --- HEADER --- */
-      header {
-        text-align: center;
-        margin-bottom: 28px;
-      }
-
-      .brand-title {
-        font-family: "Montserrat", sans-serif;
-        font-weight: 900;
-        font-size: 2.5rem;
-        line-height: 1;
-        color: var(--text-main);
-        text-transform: uppercase;
-        margin-bottom: 5px;
-      }
-
-      .brand-highlight {
-        color: var(--accent-orange);
-      }
-
-      .tagline {
-        font-size: 1rem;
-        color: var(--accent-green);
-        font-weight: 600;
-        margin-bottom: 20px;
-      }
-
-      /* --- DESTAQUE ESPECIAL: IVY (NOVO) --- */
-      .ivy-card {
-        background-color: var(--card-bg);
-        border-radius: 16px;
-        overflow: hidden;
-        margin-bottom: 30px;
-        border: 2px solid var(--accent-orange);
-        box-shadow: 0 10px 25px rgba(232, 141, 103, 0.15);
-      }
-
-      .ivy-image {
-        width: 100%;
-        height: 480px; /* Mantém a imagem num bom formato vertical mobile */
-        object-fit: cover;
-        object-position: center;
-        display: block;
-        border-bottom: 2px solid var(--accent-orange);
-      }
-
-      .ivy-content {
-        padding: 24px;
-      }
-
-      .ivy-title {
-        font-family: "Montserrat", sans-serif;
-        font-size: 1.8rem;
-        font-weight: 900;
-        color: var(--text-main);
-        margin-bottom: 8px;
-        line-height: 1.1;
-      }
-
-      .ivy-text {
-        font-size: 0.95rem;
-        color: var(--text-muted);
-        margin-bottom: 15px;
-        line-height: 1.5;
-      }
-
-      .ivy-price {
-        font-family: "Montserrat", sans-serif;
-        font-size: 1.6rem;
-        font-weight: 700;
-        color: var(--accent-green);
-        margin-bottom: 20px;
-      }
-
-      .ivy-price small {
-        font-size: 0.9rem;
-        font-weight: 400;
-        color: var(--text-muted);
-      }
-
-      .ivy-info-box {
-        background: rgba(0, 0, 0, 0.2);
-        padding: 15px;
-        border-radius: 8px;
-        border-left: 4px solid var(--accent-green);
-        font-size: 0.85rem;
-        color: var(--text-main);
-        margin-bottom: 20px;
-      }
-
-      .ivy-actions {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-      }
-
-      .btn-primary,
-      .btn-secondary {
-        display: block;
-        text-align: center;
-        padding: 14px;
-        border-radius: 8px;
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 0.95rem;
-        transition:
-          background-color 0.2s,
-          transform 0.2s;
-      }
-
-      .btn-primary {
-        background-color: var(--accent-orange);
-        color: #fff;
-      }
-
-      .btn-primary:hover {
-        background-color: #d07b57;
-        transform: translateY(-2px);
-      }
-
-      .btn-secondary {
-        background-color: transparent;
-        color: var(--accent-orange);
-        border: 1px solid var(--accent-orange);
-      }
-
-      .btn-secondary:hover {
-        background-color: rgba(232, 141, 103, 0.1);
-        transform: translateY(-2px);
-      }
-
-      /* --- REDES SOCIAIS --- */
-      .social-row {
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-        margin-top: 40px;
-      }
-
-      .social-link {
-        color: var(--text-muted);
-        text-decoration: none;
-        font-size: 0.85rem;
-        font-weight: 600;
-        padding: 8px 16px;
-        background: rgba(255, 255, 255, 0.05);
-        border-radius: 20px;
-        transition: 0.3s;
-      }
-
-      .social-link:hover {
-        background: var(--accent-orange);
-        color: white;
-      }
-
-      /* --- HERO BANNER --- */
-      .hero-banner {
-        display: flex;
-        align-items: flex-end;
-        width: 100%;
-        height: 250px;
-        background-image:
-          linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1)),
-          url("./images/hero/varinha-magica-sao-paulo.webp");
-        background-size: cover;
-        background-position: center;
-
-        border-radius: 16px;
-        text-decoration: none;
-        padding: 20px;
-        margin-bottom: 30px;
-        border: 2px solid var(--accent-orange); /* Borda laranja para chamar atenção */
-        position: relative;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-        transition: transform 0.3s ease;
-      }
-
-      .hero-banner:hover {
-        transform: scale(1.02);
-      }
-
-      .hero-content {
-        z-index: 2;
-        width: 100%;
-      }
-
-      .hero-tag {
-        background-color: var(--accent-orange);
-        color: #fff;
-        padding: 4px 10px;
-        border-radius: 4px;
-        font-size: 0.7rem;
-        font-weight: bold;
-        text-transform: uppercase;
-        display: inline-block;
-        margin-bottom: 8px;
-      }
-
-      .hero-title {
-        font-family: "Montserrat", sans-serif;
-        font-size: 1.6rem;
-        font-weight: 900;
-        color: #fff;
-        margin: 0 0 5px 0;
-        line-height: 1.1;
-        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
-      }
-
-      .hero-subtitle {
-        color: #ddd;
-        font-size: 0.9rem;
-        margin-bottom: 0;
-      }
-
-      /* --- CARTÕES DE LINKS --- */
-      .section-title {
-        font-family: "Montserrat", sans-serif;
-        font-size: 0.9rem;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        color: var(--text-muted);
-        margin: 32px 0 15px 0;
-        border-bottom: 1px solid #333;
-        padding-bottom: 10px;
-      }
-
-      .link-card {
-        display: block;
-        background-color: var(--card-bg);
-        padding: 20px;
-        border-radius: 12px;
-        text-decoration: none;
-        color: var(--text-main);
-        margin-bottom: 15px;
-        border: 1px solid transparent;
-        transition:
-          transform 0.2s,
-          border-color 0.2s;
-        position: relative;
-      }
-
-      .link-card:hover {
-        transform: translateY(-3px);
-        border-color: var(--accent-orange);
-      }
-
-      .link-card h3 {
-        font-family: "Montserrat", sans-serif;
-        font-size: 1.2rem;
-        margin-bottom: 5px;
-      }
-
-      .link-card p {
-        font-size: 0.9rem;
-        color: var(--text-muted);
-        margin: 0;
-      }
-
-      .card-highlight {
-        border-left: 4px solid var(--accent-orange);
-      }
-
-      .tag-new {
-        position: absolute;
-        top: 15px;
-        right: 15px;
-        background: var(--accent-green);
-        color: #fff;
-        font-size: 0.6rem;
-        padding: 2px 8px;
-        border-radius: 4px;
-        text-transform: uppercase;
-        font-weight: bold;
-      }
-
-      .tag-highlight {
-        background: var(--accent-orange);
-      }
-
-      /* --- FOOTER --- */
-      footer {
-        text-align: center;
-        margin-top: 50px;
-        font-size: 0.8rem;
-        color: #555;
+      @media(prefers-reduced-motion:reduce){
+        html{scroll-behavior:auto}
+        *,*::before,*::after{transition:none!important}
       }
     </style>
   </head>
   <body>
-    <div class="container">
-      <header>
-        <div class="brand-title">
-          Kaio <span class="brand-highlight">Medau</span>
-        </div>
-        <div class="tagline">Galho Quebrado</div>
-      </header>
+    <main class="page">
+      <nav class="topline" aria-label="Navegação principal">
+        <a class="wordmark" href="/" aria-label="Kaio Medau, página inicial">KAIO <span>MEDAU</span></a>
+        <a class="top-link" href="#projetos">Explorar projetos ↓</a>
+      </nav>
 
-      <!-- <div class="ivy-card">
-        <img
-          src="./images/hero/bonequinha-ivy.webp"
-          alt="Bonequinha Ivy"
-          class="ivy-image"
-        />
-
-        <div class="ivy-content">
-          <span class="hero-tag" style="margin-bottom: 12px"
-            >Disponível Esta Semana</span
-          >
-          <h2 class="ivy-title">Conheça a Ivy</h2>
-
-          <p class="ivy-text">
-            A Ivy tem 9,5cm de altura, é feita com a resina Gamer da 3D Cure e
-            pintada à mão com as tintas da Acrilex e AK Interactive.
-          </p>
-
-          <div class="ivy-price">R$ 600 <small>+ frete</small></div>
-
-          <div class="ivy-info-box">
-            <h3>Para reservar sua Ivy:</h3>
-            <p style="margin-bottom: 5px">
-              Entre em contato por
-              <strong
-                style="
-                  background-color: #784717;
-                  padding-left: 6px;
-                  padding-right: 6px;
-                "
-                >DM no Insta ou TikTok</strong
-              >
-              ou pelo e-mail
-              <strong
-                style="
-                  background-color: #784717;
-                  padding-left: 6px;
-                  padding-right: 6px;
-                "
-                >kaio@galhoquebrado.com.br</strong
-              >.
-            </p>
-            <p style="font-size: 0.75rem; color: var(--text-muted)">
-              * Reserva mediante pagamento de 50% do valor.
-            </p>
+      <header class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Artista · Maker · Criador de conteúdo</p>
+          <h1>Ideias que<br><span>ganham forma.</span></h1>
+          <p class="intro">Eu sou o Kaio. Gosto de tirar ideias do papel, experimentar materiais e transformar processos criativos em projetos — de ilustração e escultura a impressão 3D e peças colecionáveis. Por aqui, compartilho o que faço, o que aprendo e o caminho até cada resultado.</p>
+          <div class="hero-actions">
+            <a class="button" href="https://www.youtube.com/@kaiomedau" rel="noopener">Acompanhe no YouTube ↗</a>
+            <a class="button secondary" href="/media-kit/">Apresentação e parcerias</a>
           </div>
         </div>
-      </div> -->
-      <!-- <div class="section-title">No YouTube</div> -->
-      <!-- <a
-        href="https://youtu.be/_fYk1WdY5Sc"
-        class="hero-banner"
-        style="
-          background-image:
-            linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)),
-            url(&quot;./images/hero/como-deixar-miniaturas-profissionais.webp&quot;);
-        "
-        target="_top"
-      >
-        <div class="hero-content">
-          <h2 class="hero-title">
-            ▶️ Como deixar suas Miniaturas PROFISSIONAIS
-          </h2> -->
-      <!-- <p class="hero-subtitle">▶️ Assista ao vídeo completo →</p> -->
-      <!-- </div>
-      </a> -->
-      <a
-        href="https://galhoquebrado.lojavirtualnuvem.com.br/produtos/dito-gordinho-mini-3d-whkck/"
-        class="hero-banner"
-        style="
-          background-image:
-            linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)),
-            url(&quot;./images/hero/dito-gordinho-fdm.webp&quot;);
-        "
-        target="_top"
-      >
-        <div class="hero-content">
-          <h2 class="hero-title">Dito Gordinho</h2>
-          <p class="hero-subtitle">🛍️ Confira lá na loja →</p>
+        <img class="hero-image" src="/images/hero/dito-gordinho-fdm.webp" alt="Dito Gordinho, personagem autoral produzido com impressão 3D" width="640" height="800" fetchpriority="high" decoding="async">
+      </header>
+
+      <nav class="socials" aria-label="Minhas redes">
+        <a href="https://instagram.com/kaiomedau" rel="noopener">Instagram ↗</a>
+        <a href="https://www.youtube.com/@kaiomedau" rel="noopener">YouTube ↗</a>
+        <a href="https://tiktok.com/@kaiomedau" rel="noopener">TikTok ↗</a>
+        <a href="https://makerworld.com/en/@kaiomedau" rel="noopener">MakerWorld ↗</a>
+      </nav>
+
+      <section id="sobre">
+        <p class="section-kicker">Prazer, sou eu</p>
+        <h2>Criação, teste, erro, acerto. E mão na massa.</h2>
+        <p class="section-intro">Meu trabalho passa por diferentes etapas e ferramentas: desenho, modelagem, impressão 3D, pintura, acabamento e construção de objetos. Gosto de mostrar o processo de verdade — inclusive as tentativas, soluções e descobertas que acontecem no caminho.</p>
+      </section>
+
+      <section id="projetos">
+        <p class="section-kicker">O que estou fazendo</p>
+        <h2>Projetos, ferramentas e coisas úteis.</h2>
+        <p class="section-intro">Alguns lugares para conhecer o que eu crio, encontrar recursos que uso e acompanhar projetos que continuam por aí.</p>
+        <div class="grid">
+          <a class="card featured" href="https://galhoquebrado.lojavirtualnuvem.com.br?utm_source=kaiomedau&utm_medium=site&utm_campaign=home" rel="noopener">
+            <span class="icon" aria-hidden="true">🛍️</span>
+            <h3>Loja Galho Quebrado</h3>
+            <p>Peças autorais, bonequinhos, varinhas e objetos que saem da bancada para ganhar o mundo.</p>
+            <span class="arrow">Conhecer a loja ↗</span>
+          </a>
+          <a class="card" href="https://makerworld.com/en/@kaiomedau" rel="noopener">
+            <span class="icon" aria-hidden="true">🧩</span>
+            <h3>MakerWorld</h3>
+            <p>Modelos e projetos para impressão 3D.</p>
+            <span class="arrow">Ver projetos ↗</span>
+          </a>
+          <a class="card" href="https://kaiomedau.com.br/como-no-video/">
+            <span class="icon" aria-hidden="true">🎥</span>
+            <h3>Mostrei no vídeo</h3>
+            <p>Equipamentos, materiais e produtos que aparecem nos meus conteúdos.</p>
+            <span class="arrow">Encontrar produtos ↗</span>
+          </a>
+          <a class="card" href="https://kaiomedau.com.br/lista-de-equipamentos/">
+            <span class="icon" aria-hidden="true">🛠️</span>
+            <h3>Meu setup</h3>
+            <p>Equipamentos e ferramentas que fazem parte da minha rotina de criação.</p>
+            <span class="arrow">Ver equipamentos ↗</span>
+          </a>
         </div>
-      </a>
-      <!-- <div class="section-title">Varinhas e Bonequinhos</div> -->
+      </section>
 
-      <a
-        href="https://galhoquebrado.lojavirtualnuvem.com.br?utm_source=agregador&utm_medium=btn_loja&utm_campaign=Loja+Galho+Quebrado"
-        class="link-card"
-        target="_top"
-        style="background-color: var(--accent-orange); color: white"
-      >
-        <h3>🛍️ Minha Loja</h3>
-        <p style="color: rgba(255, 255, 255, 0.9)">
-          Varinhas mágicas, bonequinhos e mais
-        </p>
-      </a>
-      <a
-        href="https://kaiomedau.com.br/como-no-video/"
-        class="link-card card-highlight"
-        target="_top"
-      >
-        <h3>🎥 Mostrei no Vídeo</h3>
-        <p>Produtos e Serviços mostrados nos meus vídeos</p>
-      </a>
-      <a
-        href="https://makerworld.com/en/@kaiomedau"
-        class="link-card card-highlight"
-        target="_top"
-      >
-        <h3>🔦 MakerWorld</h3>
-        <p>Meus projetos para Impressão 3D</p>
-      </a>
+      <section id="recursos">
+        <p class="section-kicker">Recursos para criar</p>
+        <h2>Coisas que podem facilitar seu processo.</h2>
+        <div class="project-list">
+          <a class="project" href="https://kaiomedau.gumroad.com" rel="noopener">
+            <span><strong>🖌️ Pincéis digitais</strong><span>Meus brushes para Procreate e ilustração digital, disponíveis no Gumroad.</span></span>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="project" href="https://www.desenhoeilustracao.com.br/pinceis-da-semana/" rel="noopener">
+            <span><strong>🎨 Pincéis da Semana</strong><span>Uma seleção de pincéis e recursos para experimentar no desenho digital.</span></span>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="project" href="https://youtube.com/playlist?list=PLFZdnhGg53spOIFt9O-xaDNFz20ry-H7J" rel="noopener">
+            <span><strong>📚 Aprenda Procreate</strong><span>Uma playlist com aulas gratuitas em português no YouTube.</span></span>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+        <div class="commercial" id="parcerias">
+          <p class="section-kicker">Para marcas e projetos</p>
+          <h2>Tem uma ideia boa? Vamos tirar do papel.</h2>
+          <p>Crio conteúdo e desenvolvo projetos envolvendo impressão 3D, arte, escultura, toy art, ferramentas e processos criativos. Se a sua marca conversa com esse universo, quero conhecer sua proposta.</p>
+          <div class="hero-actions">
+            <a class="button" href="/media-kit/">Conheça meu trabalho</a>
+            <a class="button secondary" href="mailto:kaio@galhoquebrado.com.br">Fale comigo</a>
+          </div>
+        </div>
+      </section>
 
-      <div class="section-title">Comunidade</div>
+      <details class="support">
+        <summary>Quer apoiar meu trabalho?</summary>
+        <p>Se você gosta do que eu faço e quer apoiar a continuidade dos projetos, também pode me encontrar no <a href="https://patreon.com/kaiomedau" rel="noopener">Patreon</a> ou no <a href="https://apoia.se/kaiomedau" rel="noopener">Apoia.se</a>. Sem pressão — acompanhar, compartilhar e participar já ajuda muito.</p>
+      </details>
 
-      <!-- <a href="https://apoia.se/kaiomedau" class="link-card" target="_top">
-        <h3>Apoia.se</h3>
-        <p>Bastidores e conteúdos exclusivos</p>
-      </a> -->
-
-      <a href="https://patreon.com/kaiomedau" class="link-card" target="_top">
-        <h3>Patreon</h3>
-        <p>Bastidores e conteúdos exclusivos</p>
-      </a>
-
-      <a href="https://t.me/+SsGEGhKLOJ9kMWUx" class="link-card" target="_top">
-        <h3>Telegram</h3>
-        <p>Atualizações sobre lançamentos das varinhas</p>
-      </a>
-
-      <div class="section-title"></div>
-      <!-- <a
-        href="https://kaiomedau.com.br/como-no-video/"
-        class="link-card card-highlight"
-        target="_top"
-      >
-        <h3>🛍️ Mostrei no Vídeo</h3>
-        <p>Produtos e Serviços mostrados nos meus vídeos</p>
-      </a> -->
-
-      <!-- <a
-        href="https://docs.google.com/forms/d/e/1FAIpQLSe916JKNl2aU78i3txz8DA4HDaQjEIfzP6fakE2doqjmFDVGA/viewform?usp=header"
-        class="link-card"
-      >
-        <span class="tag-new">Formulário</span>
-        <h3>⛄️ Meu Bonequinho</h3>
-        <p>Increva-se para a chance de ganhar</p>
-      </a> -->
-
-      <div class="section-title">Parcerias e Setup</div>
-
-      <a
-        href="https://kaiomedau.com.br/media-kit/"
-        class="link-card card-highlight"
-        target="_top"
-      >
-        <h3>Media Kit</h3>
-        <p>Vamos trabalhar juntos!</p>
-      </a>
-
-      <a
-        href="https://kaiomedau.com.br/lista-de-equipamentos/"
-        class="link-card"
-        target="_top"
-      >
-        <h3>Meu Setup</h3>
-        <p>Lista dos equipamentos que uso diariamente.</p>
-      </a>
-
-      <!-- <a
-        href="https://docs.google.com/forms/d/e/1FAIpQLSedSsyYyuNTW7HZEd2dIIIfuZIdn8Fs03BG6nOv_J2ZjaY4dQ/viewform?usp=sf_link"
-        class="link-card"
-        target="_top"
-      >
-        <h3>Newsletter</h3>
-        <p>Seja avisado durante os lançamentos</p>
-      </a> -->
-
-      <div class="section-title">Arte Digital</div>
-
-      <a
-        href="https://youtube.com/playlist?list=PLFZdnhGg53spOIFt9O-xaDNFz20ry-H7J&si=RMdrBByKGV2NnILj"
-        class="link-card card-highlight"
-        target="_top"
-      >
-        <span class="tag-new tag-highlight">100% Português</span>
-        <h3>Aprenda Procreate</h3>
-        <p>40 aulas gratuitas no YouTube</p>
-      </a>
-
-      <a
-        href="https://www.desenhoeilustracao.com.br/pinceis-da-semana/?utm_source=agregador&utm_medium=btn_pinceis&utm_campaign=Pinc%C3%A9is+Digitais"
-        class="link-card"
-        target="_top"
-      >
-        <h3>🖌️ Pincéis Digitais</h3>
-        <p>Ferramentas para artistas digitais</p>
-      </a>
-
-      <div class="social-row">
-        <a
-          href="https://instagram.com/kaiomedau"
-          class="social-link"
-          target="_top"
-          >Insta</a
-        >
-        <a
-          href="https://www.youtube.com/@kaiomedau"
-          class="social-link"
-          target="_top"
-          >YouTube</a
-        >
-        <a
-          href="https://tiktok.com/@kaiomedau"
-          class="social-link"
-          target="_top"
-          >TikTok</a
-        >
-        <a
-          href="https://makerworld.com/en/@kaiomedau/"
-          class="social-link"
-          target="_top"
-          >MakerWorld</a
-        >
-      </div>
-
-      <footer>© 2026 Galho Quebrado. Todos os direitos reservados.</footer>
-    </div>
+      <footer>
+        <p>Feito com curiosidade e mão na massa. ✦</p>
+        <p>© <span id="year">2026</span> Kaio Medau</p>
+        <p class="fineprint">Alguns links podem ser afiliados. Quando isso acontecer, posso receber uma comissão sem custo adicional para você.</p>
+      </footer>
+    </main>
   </body>
 </html>
