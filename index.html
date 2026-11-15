@@ -31,34 +31,27 @@
     <div class="home-identity">
       <img class="home-avatar" src="/images/kaio-medau-media_kit-v2.webp" alt="Retrato de Kaio Medau" width="112" height="112">
       <div class="home-name">
-        <p class="eyebrow">Artista · Maker · Criador de conteúdo</p>
         <h1 id="hero-title">Kaio <span>Medau</span></h1>
-        <p class="brand-line">do Galho Quebrado</p>
+        <p class="topics">Impressão 3D <i>·</i> Miniaturas <i>·</i> Colecionáveis</p>
       </div>
     </div>
     <p class="home-tagline">Projetos criativos para quem gosta de colocar a mão na massa.</p>
-    <p class="topics">Impressão 3D <i>·</i> Miniaturas <i>·</i> Colecionáveis</p>
   </section>
 
   <section class="home-section shop-section" aria-labelledby="shop-title">
-    <div class="home-section-heading">
-      <div><p class="kicker">01 / Loja</p><h2 id="shop-title">Galho Quebrado</h2></div>
-      <p>Varinhas mágicas, bonequinhos e criações autorais.</p>
+    <div class="home-section-heading shop-heading">
+      <div><h2 id="shop-title">Galho Quebrado</h2><p><strong>Minha loja</strong> de varinhas mágicas e criações autorais.</p></div>
     </div>
     <article class="home-featured">
-      <a class="home-featured-image" id="featured-link" href="https://galhoquebrado.lojavirtualnuvem.com.br/?utm_source=kaiomedau&utm_medium=site&utm_campaign=produto-destaque" aria-label="Conheça o Dito Gordinho na loja">
+      <a class="home-featured-image" id="featured-link" href="https://galhoquebrado.lojavirtualnuvem.com.br/?utm_source=kaiomedau&utm_medium=site&utm_campaign=produto-destaque" aria-label="Conheça o Dito Gordinho">
         <img id="featured-image" src="/images/hero/dito-gordinho-fdm.webp" alt="Dito Gordinho, peça autoral impressa em 3D" width="1200" height="900" fetchpriority="high">
+        <span class="featured-caption"><strong id="featured-title">Dito Gordinho</strong><span id="featured-description">Uma criação autoral da Galho Quebrado.</span></span>
       </a>
       <div class="home-featured-copy">
-        <p class="kicker">Em destaque na loja</p>
-        <h3 id="featured-title">Dito Gordinho</h3>
-        <p id="featured-description">Uma criação autoral da Galho Quebrado.</p>
-        <a class="button" id="featured-cta" href="https://galhoquebrado.lojavirtualnuvem.com.br/?utm_source=kaiomedau&utm_medium=site&utm_campaign=produto-destaque">Explorar a loja <span aria-hidden="true">↗</span></a>
+        <a class="button" id="featured-cta" href="https://galhoquebrado.lojavirtualnuvem.com.br/?utm_source=kaiomedau&utm_medium=site&utm_campaign=home">Visitar a loja <span aria-hidden="true">↗</span></a>
       </div>
     </article>
-    <a class="text-link home-all-link" href="https://galhoquebrado.lojavirtualnuvem.com.br/?utm_source=kaiomedau&utm_medium=site&utm_campaign=home">Ver todas as criações da Galho Quebrado <span aria-hidden="true">↗</span></a>
   </section>
-
   <section class="home-section sponsor-section" aria-labelledby="sponsor-title">
     <div class="home-section-heading">
       <div><p class="kicker">02 / Para marcas</p><h2 id="sponsor-title">Parcerias</h2></div>
@@ -70,9 +63,9 @@
         <a class="button" href="/parcerias/">Conheça as possibilidades de parceria <span aria-hidden="true">→</span></a>
       </div>
       <div class="home-stats" aria-label="Indicadores de audiência">
-        <div class="home-stat"><strong>—</strong><span>seguidores somados</span></div>
-        <div class="home-stat"><strong>—</strong><span>visualizações em 90 dias</span></div>
-        <p>Indicadores atualizados disponíveis na apresentação comercial.</p>
+        <div class="home-stat"><strong>155 mil+</strong><span>seguidores somados</span></div>
+        <div class="home-stat"><strong>2,8 mi</strong><span>visualizações em 90 dias</span></div>
+        <p>Valores ilustrativos para avaliar o layout; serão substituídos pelos dados atuais.</p>
       </div>
     </div>
   </section>
@@ -105,7 +98,7 @@
     if(image&&product.image)image.src=product.image;
     if(image&&product.imageAlt)image.alt=product.imageAlt;
     if(mediaLink&&product.destination)mediaLink.href=product.destination;
-    if(cta&&product.destination)cta.href=product.destination;
+    if(cta&&product.storeUrl)cta.href=product.storeUrl;
   }).catch(()=>{});
 </script>
 </body>
