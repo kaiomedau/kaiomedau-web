@@ -39,3 +39,9 @@
  .featured-caption strong{font-size:1.55rem}
  .featured-caption>span{font-size:.76rem}
 }
+
+
+/* Compact brand label and stacked partnership teaser */
+.featured-brand{color:var(--accent);font-size:.7rem;font-weight:850;letter-spacing:.13em;text-transform:uppercase;margin-bottom:3px}
+.sponsor-teaser{grid-template-columns:1fr;gap:22px}
+@media(max-width:760px){.sponsor-teaser{grid-template-columns:1fr}}
